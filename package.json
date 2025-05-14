@@ -10,7 +10,6 @@
     "preview": "vite preview",
     "svgr": "npx @svgr/cli -d src/assets/svg --ignore-existing --typescript --no-dimensions public/svg",
     "prepare": "husky && husky install",
-    "postinstall": "husky install"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
