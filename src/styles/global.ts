@@ -15,7 +15,6 @@ const GlobalStyle = css`
     justify-content: center;
     min-height: 100vh;
     background-color: ${theme.colors.white};
-    font-family: 'Pretendard', sans-serif;
     font-size: 62.5%;
   }
 

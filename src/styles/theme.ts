@@ -46,10 +46,10 @@ export const theme = {
         'caption-10R': { fontFamily: 'Pretendard', fontWeight: 400, fontSize: '10px', lineHeight: '145%', letterSpacing: '0px' },
 
         // DAISOA
-        'number-40R': { fontFamily: 'Pretendard', fontWeight: 400, fontSize: '40px', lineHeight: '40px', letterSpacing: '0px' },
-        'number-18R': { fontFamily: 'Pretendard', fontWeight: 400, fontSize: '18px', lineHeight: '18px', letterSpacing: '0px' },
-        'number-16R': { fontFamily: 'Pretendard', fontWeight: 400, fontSize: '16px', lineHeight: '16px', letterSpacing: '0px' },
-        'number-12R': { fontFamily: 'Pretendard', fontWeight: 400, fontSize: '12px', lineHeight: '12px', letterSpacing: '0px' },
+        'number-40R': { fontFamily: 'Daiso', fontWeight: 400, fontSize: '40px', lineHeight: '40px', letterSpacing: '0px' },
+        'number-18R': { fontFamily: 'Daiso', fontWeight: 400, fontSize: '18px', lineHeight: '18px', letterSpacing: '0px' },
+        'number-16R': { fontFamily: 'Daiso', fontWeight: 400, fontSize: '16px', lineHeight: '16px', letterSpacing: '0px' },
+        'number-12R': { fontFamily: 'Daiso', fontWeight: 400, fontSize: '12px', lineHeight: '12px', letterSpacing: '0px' },
     },
 };
 
