@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import Reset from './reset';
-import { theme } from './theme';
+import theme from './theme';
 
 const GlobalStyle = css`
   ${Reset}
@@ -8,7 +8,7 @@ const GlobalStyle = css`
   * {
     box-sizing: border-box;
   }
-  
+
   html,
   body {
     display: flex;
@@ -23,4 +23,4 @@ const GlobalStyle = css`
   }
 `;
 
-export default GlobalStyle; 
+export default GlobalStyle;

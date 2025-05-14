@@ -1,5 +1,9 @@
-export const theme = {
+const theme = {
   colors: {
+    // Black / White
+    black: '#161D24',
+    white: '#fff',
+
     // Gray Scale
     'gray-01': '#28323C',
     'gray-02': '#374553',
@@ -9,9 +13,9 @@ export const theme = {
     'gray-06': '#F7F8F9',
 
     // Red Scale
-    'red-02': '#FFEEE8',
-    'red-01': '#F1352B',
     primary: '#D70011',
+    'red-01': '#F1352B',
+    'red-02': '#FFEEE8',
 
     // Green Scale
     'store-open': '#70DD56',
@@ -21,11 +25,8 @@ export const theme = {
     'brown-02': '#D3A16D',
     'brown-03': '#CBB793',
     'brown-04': '#D6C6A7',
-
-    // Black / White
-    black: '#161D24',
-    white: '#fff',
   },
+
   fonts: {
     // Pretendard
     'display-24B': {
@@ -175,3 +176,5 @@ export const theme = {
 
 export type ColorType = typeof theme.colors;
 export type FontType = typeof theme.fonts;
+
+export default theme;
