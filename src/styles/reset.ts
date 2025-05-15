@@ -1,8 +1,6 @@
 import { css } from '@emotion/react';
 
 const Reset = css`
-  /* http://meyerweb.com/eric/tools/css/reset/
-     v2.0 | 20110126 | License: public domain */
   html,
   body,
   div,
@@ -137,4 +135,4 @@ const Reset = css`
   }
 `;
 
-export default Reset; 
+export default Reset;

@@ -1,6 +1,9 @@
-declare module '*.svg' {
-    import React = require('react');
-    export const ReactComponent: React.FC<React.SVGProps<SVGSVGElement>>;
-    const src: string;
-    export default src;
+import '@emotion/react';
+import { ColorType, FontType } from './src/styles/theme';
+
+declare module '@emotion/react' {
+  export interface Theme {
+    colors: ColorType;
+    fonts: FontType;
   }
+}

@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Yarn v2+
+.yarn/install-state.gz
+.yarnrc.yml
+
 node_modules
 dist
 dist-ssr
