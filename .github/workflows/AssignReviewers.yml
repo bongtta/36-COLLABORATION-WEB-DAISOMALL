@@ -14,6 +14,6 @@ jobs:
     steps:
       - uses: hkusu/review-assign-action@v1
         with:
-          repo-token: ${{ secrets.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 }}
+          github-token: ${{ secrets.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 }}
           assignees: ${{ github.actor }} # assign pull request author
           reviewers: maehwasoo shinjigu Dubabbi # if draft, assigned when draft is released
