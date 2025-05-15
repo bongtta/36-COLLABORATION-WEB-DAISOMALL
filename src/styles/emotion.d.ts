@@ -6,4 +6,4 @@ declare module '@emotion/react' {
     colors: ColorType;
     fonts: FontType;
   }
-} 
+}
