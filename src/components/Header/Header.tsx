@@ -1,5 +1,6 @@
 import { BackIcon, CartIcon, Logo, SearchIcon, TohomeIcon } from '@assets/svgs';
 import * as S from './Header.style';
+import Divider from '@components/common/divider/Divider';
 
 interface HeaderProps {
   title?: string;
@@ -12,7 +13,7 @@ interface HeaderProps {
 }
 
 const Header = ({
-  //   Todo: title,
+  title,
   showLogo = false,
   showBackButton = true,
   showTitle = true,
@@ -25,7 +26,7 @@ const Header = ({
       <div css={S.LeftContainer}>
         {showLogo && <Logo width={73} />}
         {showBackButton && <BackIcon width={24} />}
-        {showTitle && <p css={S.Title}>매장 상품 찾기</p>}
+        {showTitle && <p css={S.Title}>{title}</p>}
       </div>
       <div css={S.RightContainer}>
         {showSearchIcon && <SearchIcon css={S.NavIcons} />}
@@ -33,6 +34,7 @@ const Header = ({
         {showCartIcon && <CartIcon css={S.NavIcons} />}
       </div>
     </div>
+    <Divider />
   </>
 );
 
