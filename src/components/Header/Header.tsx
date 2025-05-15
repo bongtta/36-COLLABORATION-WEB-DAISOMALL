@@ -1,6 +1,5 @@
 import { BackIcon, CartIcon, Logo, SearchIcon, TohomeIcon } from '@assets/svgs';
 import * as S from './Header.style';
-import Divider from '@components/common/divider/Divider';
 
 interface HeaderProps {
   title?: string;
@@ -15,11 +14,11 @@ interface HeaderProps {
 const Header = ({
   title,
   showLogo = false,
-  showBackButton = true,
-  showTitle = true,
+  showBackButton = false,
+  showTitle = false,
   showSearchIcon = false,
   showHomeIcon = false,
-  showCartIcon = true,
+  showCartIcon = false,
 }: HeaderProps) => (
   <>
     <div css={S.Wrapper}>
@@ -34,7 +33,6 @@ const Header = ({
         {showCartIcon && <CartIcon css={S.NavIcons} />}
       </div>
     </div>
-    <Divider />
   </>
 );
 

@@ -15,11 +15,6 @@ export const LeftContainer = css`
   gap: 1.6rem;
 `;
 
-export const NavIcons = css`
-  margin: 1.2rem 0.5rem 1.2rem 0.6rem;
-  width: 2.4rem;
-`;
-
 export const Title = css`
   width: 18.3rem;
   ${theme.fonts['heading-16B']}
@@ -29,8 +24,12 @@ export const Title = css`
   white-space: nowrap;
 `;
 
+export const NavIcons = css`
+  margin: 1.2rem 0.5rem 1.2rem 0.6rem;
+  width: 2.4rem;
+`;
+
 export const RightContainer = css`
   display: flex;
-  /* padding: 0 1.2rem; */
   gap: 0.4rem;
 `;
