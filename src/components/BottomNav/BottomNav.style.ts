@@ -46,7 +46,7 @@ export const CircleButton = css`
   padding: 1.2rem 1.3rem;
   width: 5.6rem;
   height: 5.6rem;
-  border-radius: 50%;
+  border-radius: 30px;
   background-color: ${theme.colors['gray-01']};
 `;
 
