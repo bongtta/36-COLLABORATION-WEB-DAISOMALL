@@ -1,5 +1,4 @@
-/** @jsxImportSource @emotion/react */
-import { tagStyle } from './ProductCard.style';
+import { tagStyle } from './ProductCardRanking/ProductCardRanking.style';
 
 interface ProductTagProps {
   // '신상', 'SNS', '박스배송', '최다판매', 'best'
