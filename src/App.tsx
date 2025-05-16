@@ -1,12 +1,13 @@
-import ChatbotButton from './components/buttons/floatingButtons/ChatbotButton';
-import FloatingUpButton from './components/buttons/floatingButtons/FloatingUpButton';
+import { Global, ThemeProvider } from '@emotion/react';
+import theme from '@styles/theme';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
     <>
-      <div style={{ height: '2000px' }}>스크롤 테스트를 위한 공간</div>
-      <ChatbotButton />
-      <FloatingUpButton />
+      <ThemeProvider theme={theme}>
+        <Global styles={GlobalStyle} />
+      </ThemeProvider>
     </>
   );
 }
