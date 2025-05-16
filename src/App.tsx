@@ -10,7 +10,12 @@ function App() {
         <Global styles={GlobalStyle} />
         
         {/* 아코디언 버튼 테스트 */}
-        <div style={{ maxWidth: '500px', margin: '20px auto', padding: '16px' }}>
+        <div style={{ 
+          backgroundColor: theme.colors['gray-06'],  
+          maxWidth: '500px', 
+          margin: '20px auto', 
+          padding: '16px' 
+        }}>
           <h2 style={{ marginBottom: '16px' }}>아코디언 컴포넌트 테스트</h2>
           
           <AccordionButton title="상품정보 제공 고시">
