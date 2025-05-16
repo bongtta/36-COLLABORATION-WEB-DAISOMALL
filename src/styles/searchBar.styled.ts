@@ -47,6 +47,7 @@ export const clearButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   padding: 0.1rem;
 `;
 
@@ -55,6 +56,7 @@ export const searchButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   color: ${theme.colors.black};
   flex-shrink: 0;
 `;
