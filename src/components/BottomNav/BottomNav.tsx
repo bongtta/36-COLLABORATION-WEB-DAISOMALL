@@ -1,15 +1,17 @@
 import {
   CategoryIconNew,
-  //   HomeIcon,
+  HomeIcon,
   HomeIconActive,
   MypageIcon,
+  OfflineSearchActive,
   OfflineSearchLarge,
   RecentIcon,
 } from '@assets/svgs';
-
 import * as S from './BottomNav.style';
+import { useState } from 'react';
 
 const BottomNav = () => {
+  const [selectedTab, setSelectedTab] = useState('home');
   return (
     <nav css={S.Wrapper}>
       <div css={S.Container}>
@@ -17,16 +19,25 @@ const BottomNav = () => {
         <p css={S.Caption}>카테고리</p>
       </div>
 
-      <div css={S.Container}>
-        <HomeIconActive css={S.HomeIcon} />
+      <div css={S.Container} onClick={() => setSelectedTab('home')}>
+        {selectedTab === 'home' ? (
+          <HomeIconActive css={S.HomeIcon} />
+        ) : (
+          <HomeIcon css={S.HomeIcon} />
+        )}
+
         <p css={S.Caption}>홈</p>
       </div>
 
-      <div css={S.CenterContainer}>
-        <div css={S.CircleButton}>
-          <OfflineSearchLarge css={S.OfflineSearchIcon} />
-        </div>
-        <p css={S.CenterCaption}>매장 상품 찾기</p>
+      <div css={S.CenterContainer} onClick={() => setSelectedTab('offline')}>
+        {selectedTab !== 'offline' ? (
+          <div css={S.CircleButton}>
+            <OfflineSearchLarge css={S.OfflineSearchIcon} />
+          </div>
+        ) : (
+          <OfflineSearchActive css={S.OfflineSearchIconActive} />
+        )}
+        <p css={S.CenterCaption(selectedTab === 'offline')}>매장 상품 찾기</p>
       </div>
 
       <div css={S.Container}>

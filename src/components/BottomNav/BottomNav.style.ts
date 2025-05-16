@@ -55,13 +55,18 @@ export const OfflineSearchIcon = css`
   height: 3.36rem;
 `;
 
+export const OfflineSearchIconActive = css`
+  width: 2.4rem;
+  height: 2.4rem;
+`;
+
 export const Caption = css`
   ${theme.fonts['caption-10SB']}
   color: ${theme.colors['gray-01']};
 `;
 
-export const CenterCaption = css`
+export const CenterCaption = (isActive: boolean) => css`
   ${theme.fonts['caption-10SB']}
   color: ${theme.colors['gray-01']};
-  margin-top: 2.3rem;
+  margin-top: ${isActive ? '0.4rem' : '2.25rem'};
 `;

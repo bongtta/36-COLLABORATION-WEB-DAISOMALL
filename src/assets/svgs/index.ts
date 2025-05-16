@@ -2,6 +2,7 @@ export { default as CategoryIconNew } from './CategoryIconNew';
 export { default as HomeIconActive } from './HomeIconActive';
 export { default as HomeIcon } from './HomeIcon';
 export { default as MypageIcon } from './MypageIcon';
+export { default as OfflineSearchActive } from './OfflineSearchActive';
 export { default as OfflineSearchLarge } from './OfflineSearchLarge';
 export { default as OfflineSearch } from './OfflineSearch';
 export { default as React } from './React';
