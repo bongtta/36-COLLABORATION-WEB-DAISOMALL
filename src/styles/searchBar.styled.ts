@@ -6,9 +6,9 @@ export const wrapper = css`
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 12px 20px;
+  padding: 1.2rem 2rem;
   background-color: ${theme.colors['gray-06']};
-  border-radius: 999px;
+  border-radius: 32px;
 `;
 
 export const input = css`
@@ -27,8 +27,8 @@ export const input = css`
 export const iconWrapper = css`
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-left: 12px;
+  gap: 1.2rem;
+  margin-left: 1.2rem;
 `;
 
 export const barcodeIcon = css`
@@ -37,8 +37,8 @@ export const barcodeIcon = css`
 `;
 
 export const divider = css`
-  width: 1px;
-  height: 16px;
+  width: 0.1rem;
+  height: 1.6rem;
   background-color: ${theme.colors['gray-04']};
 `;
 
@@ -47,7 +47,7 @@ export const clearButton = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1px;
+  padding: 0.1rem;
 `;
 
 export const searchButton = css`
