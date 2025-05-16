@@ -3,6 +3,7 @@ import theme from '@styles/theme';
 import GlobalStyle from './styles/global';
 import ProductCardRanking from '@components/ProductCard/ProductCardRanking/ProductCardRanking';
 import ProductCardVertical from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
+import TodayCard from '@components/ProductCard/TodayCard/TodayCard';
 import Img from '@assets/image.png';
 
 function App() {
@@ -32,6 +33,13 @@ function App() {
           imageUrl={Img}
           tags={['SNS']}
           quantityText="1개"
+        />
+        <TodayCard
+          imageUrl={Img}
+          profileImage={Img}
+          username="왓정"
+          title="겨울철 가성비피부관리 화장품후기 (VT리들샷, 린제이모델링팩 등)"
+          views={37120}
         />
       </div>
     </ThemeProvider>
