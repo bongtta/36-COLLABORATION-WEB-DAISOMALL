@@ -8,6 +8,8 @@ export const Wrapper = css`
   bottom: 0;
   width: 100%;
   height: 5.6rem;
+  z-index: 1;
+  border-top: 1px solid ${theme.colors['gray-05']};
 `;
 
 export const Container = css`
@@ -40,7 +42,7 @@ export const CircleButton = css`
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: -3.2rem;
+  top: -3rem;
   padding: 1.2rem 1.3rem;
   width: 5.6rem;
   height: 5.6rem;
