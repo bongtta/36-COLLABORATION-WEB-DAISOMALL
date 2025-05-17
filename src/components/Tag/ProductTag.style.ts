@@ -10,7 +10,7 @@ export const Wrapper = css`
   height: 100%;
 `;
 
-export const Tag = (bgColor: string, textColor: string, hasIcon: boolean = false) => css`
+export const Tag = (bgColor: string, hasIcon: boolean = false) => css`
   display: flex;
   align-items: center;
   justify-content: ${hasIcon ? 'flex-start' : 'center'};
@@ -20,10 +20,15 @@ export const Tag = (bgColor: string, textColor: string, hasIcon: boolean = false
   border-radius: 2px;
   overflow: hidden;
 
-  & > span {
-    color: ${textColor};
-    ${theme.fonts['caption-10SB']};
-    word-wrap: break-word;
-    text-align: center;
+  & > svg {
+    width: 0.9rem;
+    height: 0.9rem;
   }
+`;
+
+export const Text = (textColor: string) => css`
+  color: ${textColor};
+  ${theme.fonts['caption-10SB']};
+  white-space: nowrap;
+  text-align: center;
 `;

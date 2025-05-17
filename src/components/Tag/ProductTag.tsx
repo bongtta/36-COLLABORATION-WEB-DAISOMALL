@@ -10,9 +10,9 @@ export interface ProductTagProps {
 
 const ProductTag = ({ label, bg, color, icon }: ProductTagProps) => {
   return (
-    <div css={S.Tag(bg, color, Boolean(icon))}>
+    <div css={S.Tag(bg, Boolean(icon))}>
       {icon}
-      <span>{label}</span>
+      <span css={S.Text(color)}>{label}</span>
     </div>
   );
 };
