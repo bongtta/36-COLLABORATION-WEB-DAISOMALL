@@ -26,8 +26,8 @@ const SvgSnsIcon = (props: SVGProps<SVGSVGElement>) => (
         y2="36"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.307692" stop-color="#FFEEE8" />
-        <stop offset="1" stop-color="#F1352B" />
+        <stop offset="0.307692" stopColor="#FFEEE8" />
+        <stop offset="1" stopColor="#F1352B" />
       </linearGradient>
       <image
         id="image0_1_470"

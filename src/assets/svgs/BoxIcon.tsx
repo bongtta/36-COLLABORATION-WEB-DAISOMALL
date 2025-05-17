@@ -6,7 +6,7 @@ const SvgBoxIcon = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <g clip-path="url(#clip0_12_2811)">
+    <g clipPath="url(#clip0_12_2811)">
       <path
         d="M2.4 0.000610352H29.6L32 6.4005H0L2.4 0.000610352Z"
         fill="#BF8B56"

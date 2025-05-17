@@ -12,7 +12,7 @@ export const imageWrapper = (size: '96' | '128') => css`
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
   height: ${size === '96' ? '12.8rem' : '16.8rem'};
   position: relative;
-  border-radius: 0.2rem;
+  border-radius: 2px;
   overflow: hidden;
 `;
 
@@ -75,7 +75,7 @@ export const boxBadge = css`
 
 export const boxText = css`
   position: absolute;
-  color: white;
+  color: ${theme.colors.white};
   font-size: 1rem;
   font-weight: 700;
 `;
@@ -87,10 +87,8 @@ export const unitPriceRow = css`
 `;
 
 export const unitPrice = css`
-  font-family: 'Pretendard';
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: ${theme.colors['gray-03']};
+  ${theme.fonts['caption-12B']}
+  color: ${theme.colors['gray-01']};
 `;
 
 export const multiply = css`
@@ -108,7 +106,7 @@ export const unitCount = css`
   background-color: ${theme.colors['gray-02']};
   padding: 0 0.6rem;
   height: 2rem;
-  border-radius: 1.2rem;
+  border-radius: 12px;
   display: flex;
   align-items: center;
 `;
@@ -141,15 +139,13 @@ export const unitBadge = css`
   height: 1.6rem;
   padding: 0.2rem 0.6rem;
   background: ${theme.colors['gray-01']};
-  border-radius: 1.2rem;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
 export const unitBadgeText = css`
-  font-family: 'Pretendard';
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
+  ${theme.fonts['caption-10SB']}
+  color: ${theme.colors.white};
 `;

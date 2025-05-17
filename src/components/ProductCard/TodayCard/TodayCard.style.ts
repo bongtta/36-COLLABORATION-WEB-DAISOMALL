@@ -12,7 +12,7 @@ export const wrapper = css`
 export const imageWrapper = css`
   width: 12.8rem;
   height: 17rem;
-  border-radius: 0.2rem;
+  border-radius: 2px;
   overflow: hidden;
   background-color: ${theme.colors['gray-04']};
 `;

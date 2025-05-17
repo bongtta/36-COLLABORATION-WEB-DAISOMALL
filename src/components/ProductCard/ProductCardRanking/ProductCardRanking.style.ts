@@ -1,35 +1,6 @@
 import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
-export const tagList = css`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-top: 0.4rem;
-`;
-
-export const tagStyle = (type: string) => css`
-  display: inline-block;
-  padding: 0.2rem 0.6rem;
-  border-radius: 0.4rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: white;
-
-  background-color: ${(() => {
-    switch (type) {
-      case 'best':
-        return theme.colors.primary;
-      case '신상':
-        return theme.colors['red-01'];
-      case '박스배송':
-        return theme.colors['brown-01'];
-      default:
-        return theme.colors['gray-04'];
-    }
-  })()};
-`;
-
 export const code = css`
   ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
@@ -38,13 +9,13 @@ export const code = css`
 export const rankingWrapper = css`
   width: 100%;
   height: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
 export const rankingWrapperOutline = css`
-  border-radius: 0.8rem;
+  border-radius: 8px;
   outline: 1px ${theme.colors['gray-05']} solid;
   outline-offset: -1px;
   padding: 1.1rem 0;
@@ -66,7 +37,7 @@ export const rankingNumber = css`
 export const rankingImageWrapper = css`
   width: 8.1rem;
   height: 10.8rem;
-  border-radius: 0.2rem;
+  border-radius: 2px;
   overflow: hidden;
   position: relative;
 `;
@@ -79,7 +50,7 @@ export const rankingImage = css`
 
 export const rankingInfoArea = css`
   flex: 1 1 0;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -96,7 +67,7 @@ export const rankingTextGroup = css`
 export const priceRow = css`
   justify-content: flex-start;
   align-items: center;
-  display: inline-flex;
+  display: flex;
 `;
 
 export const rankingPrice = css`
@@ -105,13 +76,8 @@ export const rankingPrice = css`
 `;
 
 export const rankingName = css`
-  font-family: 'Pretendard';
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 2.03rem;
+  ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
-  width: 100%;
-  word-break: break-word;
 `;
 
 export const cartIconWrapper = css`
@@ -125,7 +91,7 @@ export const cartIconBg = css`
   width: 3.2rem;
   height: 3.2rem;
   background: ${theme.colors['gray-06']};
-  border-radius: 0.8rem;
+  border-radius: 8px;
   position: absolute;
   top: 0;
   left: 0;
@@ -140,4 +106,34 @@ export const cartIcon = css`
   path {
     stroke: ${theme.colors['gray-01']};
   }
+`;
+
+export const tagList = css`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+`;
+
+export const tagStyle = (type: string) => css`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 0.4rem;
+  height: 1.6rem;
+  border-radius: 2px;
+  ${theme.fonts['caption-10SB']};
+  color: ${type === '박스배송' ? theme.colors['primary'] : 'white'};
+  background-color: ${(() => {
+    switch (type) {
+      case 'best':
+        return theme.colors.primary;
+      case '신상':
+        return theme.colors['red-01'];
+      case '박스배송':
+        return theme.colors['gray-05'];
+      default:
+        return theme.colors['gray-04'];
+    }
+  })()};
 `;
