@@ -18,4 +18,4 @@ export const productTags: ProductTagData[] = [
   { label: '픽업 가능 매장', bg: theme.colors['gray-05'], color: theme.colors['gray-03'] },
   { label: '택배전용', bg: theme.colors['gray-05'], color: theme.colors['gray-03'] },
   { label: '픽업전용', bg: theme.colors['gray-05'], color: theme.colors['gray-03'] },
-]; 
+];

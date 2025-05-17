@@ -15,7 +15,7 @@ export const Tag = (bgColor: string, textColor: string, hasIcon: boolean = false
   align-items: center;
   justify-content: ${hasIcon ? 'flex-start' : 'center'};
   gap: ${hasIcon ? '0.3rem' : '0rem'};
-  padding: 0 0.4rem;
+  padding: 0.05rem 0.4rem;
   background-color: ${bgColor};
   border-radius: 2px;
   overflow: hidden;
