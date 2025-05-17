@@ -2,7 +2,8 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const wrapper = css`
-  width: 100%;
+  width: 12.8rem;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -52,12 +53,21 @@ export const username = css`
   color: ${theme.colors['gray-01']};
 `;
 
+export const bookmarkButton = css`
+  all: unset;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+`;
+
 export const bookmarkIcon = css`
-  width: 1.2rem;
-  height: 1.6rem;
-  path {
-    stroke: ${theme.colors['gray-04']};
-  }
+  color: ${theme.colors['white']};
+  transition: color 0.2s ease;
+`;
+
+export const bookmarkIconActive = css`
+  color: ${theme.colors['gray-04']};
 `;
 
 export const title = css`
