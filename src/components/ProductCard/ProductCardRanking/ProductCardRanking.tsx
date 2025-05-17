@@ -1,5 +1,5 @@
 import * as R from '@components/ProductCard/ProductCardRanking/ProductCardRanking.style';
-import ProductTag from '../ProductTag';
+import ProductTag from '@components/ProductCard/ProductTag';
 import { CartIcon } from '@assets/svgs';
 
 interface ProductCardRankingProps {
@@ -10,6 +10,7 @@ interface ProductCardRankingProps {
   tags?: string[];
   code?: string;
   showCartIcon?: boolean;
+  withOutline?: boolean;
 }
 
 const ProductCardRanking = ({
@@ -20,8 +21,9 @@ const ProductCardRanking = ({
   tags = [],
   code,
   showCartIcon = true,
+  withOutline = false,
 }: ProductCardRankingProps) => (
-  <div css={R.rankingWrapper}>
+  <div css={[R.rankingWrapper, withOutline && R.rankingWrapperOutline]}>
     <div css={R.rankingContent}>
       <div css={R.rankingNumber}>{rank}</div>
 

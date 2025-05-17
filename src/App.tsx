@@ -19,11 +19,12 @@ function App() {
         }}
       >
         <ProductCardRanking
-          rank={1}
           name="랭킹용 앰플"
           price="3,000"
           imageUrl={Img}
-          tags={['best', '최다판매']}
+          showCartIcon={false}
+          code="123456"
+          withOutline={true}
         />
 
         <ProductCardVertical

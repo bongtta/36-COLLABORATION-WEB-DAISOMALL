@@ -33,7 +33,6 @@ export const tagStyle = (type: string) => css`
 export const code = css`
   ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
-  margin-top: 0.4rem;
 `;
 
 export const rankingWrapper = css`
@@ -44,8 +43,16 @@ export const rankingWrapper = css`
   align-items: center;
 `;
 
+export const rankingWrapperOutline = css`
+  border-radius: 0.8rem;
+  outline: 1px ${theme.colors['gray-05']} solid;
+  outline-offset: -1px;
+  padding: 1.1rem 0;
+`;
+
 export const rankingContent = css`
-  width: 30.1rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   gap: 1.2rem;
 `;
