@@ -78,6 +78,12 @@ export const rankingPrice = css`
 export const rankingName = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const cartIconWrapper = css`

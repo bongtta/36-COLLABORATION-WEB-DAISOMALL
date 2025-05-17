@@ -74,6 +74,12 @@ export const title = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
   line-height: 1.45;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 
 export const viewRow = css`

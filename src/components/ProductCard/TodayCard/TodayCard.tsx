@@ -49,7 +49,7 @@ const TodayCard = ({
 
         <div css={T.viewRow}>
           <span css={T.viewCount}>{views.toLocaleString()}명</span>
-          <span css={T.viewText}>이 봤어요</span>
+          <span css={T.viewText}>봤어요</span>
         </div>
       </div>
     </div>
