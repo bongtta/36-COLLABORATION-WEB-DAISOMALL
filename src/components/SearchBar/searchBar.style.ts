@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const wrapper = css`
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;

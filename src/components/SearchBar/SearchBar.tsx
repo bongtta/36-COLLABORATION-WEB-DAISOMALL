@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as S from '@components/SearchBar/searchBar.styled';
+import * as S from '@components/SearchBar/SearchBar.style';
 import { SearchIcon, BarcodeIcon, CancelIcon } from '@assets/svgs';
 
 interface SearchBarProps {
@@ -39,6 +39,7 @@ const SearchBar = ({
       <input
         css={S.input}
         type="text"
+        aria-label="검색창"
         value={value}
         onChange={handleInputChange}
         onKeyDown={handleKeyDown}
