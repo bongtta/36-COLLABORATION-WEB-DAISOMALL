@@ -3,7 +3,7 @@ import ProductTag from '../ProductTag';
 import { CartIcon } from '@assets/svgs';
 
 interface ProductCardRankingProps {
-  rank: number;
+  rank?: number;
   imageUrl: string;
   name: string;
   price: string;

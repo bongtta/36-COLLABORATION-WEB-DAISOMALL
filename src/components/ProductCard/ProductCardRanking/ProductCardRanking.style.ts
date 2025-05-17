@@ -7,6 +7,7 @@ export const tagList = css`
   gap: 0.4rem;
   margin-top: 0.4rem;
 `;
+
 export const tagStyle = (type: string) => css`
   display: inline-block;
   padding: 0.2rem 0.6rem;
@@ -28,6 +29,7 @@ export const tagStyle = (type: string) => css`
     }
   })()};
 `;
+
 export const code = css`
   ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
@@ -50,7 +52,7 @@ export const rankingContent = css`
 
 export const rankingNumber = css`
   position: relative;
-  ${theme.fonts['number-18R']};
+  ${theme.fonts['heading-14B']}
   color: ${theme.colors['gray-01']};
 `;
 
@@ -108,6 +110,7 @@ export const rankingName = css`
 export const cartIconWrapper = css`
   width: 3.2rem;
   height: 3.2rem;
+  cursor: pointer;
   position: relative;
 `;
 
