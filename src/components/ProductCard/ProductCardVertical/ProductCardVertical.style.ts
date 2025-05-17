@@ -23,13 +23,10 @@ export const image = css`
 `;
 
 export const quantity = css`
-  position: absolute;
-  bottom: 0.4rem;
-  right: 0.4rem;
   padding: 0.2rem 0.6rem;
-  background-color: ${theme.colors.black};
+  background-color: ${theme.colors['gray-01']};
   color: ${theme.colors.white};
-  border-radius: 0.4rem;
+  border-radius: 12px;
   font-size: 1rem;
   font-weight: 600;
 `;
@@ -39,29 +36,11 @@ export const cartButton = css`
   height: 3.2rem;
   position: absolute;
   bottom: 0.4rem;
-  left: 0.4rem;
+  right: 0.4rem;
   border: none;
   padding: 0;
   background: none;
   cursor: pointer;
-`;
-
-export const cartBg = css`
-  width: 100%;
-  height: 100%;
-  background-color: ${theme.colors['gray-06']};
-  border-radius: 0.8rem;
-`;
-
-export const cartIcon = css`
-  position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
-  width: 2rem;
-  height: 2rem;
-  path {
-    stroke: ${theme.colors['gray-01']};
-  }
 `;
 
 export const infoArea = css`
@@ -74,4 +53,103 @@ export const tagList = css`
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
+`;
+
+export const snsBadge = css`
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  z-index: 1;
+`;
+
+export const boxBadge = css`
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0.4rem;
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const boxText = css`
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+`;
+
+export const unitPriceRow = css`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
+
+export const unitPrice = css`
+  font-family: 'Pretendard';
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: ${theme.colors['gray-03']};
+`;
+
+export const multiply = css`
+  font-family: 'Pretendard';
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: ${theme.colors['gray-03']};
+`;
+
+export const unitCount = css`
+  font-family: 'Pretendard';
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: ${theme.colors['white']};
+  background-color: ${theme.colors['gray-02']};
+  padding: 0 0.6rem;
+  height: 2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+`;
+
+export const unitWon = css`
+  font-family: 'Pretendard';
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45rem;
+  color: ${theme.colors['gray-01']};
+`;
+
+export const unitDividerLeft = css`
+  width: 0.45rem;
+  height: 0.45rem;
+  outline: 0.07rem ${theme.colors['gray-01']} solid;
+  outline-offset: -0.035rem;
+`;
+
+export const unitDividerRight = css`
+  width: 0.45rem;
+  height: 0.45rem;
+  transform: rotate(180deg);
+  transform-origin: top left;
+  outline: 0.07rem ${theme.colors['gray-01']} solid;
+  outline-offset: -0.035rem;
+`;
+
+export const unitBadge = css`
+  height: 1.6rem;
+  padding: 0.2rem 0.6rem;
+  background: ${theme.colors['gray-01']};
+  border-radius: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const unitBadgeText = css`
+  font-family: 'Pretendard';
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
 `;

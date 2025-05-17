@@ -26,15 +26,29 @@ function App() {
           code="123456"
           withOutline={true}
         />
-
-        <ProductCardVertical
-          size="96"
-          name="수직형 앰플"
-          price="3,000"
-          imageUrl={Img}
-          tags={['SNS']}
-          quantityText="1개"
-        />
+        <div
+          style={{
+            display: 'flex',
+            gap: '2rem',
+          }}
+        >
+          <ProductCardVertical
+            size="96"
+            name="수직형 앰플"
+            price="3,000"
+            imageUrl={Img}
+            quantityText="1개"
+            isBoxDelivery={true}
+          />
+          <ProductCardVertical
+            size="96"
+            name="수직형 앰플"
+            price="3,000"
+            imageUrl={Img}
+            tags={['SNS']}
+            isSnsHot={true}
+          />
+        </div>
         <TodayCard
           imageUrl={Img}
           profileImage={Img}
