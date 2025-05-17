@@ -2,9 +2,28 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const Wrapper = css`
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0 1.6rem;
-  height: 4.8rem;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+`;
+
+export const Tag = (bgColor: string, textColor: string, hasIcon: boolean = false) => css`
+  display: flex;
+  align-items: center;
+  justify-content: ${hasIcon ? 'flex-start' : 'center'};
+  gap: ${hasIcon ? '0.3rem' : '0rem'};
+  padding: 0 0.4rem;
+  background-color: ${bgColor};
+  border-radius: 2px;
+  overflow: hidden;
+
+  & > span {
+    color: ${textColor};
+    ${theme.fonts['caption-10SB']};
+    word-wrap: break-word;
+    text-align: center;
+  }
 `;
