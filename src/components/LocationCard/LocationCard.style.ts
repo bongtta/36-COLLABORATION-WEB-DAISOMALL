@@ -141,3 +141,13 @@ export const standTextGray = css`
   ${theme.fonts['heading-16B']};
   color: ${theme.colors['gray-03']};
 `;
+
+export const likeIcon = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+`;

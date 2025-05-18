@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import * as S from './LocationCard.style';
-import { HeartIcon } from '@assets/svgs';
+import { LikeIcon } from '@assets/svgs';
 import StoreStatus from '@components/LocationCard/StoreStatus/StoreStatus';
 import LocationTag from './LocationTag';
 import StoreActionButton from '@components/LocationCard/StoreActionButton/StoreActionButton';
@@ -30,60 +31,70 @@ const LocationCard = ({
   isSoldOut = false,
   isFranchise = false,
   isPickupAvailable = false,
-}: LocationCardProps) => (
-  <div css={S.wrapper}>
-    <div css={S.topSection}>
-      <div css={S.storeInfo}>
-        <div css={S.titleRow}>
-          <span css={S.storeName}>{storeName}</span>
-          <span css={S.distance}>{distance}</span>
-          {isPickupAvailable && <span css={S.pickupBadge}>픽업 가능 매장</span>}
-        </div>
-        <p css={S.address}>{address}</p>
-        <div css={S.statusRow}>
-          <StoreStatus isOpen={isOpen} />
-          <span css={S.circleDivider} />
-          <span css={S.time}>{time}</span>
-        </div>
-      </div>
-      <HeartIcon width={24} height={24} />
-    </div>
+}: LocationCardProps) => {
+  const [liked, setLiked] = useState(false);
 
-    {isFranchise ? (
-      <div css={S.franchiseNotice}>가맹/유통점은 재고 확인이 어렵습니다.</div>
-    ) : (
-      <div css={S.bottomSection}>
-        <div css={S.tagRow}>
-          {floor && (
-            <LocationTag
-              label={`${floor}`}
-              color={isSoldOut ? 'gray' : 'red'}
-            />
-          )}
-          <span css={S.divider} />
-          {stand && (
-            <>
+  return (
+    <div css={S.wrapper}>
+      <div css={S.topSection}>
+        <div css={S.storeInfo}>
+          <div css={S.titleRow}>
+            <span css={S.storeName}>{storeName}</span>
+            <span css={S.distance}>{distance}</span>
+            {isPickupAvailable && (
+              <span css={S.pickupBadge}>픽업 가능 매장</span>
+            )}
+          </div>
+          <p css={S.address}>{address}</p>
+          <div css={S.statusRow}>
+            <StoreStatus isOpen={isOpen} />
+            <span css={S.circleDivider} />
+            <span css={S.time}>{time}</span>
+          </div>
+        </div>
+        <button onClick={() => setLiked((prev) => !prev)} css={S.likeIcon}>
+          <LikeIcon filled={liked} width={24} height={24} />
+        </button>
+      </div>
+
+      {isFranchise ? (
+        <div css={S.franchiseNotice}>가맹/유통점은 재고 확인이 어렵습니다.</div>
+      ) : (
+        <div css={S.bottomSection}>
+          <div css={S.tagRow}>
+            {floor && (
               <LocationTag
-                label={`${stand}`}
+                label={`${floor}`}
                 color={isSoldOut ? 'gray' : 'red'}
               />
-              <span css={isSoldOut ? S.standTextGray : S.standText}>매대</span>
-            </>
-          )}
-          <span css={S.divider} />
-          {isSoldOut ? (
-            <LocationTag label="일시품절" color="gray" />
-          ) : (
-            <>
-              <span css={S.standText}>재고</span>
-              <LocationTag label={`${stock ?? 0}개`} color="red" />
-            </>
-          )}
+            )}
+            <span css={S.divider} />
+            {stand && (
+              <>
+                <LocationTag
+                  label={`${stand}`}
+                  color={isSoldOut ? 'gray' : 'red'}
+                />
+                <span css={isSoldOut ? S.standTextGray : S.standText}>
+                  매대
+                </span>
+              </>
+            )}
+            <span css={S.divider} />
+            {isSoldOut ? (
+              <LocationTag label="일시품절" color="gray" />
+            ) : (
+              <>
+                <span css={S.standText}>재고</span>
+                <LocationTag label={`${stock ?? 0}개`} color="red" />
+              </>
+            )}
+          </div>
+          <StoreActionButton isSoldOut={isSoldOut} />
         </div>
-        <StoreActionButton isSoldOut={isSoldOut} />
-      </div>
-    )}
-  </div>
-);
+      )}
+    </div>
+  );
+};
 
 export default LocationCard;
