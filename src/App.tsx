@@ -8,7 +8,10 @@ function App() {
     <ThemeProvider theme={theme}>
       <Global styles={GlobalStyle} />
       <div style={{ padding: '2rem' }}>
-        <QuickMenuBar />
+        <QuickMenuBar
+          onStoreSearchClick={() => console.log('매장재고 클릭')}
+          onHolidayArrivalClick={() => console.log('휴일도착 클릭')}
+        />
       </div>
     </ThemeProvider>
   );
