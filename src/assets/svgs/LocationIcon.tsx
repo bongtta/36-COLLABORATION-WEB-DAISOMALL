@@ -6,11 +6,11 @@ const SvgLocationIcon = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path d="M12 20.4615V17.3846" stroke="#28323C" stroke-width={1.5} />
-    <path d="M12 6.61538V3.53845" stroke="#28323C" stroke-width={1.5} />
-    <circle cx="12" cy="12" r="9.25" stroke="#28323C" stroke-width={1.5} />
-    <path d="M3.53843 12L6.61536 12" stroke="#28323C" stroke-width={1.5} />
-    <path d="M17.3846 12L20.4615 12" stroke="#28323C" stroke-width={1.5} />
+    <path d="M12 20.4615V17.3846" stroke="#28323C" strokeWidth={1.5} />
+    <path d="M12 6.61538V3.53845" stroke="#28323C" strokeWidth={1.5} />
+    <circle cx="12" cy="12" r="9.25" stroke="#28323C" strokeWidth={1.5} />
+    <path d="M3.53843 12L6.61536 12" stroke="#28323C" strokeWidth={1.5} />
+    <path d="M17.3846 12L20.4615 12" stroke="#28323C" strokeWidth={1.5} />
     <circle cx="12" cy="12" r="2" fill="#28323C" />
   </svg>
 );
