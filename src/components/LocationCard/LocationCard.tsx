@@ -1,7 +1,8 @@
 import * as S from './LocationCard.style';
-import { HeartIcon, ArrowRightIcon } from '@assets/svgs';
+import { HeartIcon } from '@assets/svgs';
 import StoreStatus from '@components/LocationCard/StoreStatus/StoreStatus';
-import ProductTag from './ProductTag';
+import LocationTag from './LocationTag';
+import StoreActionButton from '@components/LocationCard/StoreActionButton/StoreActionButton';
 
 interface LocationCardProps {
   storeName: string;
@@ -41,7 +42,7 @@ const LocationCard = ({
         <p css={S.address}>{address}</p>
         <div css={S.statusRow}>
           <StoreStatus isOpen={isOpen} />
-          <span css={S.divider} />
+          <span css={S.circleDivider} />
           <span css={S.time}>{time}</span>
         </div>
       </div>
@@ -53,28 +54,33 @@ const LocationCard = ({
     ) : (
       <div css={S.bottomSection}>
         <div css={S.tagRow}>
-          {floor && <ProductTag type={`${floor}`} />}
+          {floor && (
+            <LocationTag
+              label={`${floor}`}
+              color={isSoldOut ? 'gray' : 'red'}
+            />
+          )}
           <span css={S.divider} />
           {stand && (
             <>
-              <ProductTag type={`${stand}`} />
-              <span css={S.standText}>매대</span>
+              <LocationTag
+                label={`${stand}`}
+                color={isSoldOut ? 'gray' : 'red'}
+              />
+              <span css={isSoldOut ? S.standTextGray : S.standText}>매대</span>
             </>
           )}
           <span css={S.divider} />
           {isSoldOut ? (
-            <span css={S.soldOutText}>일시품절</span>
+            <LocationTag label="일시품절" color="gray" />
           ) : (
             <>
-              <span>재고</span>
-              <ProductTag type={`${stock ?? 0}개`} />
+              <span css={S.standText}>재고</span>
+              <LocationTag label={`${stock ?? 0}개`} color="red" />
             </>
           )}
         </div>
-        <button css={S.actionButton}>
-          <span>{isSoldOut ? '재입고 알림' : '매장 픽업하기'}</span>
-          <ArrowRightIcon width={12} height={12} />
-        </button>
+        <StoreActionButton isSoldOut={isSoldOut} />
       </div>
     )}
   </div>

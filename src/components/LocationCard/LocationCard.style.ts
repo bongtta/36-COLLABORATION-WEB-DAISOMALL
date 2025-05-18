@@ -58,14 +58,20 @@ export const address = css`
 export const statusRow = css`
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 `;
 
 export const divider = css`
+  width: 1px;
+  height: 1.6rem;
+  background: ${theme.colors['gray-04']};
+`;
+
+export const circleDivider = css`
   width: 0.3rem;
   height: 0.3rem;
   background: ${theme.colors['gray-04']};
-  border-radius: 50%;
+  border-radius: 20px;
 `;
 
 export const time = css`
@@ -94,7 +100,7 @@ export const tagRow = css`
 `;
 
 export const standText = css`
-  ${theme.fonts['heading-14B']};
+  ${theme.fonts['heading-16B']};
   color: ${theme.colors['gray-01']};
 `;
 
@@ -102,6 +108,7 @@ export const actionButton = css`
   height: 2.4rem;
   padding: 0 0.8rem;
   border-radius: 4px;
+  border: none;
   background: ${theme.colors['gray-06']};
   display: flex;
   align-items: center;
@@ -112,29 +119,25 @@ export const actionButton = css`
 `;
 
 export const soldOutText = css`
-  ${theme.fonts['body-14R']};
-  color: ${theme.colors['gray-03']};
+  ${theme.fonts['heading-16B']};
+  color: ${theme.colors['gray-04']};
 `;
 
-export const tagStyle = (type: string) => css`
+export const tagStyle = (color: 'gray' | 'red' = 'red') => css`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 0 0.4rem;
-  height: 1.6rem;
-  border-radius: 2px;
-  ${theme.fonts['caption-10SB']};
-  color: ${type === '박스배송' ? theme.colors['primary'] : 'white'};
-  background-color: ${(() => {
-    switch (type) {
-      case 'best':
-        return theme.colors.primary;
-      case '신상':
-        return theme.colors['red-01'];
-      case '박스배송':
-        return theme.colors['gray-05'];
-      default:
-        return theme.colors['gray-04'];
-    }
-  })()};
+  padding: 0.4rem;
+  height: 2.4rem;
+  border-radius: 4px;
+  ${theme.fonts['heading-16B']};
+  color: ${color === 'red' ? theme.colors['primary'] : theme.colors['gray-03']};
+  background-color: ${color === 'red'
+    ? theme.colors['red-02']
+    : theme.colors['gray-06']};
+`;
+
+export const standTextGray = css`
+  ${theme.fonts['heading-16B']};
+  color: ${theme.colors['gray-03']};
 `;
