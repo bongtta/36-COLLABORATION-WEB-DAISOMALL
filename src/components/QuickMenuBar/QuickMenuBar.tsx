@@ -14,7 +14,6 @@ interface QuickMenuItem {
 
 interface QuickMenuBarProps {
   onStoreSearchClick?: () => void;
-  onHolidayArrivalClick?: () => void;
 }
 
 const QUICK_MENUS: QuickMenuItem[] = [
@@ -25,21 +24,18 @@ const QUICK_MENUS: QuickMenuItem[] = [
   { icon: <DeliveryIcon />, label: '정기배송' },
 ];
 
-const QuickMenuBar = ({
-  onStoreSearchClick,
-  onHolidayArrivalClick,
-}: QuickMenuBarProps) => (
+const QuickMenuBar = ({ onStoreSearchClick }: QuickMenuBarProps) => (
   <div css={S.wrapper}>
     {QUICK_MENUS.map((item, idx) => {
-      const handleClick =
-        item.label === '매장재고'
-          ? onStoreSearchClick
-          : item.label === '휴일도착'
-            ? onHolidayArrivalClick
-            : undefined;
+      const isStoreSearch = item.label === '매장재고';
 
       return (
-        <button css={S.menuItem} key={idx} onClick={handleClick} type="button">
+        <button
+          key={idx}
+          css={S.menuItem}
+          type="button"
+          onClick={isStoreSearch ? onStoreSearchClick : undefined}
+        >
           <div css={S.icon}>{item.icon}</div>
           <span css={S.label}>{item.label}</span>
         </button>
