@@ -23,6 +23,7 @@ export const Tag = (bgColor: string, hasIcon: boolean = false) => css`
   & > svg {
     width: 0.9rem;
     height: 0.9rem;
+    margin-bottom: 0.1rem;
   }
 `;
 
