@@ -15,7 +15,6 @@ function App() {
           gap: '2rem',
         }}
       >
-        {/* ✅ 일반 매장, 재고 있음 */}
         <LocationCard
           storeName="홍대입구점"
           distance="1.9 Km"
@@ -28,7 +27,6 @@ function App() {
           isPickupAvailable={true}
         />
 
-        {/* ✅ 일반 매장, 일시품절 */}
         <LocationCard
           storeName="홍대2호점"
           distance="2.0 Km"
@@ -41,7 +39,6 @@ function App() {
           isPickupAvailable={true}
         />
 
-        {/* ✅ 가맹/유통 매장 */}
         <LocationCard
           storeName="신촌명물거리점"
           distance="3.0 Km"

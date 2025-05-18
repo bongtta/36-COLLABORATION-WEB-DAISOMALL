@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const Wrapper = css`
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 0.4rem;
 `;
