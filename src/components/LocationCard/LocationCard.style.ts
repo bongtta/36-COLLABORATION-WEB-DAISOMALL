@@ -3,16 +3,17 @@ import theme from '@styles/theme';
 
 export const wrapper = css`
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: clamp(1rem, 2vw, 1.6rem);
 `;
 
 export const topSection = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1.2rem;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
 `;
 
 export const storeInfo = css`
@@ -89,7 +90,7 @@ export const bottomSection = css`
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
 `;
 
 export const tagRow = css`
