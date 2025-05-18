@@ -3,7 +3,7 @@ import theme from '@styles/theme';
 
 export const wrapper = css`
   display: flex;
-  overflow-x: auto;
+  overflow-x: visible;
   gap: 0.8rem;
   padding: 2rem 1.6rem;
   -webkit-overflow-scrolling: touch;
@@ -39,9 +39,6 @@ export const icon = css`
 
 export const label = css`
   color: ${theme.colors['gray-01']};
-  font-size: 1.2rem;
-  font-weight: 500;
-  font-family: Pretendard;
-  line-height: 1.2;
+  ${theme.fonts['display-12M']};
   white-space: nowrap;
 `;
