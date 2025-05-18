@@ -90,6 +90,7 @@ export const cartIconWrapper = css`
   width: 3.2rem;
   height: 3.2rem;
   cursor: pointer;
+  right: 2rem;
   position: relative;
 `;
 

@@ -23,7 +23,7 @@ function App() {
           name="랭킹용 앰플"
           price="3,000"
           imageUrl={Img}
-          showCartIcon={false}
+          showCartIcon={true}
           code="123456"
           withOutline={true}
         />
@@ -33,7 +33,7 @@ function App() {
           price="3,000"
           imageUrl={Img}
           showCartIcon={false}
-          code="123456"
+          tags={['박스배송', '택배전용']}
         />
         <div
           style={{
@@ -47,7 +47,7 @@ function App() {
             price="3,000"
             imageUrl={Img}
             quantityText="1개"
-            tags={['박스전용', '택배전용']}
+            tags={['박스배송', '택배전용']}
             isBoxDelivery={true}
           />
           <ProductCardVertical

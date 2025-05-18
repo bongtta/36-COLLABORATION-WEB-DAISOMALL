@@ -39,15 +39,12 @@ const ProductCardRanking = ({
           <p css={R.rankingName}>{name}</p>
         </div>
 
-        {code ? (
-          <p css={R.code}>품번: {code}</p>
-        ) : (
-          <div css={R.tagList}>
-            {tags.map((tag) => (
-              <ProductTag key={tag} type={tag} />
-            ))}
-          </div>
-        )}
+        {code && <p css={R.code}>품번: {code}</p>}
+        <div css={R.tagList}>
+          {tags.map((tag) => (
+            <ProductTag key={tag} type={tag} />
+          ))}
+        </div>
       </div>
     </div>
 
