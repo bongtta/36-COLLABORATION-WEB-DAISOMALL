@@ -13,18 +13,13 @@ const GlobalStyle = css`
   body {
     display: flex;
     justify-content: center;
-    width: 100%;
     min-height: 100vh;
     background-color: ${theme.colors.white};
     font-size: 62.5%;
   }
 
   #root {
-    position: relative;
-    min-width: 375px;
-    max-width: 425px;
-    width: 100%;
-    margin: 0 auto;
+    width: 375px;
   }
 `;
 
