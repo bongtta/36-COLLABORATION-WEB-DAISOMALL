@@ -44,7 +44,7 @@ export const profileArea = css`
 export const profileImage = css`
   width: 2rem;
   height: 2rem;
-  border-radius: 50%;
+  border-radius: 40px;
   object-fit: cover;
 `;
 
