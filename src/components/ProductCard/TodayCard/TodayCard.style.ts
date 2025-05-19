@@ -9,14 +9,6 @@ export const wrapper = css`
   gap: 0.8rem;
 `;
 
-export const imageWrapper = css`
-  width: 12.8rem;
-  height: 17rem;
-  border-radius: 2px;
-  overflow: hidden;
-  background-color: ${theme.colors['gray-04']};
-`;
-
 export const mainImage = css`
   width: 100%;
   height: 100%;
@@ -29,6 +21,12 @@ export const contentArea = css`
   gap: 0.8rem;
 `;
 
+export const infoGroup = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+`;
+
 export const topRow = css`
   display: flex;
   justify-content: space-between;
@@ -38,7 +36,7 @@ export const topRow = css`
 export const profileArea = css`
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 `;
 
 export const profileImage = css`
@@ -85,17 +83,17 @@ export const title = css`
 export const viewRow = css`
   display: flex;
   align-items: center;
-  gap: 0.2rem;
+  gap: 0.4rem;
 `;
 
 export const viewCount = css`
-  ${theme.fonts['body-12R']};
+  ${theme.fonts['caption-12B']};
   font-weight: 700;
   color: ${theme.colors['gray-04']};
   letter-spacing: 0.1px;
 `;
 
 export const viewText = css`
-  ${theme.fonts['body-12R']};
+  ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-04']};
 `;

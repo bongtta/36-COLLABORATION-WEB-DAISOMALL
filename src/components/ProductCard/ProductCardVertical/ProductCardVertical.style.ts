@@ -5,6 +5,7 @@ export const wrapper = (size: '96' | '128') => css`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  margin 1.1rem 1.2rem;
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
 `;
 
@@ -12,23 +13,14 @@ export const imageWrapper = (size: '96' | '128') => css`
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
   height: ${size === '96' ? '12.8rem' : '16.8rem'};
   position: relative;
-  border-radius: 2px;
   overflow: hidden;
 `;
 
 export const image = css`
   width: 100%;
   height: 100%;
+  border-radius: 2px;
   object-fit: cover;
-`;
-
-export const quantity = css`
-  padding: 0.2rem 0.6rem;
-  background-color: ${theme.colors['gray-01']};
-  color: ${theme.colors.white};
-  border-radius: 12px;
-  font-size: 1rem;
-  font-weight: 600;
 `;
 
 export const cartButton = css`

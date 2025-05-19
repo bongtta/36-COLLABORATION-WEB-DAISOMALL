@@ -11,6 +11,7 @@ export const rankingWrapper = css`
   height: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 0.7rem;
   align-items: center;
 `;
 

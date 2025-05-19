@@ -23,29 +23,28 @@ const TodayCard = ({
 
   return (
     <div css={T.wrapper}>
-      <div css={T.imageWrapper}>
-        <img src={imageUrl} alt="대표 이미지" css={T.mainImage} />
-      </div>
-
+      <img src={imageUrl} alt="대표 이미지" css={T.mainImage} />
       <div css={T.contentArea}>
-        <div css={T.topRow}>
-          <div css={T.profileArea}>
-            <img src={profileImage} alt={username} css={T.profileImage} />
-            <span css={T.username}>{username}</span>
+        <div css={T.infoGroup}>
+          <div css={T.topRow}>
+            <div css={T.profileArea}>
+              <img src={profileImage} alt={username} css={T.profileImage} />
+              <span css={T.username}>{username}</span>
+            </div>
+            <button
+              onClick={toggleBookmark}
+              css={[
+                T.bookmarkButton,
+                bookmarked ? T.bookmarkIconActive : T.bookmarkIcon,
+              ]}
+              aria-label="북마크"
+            >
+              <BookmarkIcon width={20} height={20} />
+            </button>
           </div>
-          <button
-            onClick={toggleBookmark}
-            css={[
-              T.bookmarkButton,
-              bookmarked ? T.bookmarkIconActive : T.bookmarkIcon,
-            ]}
-            aria-label="북마크"
-          >
-            <BookmarkIcon width={20} height={20} />
-          </button>
-        </div>
 
-        <p css={T.title}>{title}</p>
+          <p css={T.title}>{title}</p>
+        </div>
 
         <div css={T.viewRow}>
           <span css={T.viewCount}>{views.toLocaleString()}명</span>
