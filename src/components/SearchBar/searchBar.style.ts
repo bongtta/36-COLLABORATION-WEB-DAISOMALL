@@ -51,5 +51,4 @@ export const searchButton = css`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: ${theme.colors.black};
 `;
