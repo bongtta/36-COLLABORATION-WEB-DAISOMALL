@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import * as S from './FilterTabs.style'
 import { css } from '@emotion/react'
+import XIcon from '@assets/svgs/XIcon'
 
 type FilterOption = 'like-store' | 'pickup-able' | 'no-soldout' | 'no-store'
 
@@ -54,6 +55,11 @@ const FilterTabs = ({ onChange }: FilterTabsProps) => {
           >
             {label}
           </div>
+          {isSelected(key as FilterOption) && (
+            <div css={S.iconWrapper}>
+              <XIcon />
+            </div>
+          )}
         </div>
       ))}
     </div>

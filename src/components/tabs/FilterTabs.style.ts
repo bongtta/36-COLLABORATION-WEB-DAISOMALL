@@ -23,6 +23,7 @@ export const filterTab = css`
 export const selectedFilterTab = css`
   background: ${theme.colors['gray-01']};
   outline: 1px ${theme.colors['gray-01']} solid;
+  padding-right: 0.8rem;
 `
 
 export const filterTabText = css`
@@ -35,6 +36,14 @@ export const filterTabText = css`
 export const selectedFilterTabText = css`
   color: ${theme.colors.white};
   ${theme.fonts['button-14B']};
+`
+
+export const iconWrapper = css`
+  display: flex;
+  align-items: center;
+  margin-left: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
 `
 
 
