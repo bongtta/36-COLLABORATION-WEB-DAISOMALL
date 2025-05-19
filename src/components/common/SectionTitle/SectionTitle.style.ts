@@ -30,7 +30,7 @@ export const image = css`
 export const titleRow = css`
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
 `;
 
 export const titleDynamic = (color: string) => css`
@@ -63,7 +63,6 @@ export const icon = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 0.4rem;
 `;
 
 export const arrow = css`

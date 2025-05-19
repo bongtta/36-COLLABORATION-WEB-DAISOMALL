@@ -1,4 +1,5 @@
 import * as S from './SectionTitle.style';
+import theme from '@styles/theme';
 
 interface SectionTitleProps {
   title1: string;
@@ -16,8 +17,8 @@ const SectionTitle = ({
   subtitle,
   onClickAll,
   image,
-  title1Color = '#28323C',
-  title2Color = '#28323C',
+  title1Color = theme.colors['gray-01'],
+  title2Color = theme.colors['gray-01'],
 }: SectionTitleProps) => (
   <div css={S.wrapper}>
     <div css={S.topRow}>
