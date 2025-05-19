@@ -3,6 +3,7 @@ import theme from '@styles/theme';
 
 export const Wrapper = css`
   padding: 1.1rem 1.6rem 0.8rem;
+  width: 100%;
 `;
 
 export const TabList = css`
@@ -24,7 +25,7 @@ export const SelectedText = css`
   &::after {
     content: '';
     position: absolute;
-    bottom: -0.2rem;
+    bottom: -0.3rem;
     left: -0.32rem;
     width: 2.2rem;
     height: 0.3rem;
