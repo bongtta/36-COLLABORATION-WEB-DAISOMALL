@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as S from '@components/SearchBar/SearchBar.style';
+import * as S from '@components/SearchBar/searchBar.style';
 import { SearchIcon, BarcodeIcon, CancelIcon } from '@assets/svgs';
 
 interface SearchBarProps {
@@ -9,7 +9,7 @@ interface SearchBarProps {
 }
 
 const SearchBar = ({
-  placeholder = '검색어를 입력하세요',
+  placeholder = '상품명, 품번, 브랜드',
   onSearch,
   onClear,
 }: SearchBarProps) => {
@@ -46,10 +46,10 @@ const SearchBar = ({
         placeholder={placeholder}
       />
 
-      <div css={S.iconWrapper}>
+      <div css={S.iconWrapper(value !== '')}>
         {value === '' ? (
           <>
-            <BarcodeIcon css={S.barcodeIcon} width={24} />
+            <BarcodeIcon width={24} />
             <div css={S.divider} />
           </>
         ) : (
