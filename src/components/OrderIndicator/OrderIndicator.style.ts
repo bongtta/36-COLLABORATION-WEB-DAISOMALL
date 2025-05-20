@@ -11,6 +11,12 @@ export const IndicatorContainer = css`
   gap: 0.2rem;
 `;
 
+export const IndicatorPositionStyle = (bottomPadding: string) => css`
+  position: absolute;
+  bottom: ${bottomPadding};
+  right: 1.6rem;
+`;
+
 export const IndicatorItemStyle = (active: boolean) => css`
   text-align: center;
   color: ${active ? theme.colors.white : theme.colors['gray-05']};
