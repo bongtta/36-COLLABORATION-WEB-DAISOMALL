@@ -10,14 +10,14 @@ export const buttonStyle = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
+
   width: 100%;
   height: 4.8rem;
   padding: 1.2rem 1.6rem;
-  
+
   background-color: ${theme.colors.white};
   border: none;
-  
+
   cursor: pointer;
 `;
 
@@ -30,13 +30,13 @@ export const iconStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 2.4rem;
   height: 2.4rem;
   padding: 0 0.7rem;
-  
+
   color: ${theme.colors['gray-02']};
-  
+
   svg {
     width: 1rem;
     height: 0.5rem;
@@ -48,11 +48,11 @@ export const contentStyle = css`
   flex-direction: column;
   align-items: flex-start;
   gap: 1.6rem;
-  
+
   padding: 1.6rem;
-  
+
   background-color: ${theme.colors.white};
   color: ${theme.colors['gray-01']};
-  
+
   ${theme.fonts['body-14R']}
 `;

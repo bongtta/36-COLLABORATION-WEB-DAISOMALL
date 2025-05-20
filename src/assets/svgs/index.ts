@@ -1,6 +1,4 @@
-import React from 'react';
-
-export { React };
+export { default as SmallArrowRightIcon } from './SmallArrowRightIcon';
 export { default as SmallArrowDownIcon } from './SmallArrowDownIcon';
 export { default as SmallArrowUpIcon } from './SmallArrowUpIcon';
 export { default as ChatbotIcon } from './ChatbotIcon';

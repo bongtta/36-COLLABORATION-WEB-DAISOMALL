@@ -6,7 +6,7 @@ export const buttonStyle = css`
   bottom: 7.4rem;
   right: 1.6rem;
   z-index: 1;
-  
+
   display: flex;
   width: 3.8rem;
   height: 3.8rem;
@@ -14,19 +14,19 @@ export const buttonStyle = css`
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  
+
   border-radius: 20px;
   background-color: ${theme.colors['red-02']};
   box-shadow: ${theme.shadows.button};
   border: none;
-  
+
   cursor: pointer;
 `;
 
 export const iconStyle = css`
   width: 2.4rem;
   height: 2.4rem;
-  
+
   path {
     stroke: ${theme.colors.primary};
   }

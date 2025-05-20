@@ -8,16 +8,16 @@ const FloatingUpButton = () => {
   const checkVisibility = useCallback(() => {
     const pageHeight = document.documentElement.scrollHeight;
     const isPageTallEnough = pageHeight >= 500;
-    
+
     const scrollThreshold = 125;
     const hasScrolledEnough = window.scrollY > scrollThreshold;
-    
+
     setIsVisible(isPageTallEnough && hasScrolledEnough);
   }, []);
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
-    
+
     const debounceScroll = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(checkVisibility, 10);
@@ -27,7 +27,7 @@ const FloatingUpButton = () => {
     window.addEventListener('resize', debounceScroll, { passive: true });
 
     checkVisibility();
-    
+
     return () => {
       clearTimeout(timeoutId);
       window.removeEventListener('scroll', debounceScroll);
@@ -43,7 +43,7 @@ const FloatingUpButton = () => {
   };
 
   return (
-    <button 
+    <button
       css={S.buttonStyle(isVisible)}
       onClick={handleScrollToTop}
       aria-label="페이지 맨 위로 스크롤"
