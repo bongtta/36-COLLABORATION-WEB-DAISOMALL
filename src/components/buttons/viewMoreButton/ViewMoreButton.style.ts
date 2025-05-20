@@ -20,7 +20,6 @@ export const buttonStyle = css`
   background-color: ${theme.colors.white};
   border: 1px solid ${theme.colors['gray-04']};
   border-radius: 4px;
-  box-shadow: ${theme.shadows.viewMoreButton};
   
   cursor: pointer;
 `;
