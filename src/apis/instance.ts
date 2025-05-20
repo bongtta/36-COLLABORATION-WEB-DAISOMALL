@@ -1,11 +1,25 @@
 import axios, { AxiosError, type InternalAxiosRequestConfig, type AxiosResponse } from 'axios';
-import type { ApiResponse } from '../types/api';
+import type {
+  BaseApiResponse,
+  PageRequest,
+  GetBrandProductsResponseData,
+  GetProductDetailResponseData,
+  SearchedProduct, // SearchProductsResponseData 대신 SearchedProduct[], 명세 응답이 data.products 임
+  SearchProductsResponseData,
+  SortProductsRequest,
+  GetPopularProductsResponseData,
+  GetReviewsResponseData,
+  GetStoreStockInfoResponseData,
+  SearchStoreByNameResponseData,
+  FilterStoreRequestParams, // 요청 파라미터 타입
+  FilterStoresResponseData
+} from '../types/api';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL ; 
+const baseURL = import.meta.env.VITE_API_BASE_URL || '/api/v1'; // 환경 변수가 없으면 기본 /api/v1 사용 (명세서 기준)
 
 const instance = axios.create({
   baseURL,
-  timeout: 5000, // 5초 타임아웃
+  timeout: 10000, // 타임아웃 10초로 증가
   headers: {
     'Content-Type': 'application/json',
   },
@@ -14,17 +28,14 @@ const instance = axios.create({
 // 요청 인터셉터
 instance.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
-    // 요청 보내기 전에 수행할 작업 (예: 인증 토큰 추가)
+    // 예시: 인증 토큰 추가 로직 (필요시 주석 해제 및 수정)
     // const accessToken = localStorage.getItem('accessToken');
-    // if (accessToken) {
+    // if (accessToken && config.headers) {
     //   config.headers.Authorization = `Bearer ${accessToken}`;
     // }
-
-    console.log('Request Interceptor:', config);
     return config;
   },
   (error: AxiosError) => {
-    // 요청 오류가 있는 작업 수행
     console.error('Request Error Interceptor:', error);
     return Promise.reject(error);
   },
@@ -32,48 +43,149 @@ instance.interceptors.request.use(
 
 // 응답 인터셉터
 instance.interceptors.response.use(
-  (response: AxiosResponse<ApiResponse<unknown>>) => {
-    // 2xx 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
-    
-    // 응답 데이터가 있는 작업 수행
-    console.log('Response Interceptor:', response);
-    if (response.data && response.data.success) {
-      return response.data.data; // 실제 비즈니스 데이터 반환 (ApiResponse.data)
+  // API 응답 전체를 BaseApiResponse<T> 타입으로 받고, 실제 사용하는 data 필드만 반환
+  <T>(response: AxiosResponse<BaseApiResponse<T>>): T => {
+    // 명세서의 status가 200인 경우를 성공으로 간주 (실제 성공 코드는 API 설계에 따라 다를 수 있음)
+    // 일반적으로 status는 HTTP 상태 코드를 따르지만, 여기서는 응답 바디의 status를 사용
+    if (response.data && response.data.status === 0) { // 명세서에는 status: 0 으로 되어 있음
+      return response.data.data;
     }
-    // API 응답 형식에 success 필드가 없거나 false인 경우 에러로 처리할 수 있습니다.
-    // 이 부분은 실제 API 응답 구조에 맞춰 조정이 필요합니다.
-    return Promise.reject(
-      new Error(response.data?.error?.message || 'API 요청 실패'),
-    );
+    // 성공적이지 않은 응답 처리 (status가 0이 아니거나, data 필드가 없는 경우 등)
+    const errorMessage = response.data?.message || 'API 요청 처리 중 오류가 발생했습니다.';
+    console.error('API Error Message:', errorMessage, 'Status Code:', response.data?.status);
+    throw new Error(errorMessage);
   },
-  (error: AxiosError<ApiResponse<unknown>>) => {
-    // 2xx 외의 범위에 있는 상태 코드는 이 함수를 트리거 합니다.
-    // 응답 오류가 있는 작업 수행
+  (error: AxiosError<BaseApiResponse<unknown>>) => {
     console.error('Response Error Interceptor:', error);
 
     if (error.response) {
-      // 서버가 상태 코드로 응답한 경우
-      const { status, data } = error.response;
-      const errorMessage = data?.error?.message || error.message;
-
-      // 예시: 401 Unauthorized 경우 로그인 페이지로 리다이렉트
-      // if (status === 401) {
-      //   // window.location.href = '/login';
-      //   console.error('401 Unauthorized: 로그인 필요');
-      // }
-
-      // 다른 공통 에러 처리 로직 추가 가능
-      console.error(`Error ${status}: ${errorMessage}`);
-      return Promise.reject(new Error(errorMessage)); // 일관된 에러 메시지 반환
+      // 서버가 응답을 반환했지만, HTTP 상태 코드가 2xx 범위가 아닌 경우
+      const apiError = error.response.data;
+      const errorMessage = apiError?.message || error.message || '서버 응답 오류';
+      console.error(`Server Error (HTTP ${error.response.status}): ${errorMessage}`);
+      return Promise.reject(new Error(errorMessage));
     } if (error.request) {
       // 요청이 이루어졌으나 응답을 받지 못한 경우
       console.error('No response received:', error.request);
-      return Promise.reject(new Error('서버로부터 응답이 없습니다.'));
+      return Promise.reject(new Error('서버로부터 응답을 받지 못했습니다.'));
     }
-    // 요청을 설정하는 중에 문제가 발생한 경우
+    // 요청 설정 중 오류가 발생한 경우
     console.error('Error setting up request:', error.message);
     return Promise.reject(new Error('요청 설정 중 오류가 발생했습니다.'));
   },
 );
 
-export default instance; 
+// --- brand-controller ---
+/**
+ * GET /api/v1/brands/{brandId}/products 브랜드별 상품 조회
+ */
+export const getBrandProducts = async (
+  brandId: number,
+  params: PageRequest,
+): Promise<GetBrandProductsResponseData> => {
+  return instance.get(`/brands/${brandId}/products`, { params });
+};
+
+// --- product-controller ---
+/**
+ * GET /api/v1/products/{productId} 상품 상세 조회
+ */
+export const getProductDetail = async (
+  productId: number,
+): Promise<GetProductDetailResponseData> => {
+  return instance.get(`/products/${productId}`);
+};
+
+/**
+ * GET /api/v1/products/search 상품 검색 (상품명, 품번, 브랜드)
+ * @param keyword 검색어
+ * @param params 페이지네이션
+ */
+export const searchProducts = async (
+  keyword: string,
+  params: PageRequest, // specification.md 에서는 request 객체 안에 pageNumber, pageSize
+): Promise<SearchProductsResponseData> => {
+  return instance.get('/products/search', { params: { keyword, ...params } });
+};
+
+/**
+ * GET /api/v1/products/search/{keyword}/sort 상품 정렬 (최신, 가격 낮은 순, 높은 순)
+ * @param keyword 검색어
+ * @param params 정렬 옵션 및 페이지네이션 (SortProductsRequest 타입 사용)
+ */
+export const sortProducts = async (
+  keyword: string,
+  params: SortProductsRequest,
+): Promise<SearchProductsResponseData> => { // 응답은 SearchedProduct[]와 Pageable을 포함하는 SearchProductsResponseData
+  return instance.get(`/products/search/${keyword}/sort`, { params });
+};
+
+/**
+ * GET /api/v1/products/popular 지금 많이 찾는 상품 조회
+ */
+export const getPopularProducts = async (): Promise<GetPopularProductsResponseData> => {
+  return instance.get('/products/popular');
+};
+
+// --- review-controller ---
+/**
+ * GET /api/v1/reviews 상품에 대한 전체 리뷰를 조회합니다
+ * @param productId 상품 ID
+ * @param params 페이지네이션
+ */
+export const getReviews = async (
+  productId: number,
+  params: PageRequest,
+): Promise<GetReviewsResponseData> => {
+  return instance.get('/reviews', { params: { productId, ...params } }); // 명세서상 productId와 request 객체가 파라미터
+};
+
+// --- store-controller ---
+/**
+ * GET /api/v1/stores 상품별 매장 재고 기본 조희
+ * @param productId 상품 ID
+ * @param params 페이지네이션
+ */
+export const getStoreStockInfo = async (
+  productId: number,
+  params: PageRequest,
+): Promise<GetStoreStockInfoResponseData> => {
+  return instance.get('/stores', { params: { productId, ...params } }); // 명세서상 productId와 request 객체가 파라미터
+};
+
+/**
+ * GET /api/v1/stores/search 매장명으로 검색
+ * 특정 상품(productId)에 입고된 매장 목록을 매장 이름(keyword)으로 검색
+ * @param productId 상품 ID (query)
+ * @param keyword 매장명 키워드 (query)
+ * @param params 페이지네이션 (query)
+ */
+export const searchStoreByName = async (
+  productId: number,
+  keyword: string,
+  params: PageRequest,
+): Promise<SearchStoreByNameResponseData> => {
+  return instance.get('/stores/search', { params: { productId, keyword, ...params } });
+};
+
+/**
+ * GET /api/v1/stores/filter 상품별 매장 필터 조회
+ * @param productId 상품 ID (query)
+ * @param params 필터 조건 및 페이지네이션 (FilterStoreRequestParams 타입 사용)
+ * 명세서에는 basicRequest (pageNumber, pageSize)와 filterRequest (pickup, excludeOutOfStock, excludeStoreType) 로 나뉘어 있음.
+ * 이를 FilterStoreRequestParams 로 통합하여 전달.
+ */
+export const filterStores = async (
+  productId: number,
+  params: FilterStoreRequestParams,
+): Promise<FilterStoresResponseData> => {
+  return instance.get('/stores/filter', { params: { productId, ...params } });
+};
+
+// export default instance; // 필요에 따라 인스턴스를 직접 export 할 수도 있습니다.
+// 또는 각 API 함수들을 그룹화하여 export 할 수 있습니다.
+// 예:
+// export const brandApi = { getBrandProducts };
+// export const productApi = { getProductDetail, searchProducts, sortProducts, getPopularProducts };
+// export const reviewApi = { getReviews };
+// export const storeApi = { getStoreStockInfo, searchStoreByName, filterStores }; 
