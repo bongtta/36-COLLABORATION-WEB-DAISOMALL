@@ -9,11 +9,7 @@ const SmallArrowRightIcon = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M1 1L5 5L1 9"
-      stroke="currentColor"
-      strokeLinecap="square"
-    />
+    <path d="M1 1L5 5L1 9" stroke="currentColor" strokeLinecap="square" />
   </svg>
 );
 

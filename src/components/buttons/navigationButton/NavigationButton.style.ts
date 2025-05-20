@@ -12,16 +12,20 @@ export const buttonStyle = (variant: 'white' | 'gray') => css`
   justify-content: center;
   align-items: center;
   gap: ${variant === 'white' ? '0.4rem' : '0.8rem'};
-  
+
   width: 100%;
   max-width: 34.3rem;
   height: 4.8rem;
   padding: 1.5rem 11.5rem;
-  
-  background-color: ${variant === 'white' ? theme.colors.white : theme.colors['gray-06']};
-  border: ${variant === 'white' ? `1px solid ${theme.colors['gray-04']}` : 'none'};
+
+  background-color: ${variant === 'white'
+    ? theme.colors.white
+    : theme.colors['gray-06']};
+  border: ${variant === 'white'
+    ? `1px solid ${theme.colors['gray-04']}`
+    : 'none'};
   border-radius: 4px;
-  
+
   cursor: pointer;
 `;
 
@@ -44,7 +48,7 @@ export const iconContainer = css`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   width: 1.6rem;
   height: 1.6rem;
   flex-shrink: 0;

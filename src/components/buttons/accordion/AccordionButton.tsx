@@ -4,12 +4,16 @@ import Divider from '@components/common/divider/Divider';
 import * as S from './AccordionButton.style';
 
 interface AccordionButtonProps {
-  title: string;            // 아코디언 버튼 제목
+  title: string; // 아코디언 버튼 제목
   children: React.ReactNode; // 아코디언 내부 콘텐츠
-  defaultOpen?: boolean;    // 초기 상태 (기본값은 닫힘)
+  defaultOpen?: boolean; // 초기 상태 (기본값은 닫힘)
 }
 
-const AccordionButton = ({ title, children, defaultOpen = false }: AccordionButtonProps) => {
+const AccordionButton = ({
+  title,
+  children,
+  defaultOpen = false,
+}: AccordionButtonProps) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
   // 컴포넌트 상태에 따라 렌더링할 아이콘 결정
@@ -17,8 +21,8 @@ const AccordionButton = ({ title, children, defaultOpen = false }: AccordionButt
 
   return (
     <div css={S.accordionContainer}>
-      <button 
-        css={S.buttonStyle} 
+      <button
+        css={S.buttonStyle}
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-label={`${title} ${isOpen ? '닫기' : '열기'}`}
@@ -28,7 +32,7 @@ const AccordionButton = ({ title, children, defaultOpen = false }: AccordionButt
           <ArrowIcon />
         </span>
       </button>
-      
+
       {isOpen && (
         <>
           <Divider />

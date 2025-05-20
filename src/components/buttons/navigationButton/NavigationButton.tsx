@@ -15,14 +15,14 @@ const NavigationButton = ({
   count,
   to,
   variant = 'white',
-  onClick
+  onClick,
 }: NavigationButtonProps) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     // 페이지 이동
     navigate(to);
-    
+
     // 추가 콜백 실행
     if (onClick) onClick();
   };
@@ -35,11 +35,9 @@ const NavigationButton = ({
         aria-label={`${text} 페이지로 이동`}
       >
         <span css={S.textStyle}>{text}</span>
-        
-        {count !== undefined && (
-          <span css={S.countStyle}>{count}</span>
-        )}
-        
+
+        {count !== undefined && <span css={S.countStyle}>{count}</span>}
+
         <div css={S.iconContainer}>
           <SmallArrowRightIcon css={S.iconStyle} />
         </div>
