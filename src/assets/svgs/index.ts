@@ -1,3 +1,5 @@
+export { default as LikeIcon } from './LikeIcon';
+export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as LocationIcon } from './LocationIcon';
 export { default as StarIconWhite } from './StarIconWhite';
 export { default as SmallArrowRightIcon } from './SmallArrowRightIcon';
