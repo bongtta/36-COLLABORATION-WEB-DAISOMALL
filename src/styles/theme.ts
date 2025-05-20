@@ -27,6 +27,10 @@ const theme = {
     'brown-04': '#D6C6A7',
   },
 
+  shadows: {
+    button: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
+  },
+
   fonts: {
     // Pretendard
     'display-24B': {
@@ -176,5 +180,6 @@ const theme = {
 
 export type ColorType = typeof theme.colors;
 export type FontType = typeof theme.fonts;
+export type ShadowType = typeof theme.shadows;
 
 export default theme;

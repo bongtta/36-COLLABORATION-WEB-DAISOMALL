@@ -1,3 +1,6 @@
+export { default as React } from './React';
+export { default as ChatbotIcon } from './ChatbotIcon';
+export { default as FloatingUpIcon } from './FloatingUpIcon';
 export { default as RecentIcon } from './RecentIcon';
 export { default as BackIcon } from './BackIcon';
 export { default as CartIcon } from './CartIcon';
