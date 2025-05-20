@@ -9,12 +9,14 @@ interface ImageCarouselProps {
   images: string[];
   bottomPadding?: string;
   autoSlideInterval?: number;
+  autoplay?: boolean;
 }
 
 const ImageCarousel: React.FC<ImageCarouselProps> = ({
   images,
   bottomPadding = '1.1rem',
   autoSlideInterval = 5000,
+  autoplay = true,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -26,7 +28,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: !!autoSlideInterval,
+    autoplay: autoplay && !!autoSlideInterval,
     autoplaySpeed: autoSlideInterval,
     beforeChange: (_: number, nextIndex: number) => {
       setCurrentIndex(nextIndex);

@@ -32,6 +32,7 @@ function App() {
           images={bannerImages} 
           bottomPadding="1.1rem"
           autoSlideInterval={3000} // 3초마다 슬라이드 전환 (원하는 값으로 조정 가능)
+          autoplay={false} // 자동 슬라이드 기능 활성화 (기본값은 true)
         />
 
       </ThemeProvider>
