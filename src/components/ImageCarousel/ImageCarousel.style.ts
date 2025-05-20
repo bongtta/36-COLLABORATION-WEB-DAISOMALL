@@ -4,17 +4,28 @@ export const CarouselContainer = css`
   position: relative;
   width: 100%;
   overflow: hidden;
-`;
-
-export const ImageContainer = css`
-  width: 100%;
-  display: flex;
-  transition: transform 0.3s ease-in-out;
+  
+  .slick-slider {
+    width: 100%;
+  }
+  
+  .slick-track {
+    display: flex;
+  }
+  
+  .slick-slide {
+    height: auto;
+  }
+  
+  .slick-slide > div {
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const CarouselImage = css`
   width: 100%;
   height: auto;
   display: block;
-  flex-shrink: 0;
+  object-fit: cover;
 `;

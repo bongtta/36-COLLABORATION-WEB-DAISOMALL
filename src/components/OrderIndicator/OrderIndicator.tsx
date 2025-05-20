@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
 import { IndicatorContainer, IndicatorItemStyle, Divider } from './OrderIndicator.style';
 
 interface OrderIndicatorProps {
