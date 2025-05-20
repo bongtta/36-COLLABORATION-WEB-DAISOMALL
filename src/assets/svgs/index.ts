@@ -1,3 +1,5 @@
+export { default as React } from './React';
+export { default as XIcon } from './XIcon';
 export { default as LikeIcon } from './LikeIcon';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as LocationIcon } from './LocationIcon';
