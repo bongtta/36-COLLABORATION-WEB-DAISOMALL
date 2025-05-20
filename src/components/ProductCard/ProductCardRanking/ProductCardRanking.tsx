@@ -10,7 +10,6 @@ interface ProductCardRankingProps {
   tags?: string[];
   code?: string;
   showCartIcon?: boolean;
-  withOutline?: boolean;
 }
 
 const ProductCardRanking = ({
@@ -49,7 +48,7 @@ const ProductCardRanking = ({
     </div>
 
     {showCartIcon && (
-      <div css={R.cartIconWrapper}>
+      <div css={R.cartButton}>
         <CartIcon css={R.cartIcon} />
       </div>
     )}

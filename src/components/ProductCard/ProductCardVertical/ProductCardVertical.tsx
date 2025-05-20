@@ -56,7 +56,7 @@ const ProductCardVertical = ({
 
           {isBoxDelivery && quantityText && (
             <div css={S.unitPriceRow}>
-              <div css={R.priceRow}>
+              <div css={S.priceRow}>
                 <span css={S.unitPrice}>3,000</span>
                 <span css={S.unitWon}>원</span>
               </div>

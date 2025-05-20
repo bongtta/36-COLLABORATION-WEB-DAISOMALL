@@ -84,7 +84,7 @@ export const rankingName = css`
   text-overflow: ellipsis;
 `;
 
-export const cartIconWrapper = css`
+export const cartButton = css`
   width: 3.2rem;
   height: 3.2rem;
   display: flex;
@@ -93,20 +93,16 @@ export const cartIconWrapper = css`
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 `;
 
 export const cartIcon = css`
   width: 2rem;
   height: 2rem;
-
-  path {
-    stroke: ${theme.colors['gray-01']};
-  }
 `;
 
 export const tagList = css`
   display: flex;
-  flex-wrap: wrap;
   gap: 0.4rem;
   margin-top: 0.4rem;
 `;

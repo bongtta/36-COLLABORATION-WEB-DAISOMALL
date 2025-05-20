@@ -3,10 +3,9 @@ import theme from '@styles/theme';
 
 export const wrapper = css`
   width: 12.8rem;
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.7rem;
 `;
 
 export const mainImage = css`
@@ -55,7 +54,6 @@ export const bookmarkButton = css`
   all: unset;
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
 `;
 
@@ -71,7 +69,6 @@ export const bookmarkIconActive = css`
 export const title = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
-  line-height: 1.45;
 
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -88,9 +85,7 @@ export const viewRow = css`
 
 export const viewCount = css`
   ${theme.fonts['caption-12B']};
-  font-weight: 700;
   color: ${theme.colors['gray-04']};
-  letter-spacing: 0.1px;
 `;
 
 export const viewText = css`

@@ -5,14 +5,7 @@ export const wrapper = (size: '96' | '128') => css`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin 1.1rem 1.2rem;
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
-`;
-
-export const textGroup = css`
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
 `;
 
 export const imageWrapper = (size: '96' | '128') => css`
@@ -29,35 +22,10 @@ export const image = css`
   object-fit: cover;
 `;
 
-export const cartButton = css`
-  width: 3.2rem;
-  height: 3.2rem;
-  background: ${theme.colors['gray-06']};
-  border-radius: 8px;
-  position: absolute;
-  bottom: 0.4rem;
-  right: 0.4rem;
-  border: none;
-  cursor: pointer;
-`;
-
-export const infoArea = css`
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-`;
-
-export const tagList = css`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-`;
-
 export const snsBadge = css`
   position: absolute;
   top: 0.4rem;
   left: 0.4rem;
-  z-index: 1;
 `;
 
 export const boxBadge = css`
@@ -74,8 +42,26 @@ export const boxBadge = css`
 export const boxText = css`
   position: absolute;
   color: ${theme.colors.white};
-  font-size: 1rem;
-  font-weight: 700;
+  ${theme.fonts['caption-12B']};
+  padding: 0.7rem 0.3rem 0.3rem 0.3rem;
+  text-align: center;
+`;
+
+export const textGroup = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+`;
+
+export const infoArea = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+`;
+
+export const tagList = css`
+  display: flex;
+  gap: 0.4rem;
 `;
 
 export const unitPriceRow = css`
@@ -84,36 +70,18 @@ export const unitPriceRow = css`
   gap: 0.4rem;
 `;
 
+export const priceRow = css`
+  display: flex;
+  align-items: flex-start;
+`;
+
 export const unitPrice = css`
-  ${theme.fonts['caption-12B']}
+  ${theme.fonts['number-12R']}
   color: ${theme.colors['gray-01']};
 `;
 
-export const multiply = css`
-  font-family: 'Pretendard';
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: ${theme.colors['gray-03']};
-`;
-
-export const unitCount = css`
-  font-family: 'Pretendard';
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: ${theme.colors['white']};
-  background-color: ${theme.colors['gray-02']};
-  padding: 0 0.6rem;
-  height: 2rem;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-`;
-
 export const unitWon = css`
-  font-family: 'Pretendard';
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.45rem;
+  ${theme.fonts['caption-10SB']}
   color: ${theme.colors['gray-01']};
 `;
 
@@ -130,6 +98,23 @@ export const unitBadge = css`
 export const unitBadgeText = css`
   ${theme.fonts['caption-10SB']}
   color: ${theme.colors.white};
+`;
+
+export const cartButton = css`
+  width: 3.2rem;
+  height: 3.2rem;
+  background: ${theme.colors['gray-06']};
+  border-radius: 8px;
+  position: absolute;
+  bottom: 0.4rem;
+  right: 0.4rem;
+  border: none;
+  cursor: pointer;
+`;
+
+export const cartIcon = css`
+  width: 2rem;
+  height: 2rem;
 `;
 
 export const infoGroup = css`
@@ -152,13 +137,4 @@ export const priceWrapper = css`
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
-`;
-
-export const cartIcon = css`
-  width: 2rem;
-  height: 2rem;
-
-  path {
-    stroke: ${theme.colors['gray-01']};
-  }
 `;
