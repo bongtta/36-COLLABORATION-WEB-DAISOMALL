@@ -12,14 +12,13 @@ const OrderIndicator = ({
   totalItems,
 }: OrderIndicatorProps) => (
   <div css={IndicatorContainer}>
-    {Array.from({ length: totalItems }).map((_, index) => (
-      <React.Fragment key={index}>
-        <div css={IndicatorItemStyle(index === currentIndex)}>
-          {index + 1}
-        </div>
-        {index < totalItems - 1 && <div css={Divider}>|</div>}
-      </React.Fragment>
-    ))}
+    <div css={IndicatorItemStyle(true)}>
+      {currentIndex + 1}
+    </div>
+    <div css={Divider}>|</div>
+    <div css={IndicatorItemStyle(false)}>
+      {totalItems}
+    </div>
   </div>
 );
 
