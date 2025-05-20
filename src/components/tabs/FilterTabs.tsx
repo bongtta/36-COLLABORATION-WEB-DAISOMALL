@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import * as S from './FilterTabs.style'
 import { css } from '@emotion/react'
-import XIcon from '@assets/svgs/XIcon'
+import { XIcon } from '@assets/svgs'
 
 type FilterOption = 'like-store' | 'pickup-able' | 'no-soldout' | 'no-store'
 
