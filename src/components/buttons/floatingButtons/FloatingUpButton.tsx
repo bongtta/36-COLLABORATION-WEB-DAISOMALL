@@ -5,30 +5,19 @@ import * as S from './FloatingUpButton.style';
 const FloatingUpButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // rem -> px
-  const remToPx = useCallback((rem: number): number => {
-    const fontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    return rem * fontSize;
-  }, []);
-
-  // 스크롤 감지 함수
   const checkVisibility = useCallback(() => {
-    // 페이지 높이 체크
     const pageHeight = document.documentElement.scrollHeight;
-    const isPageTallEnough = pageHeight >= remToPx(50);
+    const isPageTallEnough = pageHeight >= 500;
     
-    // 스크롤 위치 체크
-    const scrollThreshold = remToPx(12.5);
+    const scrollThreshold = 125;
     const hasScrolledEnough = window.scrollY > scrollThreshold;
     
-    // 버튼 표시 조건
     setIsVisible(isPageTallEnough && hasScrolledEnough);
-  }, [remToPx]);
+  }, []);
 
   useEffect(() => {
     let timeoutId: ReturnType<typeof setTimeout>;
     
-    // 디바운스 함수
     const debounceScroll = () => {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(checkVisibility, 10);
@@ -59,11 +48,7 @@ const FloatingUpButton = () => {
       onClick={handleScrollToTop}
       aria-label="페이지 맨 위로 스크롤"
     >
-      <FloatingUpIcon 
-        width="1.3rem" 
-        height="1.3rem" 
-        css={S.iconStyle} 
-      />
+      <FloatingUpIcon css={S.iconStyle} />
     </button>
   );
 };
