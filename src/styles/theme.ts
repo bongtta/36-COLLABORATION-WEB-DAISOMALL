@@ -28,7 +28,7 @@ const theme = {
   },
 
   shadows: {
-    button: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
+    floatingButton: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
   },
 
   fonts: {
@@ -51,7 +51,7 @@ const theme = {
       fontFamily: 'Pretendard',
       fontWeight: 500,
       fontSize: '12px',
-      lineHeight: '145%',
+      lineHeight: '100%',
       letterSpacing: '0px',
     },
     'heading-16B': {
@@ -151,28 +151,28 @@ const theme = {
       fontFamily: 'Daiso',
       fontWeight: 400,
       fontSize: '40px',
-      lineHeight: '40px',
+      lineHeight: '100%',
       letterSpacing: '0px',
     },
     'number-18R': {
       fontFamily: 'Daiso',
       fontWeight: 400,
       fontSize: '18px',
-      lineHeight: '18px',
+      lineHeight: '100%',
       letterSpacing: '0px',
     },
     'number-16R': {
       fontFamily: 'Daiso',
       fontWeight: 400,
       fontSize: '16px',
-      lineHeight: '16px',
+      lineHeight: '100%',
       letterSpacing: '0px',
     },
     'number-12R': {
       fontFamily: 'Daiso',
       fontWeight: 400,
       fontSize: '12px',
-      lineHeight: '12px',
+      lineHeight: '100%',
       letterSpacing: '0px',
     },
   },
