@@ -48,7 +48,7 @@ export const allButton = css`
   align-items: center;
   background: none;
   border: none;
-  padding: 0;
+  gap: 0.6rem;
   cursor: pointer;
 `;
 

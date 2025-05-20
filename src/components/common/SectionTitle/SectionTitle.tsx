@@ -1,5 +1,6 @@
 import * as S from './SectionTitle.style';
 import theme from '@styles/theme';
+import { SmallArrowRightIcon } from '@assets/svgs';
 
 interface SectionTitleProps {
   title1: string;
@@ -31,9 +32,7 @@ const SectionTitle = ({
       </div>
       <button type="button" onClick={onClickAll} css={S.allButton}>
         <span css={S.allText}>전체보기</span>
-        <div css={S.icon}>
-          <div css={S.arrow} />
-        </div>
+        <SmallArrowRightIcon />
       </button>
     </div>
     {subtitle && <span css={S.subtitle}>{subtitle}</span>}
