@@ -3,26 +3,30 @@ import theme from '@styles/theme';
 
 export const buttonStyle = css`
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 10;
-  
-  width: 3.8rem;
-  height: 3.8rem;
-  border-radius: 50%;
-  
-  background-color: ${theme.colors['red-02']};
-  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.1);
-  border: none;
+  bottom: 7.4rem;
+  right: 1.6rem;
+  z-index: 1;
   
   display: flex;
-  align-items: center;
+  width: 3.8rem;
+  height: 3.8rem;
+  padding: 0.7rem;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  
+  border-radius: 20px;
+  background-color: ${theme.colors['red-02']};
+  box-shadow: ${theme.shadows.button};
+  border: none;
   
   cursor: pointer;
 `;
 
 export const iconStyle = css`
+  width: 2.4rem;
+  height: 2.4rem;
+  
   path {
     stroke: ${theme.colors.primary};
   }
