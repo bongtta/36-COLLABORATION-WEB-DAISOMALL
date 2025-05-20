@@ -44,7 +44,7 @@ instance.interceptors.request.use(
 instance.interceptors.response.use(
   // API 응답 전체를 BaseApiResponse<T> 타입으로 받고, 실제 사용하는 data 필드만 반환
   <T>(response: AxiosResponse<BaseApiResponse<T>>): T => {
-    // 명세서의 status가 200인 경우를 성공으로 간주 (실제 성공 코드는 API 설계에 따라 다를 수 있음)
+    // 명세서의 status가 200인 경우를 성공으로 간주
     // 일반적으로 status는 HTTP 상태 코드를 따르지만, 여기서는 응답 바디의 status를 사용
     if (response.data && response.data.status === 0) { // 명세서에는 status: 0 으로 되어 있음
       return response.data.data;
@@ -180,11 +180,3 @@ export const filterStores = async (
 ): Promise<FilterStoresResponseData> => {
   return instance.get('/stores/filter', { params: { productId, ...params } });
 };
-
-// export default instance; // 필요에 따라 인스턴스를 직접 export 할 수도 있습니다.
-// 또는 각 API 함수들을 그룹화하여 export 할 수 있습니다.
-// 예:
-// export const brandApi = { getBrandProducts };
-// export const productApi = { getProductDetail, searchProducts, sortProducts, getPopularProducts };
-// export const reviewApi = { getReviews };
-// export const storeApi = { getStoreStockInfo, searchStoreByName, filterStores }; 
