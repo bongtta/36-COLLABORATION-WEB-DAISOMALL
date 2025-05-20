@@ -9,6 +9,12 @@ export const wrapper = (size: '96' | '128') => css`
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
 `;
 
+export const textGroup = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+`;
+
 export const imageWrapper = (size: '96' | '128') => css`
   width: ${size === '96' ? '9.6rem' : '12.8rem'};
   height: ${size === '96' ? '12.8rem' : '16.8rem'};
@@ -26,11 +32,12 @@ export const image = css`
 export const cartButton = css`
   width: 3.2rem;
   height: 3.2rem;
+  background: ${theme.colors['gray-06']};
+  border-radius: 8px;
   position: absolute;
   bottom: 0.4rem;
   right: 0.4rem;
   border: none;
-  padding: 0;
   background: none;
   cursor: pointer;
 `;

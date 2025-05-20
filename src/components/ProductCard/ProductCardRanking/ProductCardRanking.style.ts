@@ -6,32 +6,23 @@ export const code = css`
   color: ${theme.colors['gray-03']};
 `;
 
-export const rankingWrapper = css`
-  width: 100%;
-  height: 100%;
+export const rankingWrapper = (hasCode: boolean) => css`
   display: flex;
-  justify-content: space-between;
-  gap: 0.7rem;
+  justify-content: ${hasCode ? 'flex-start' : 'space-between'};
   align-items: center;
-`;
-
-export const rankingWrapperOutline = css`
-  border-radius: 8px;
-  outline: 1px ${theme.colors['gray-05']} solid;
-  outline-offset: -1px;
-  padding: 1.1rem 0;
-`;
-
-export const rankingContent = css`
   width: 100%;
   height: 100%;
+`;
+
+export const rankingContent = (hasCode?: boolean) => css`
   display: flex;
-  gap: 1.2rem;
+  gap: ${hasCode ? '1.6rem' : '1.2rem'};
+  flex: 1;
 `;
 
 export const rankingNumber = css`
   position: relative;
-  ${theme.fonts['heading-14B']}
+  ${theme.fonts['number-18R']}
   color: ${theme.colors['gray-01']};
 `;
 
@@ -49,29 +40,33 @@ export const rankingImage = css`
   object-fit: cover;
 `;
 
-export const rankingInfoArea = css`
-  flex: 1 1 0;
+export const rankingInfoArea = (hasCode?: boolean) => css`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: ${hasCode ? '0.4rem' : '0.8rem'};
   padding: 0.4rem 0;
+  flex: 1;
 `;
 
-export const rankingTextGroup = css`
+export const rankingTextGroup = (hasCode?: boolean) => css`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: ${hasCode ? '0.2rem' : '0.4rem'};
 `;
 
 export const priceRow = css`
-  justify-content: flex-start;
-  align-items: center;
   display: flex;
+  align-items: baseline;
 `;
 
 export const rankingPrice = css`
+  ${theme.fonts['number-18R']};
+  color: ${theme.colors['gray-01']};
+`;
+
+export const rankingWon = css`
   ${theme.fonts['heading-16B']};
   color: ${theme.colors['gray-01']};
 `;
@@ -90,27 +85,18 @@ export const rankingName = css`
 export const cartIconWrapper = css`
   width: 3.2rem;
   height: 3.2rem;
-  cursor: pointer;
-  right: 2rem;
-  position: relative;
-`;
-
-export const cartIconBg = css`
-  width: 3.2rem;
-  height: 3.2rem;
+  display: flex;
   background: ${theme.colors['gray-06']};
   border-radius: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const cartIcon = css`
-  position: absolute;
-  top: 0.6rem;
-  left: 0.6rem;
   width: 2rem;
   height: 2rem;
+
   path {
     stroke: ${theme.colors['gray-01']};
   }

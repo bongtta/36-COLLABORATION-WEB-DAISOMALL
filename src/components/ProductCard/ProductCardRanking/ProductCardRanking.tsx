@@ -21,25 +21,25 @@ const ProductCardRanking = ({
   tags = [],
   code,
   showCartIcon = true,
-  withOutline = false,
 }: ProductCardRankingProps) => (
-  <div css={[R.rankingWrapper, withOutline && R.rankingWrapperOutline]}>
-    <div css={R.rankingContent}>
+  <div css={R.rankingWrapper(!!code)}>
+    <div css={R.rankingContent(!!code)}>
       <div css={R.rankingNumber}>{rank}</div>
 
       <div css={R.rankingImageWrapper}>
         <img src={imageUrl} alt={name} css={R.rankingImage} />
       </div>
 
-      <div css={R.rankingInfoArea}>
-        <div css={R.rankingTextGroup}>
+      <div css={R.rankingInfoArea(!!code)}>
+        <div css={R.rankingTextGroup(!!code)}>
           <div css={R.priceRow}>
-            <span css={R.rankingPrice}>{price}원</span>
+            <span css={R.rankingPrice}>{price}</span>
+            <span css={R.rankingWon}>원</span>
           </div>
           <p css={R.rankingName}>{name}</p>
         </div>
 
-        {code && <p css={R.code}>품번: {code}</p>}
+        {code ? <p css={R.code}>품번: {code}</p> : null}
         <div css={R.tagList}>
           {tags.map((tag) => (
             <ProductTag key={tag} type={tag} />
@@ -50,7 +50,6 @@ const ProductCardRanking = ({
 
     {showCartIcon && (
       <div css={R.cartIconWrapper}>
-        <div css={R.cartIconBg} />
         <CartIcon css={R.cartIcon} />
       </div>
     )}

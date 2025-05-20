@@ -42,15 +42,15 @@ const ProductCardVertical = ({
       )}
 
       <button css={S.cartButton}>
-        <div css={R.cartIconBg} />
         <CartIcon css={R.cartIcon} />
       </button>
     </div>
 
     <div css={S.infoArea}>
-      <div css={R.rankingTextGroup}>
+      <div css={S.textGroup}>
         <div css={R.priceRow}>
-          <span css={R.rankingPrice}>{price}원</span>
+          <span css={R.rankingPrice}>{price}</span>
+          <span css={R.rankingWon}>원</span>
         </div>
         {isBoxDelivery && quantityText && (
           <div css={S.unitPriceRow}>
