@@ -8,13 +8,11 @@ export interface ProductTagProps {
   icon?: ReactNode;
 }
 
-const ProductTag = ({ label, bg, color, icon }: ProductTagProps) => {
-  return (
-    <div css={S.Tag(bg, Boolean(icon))}>
-      {icon}
-      <span css={S.Text(color)}>{label}</span>
-    </div>
-  );
-};
+const ProductTag = ({ label, bg, color, icon }: ProductTagProps) => (
+  <div css={S.Tag(bg, Boolean(icon))}>
+    {icon}
+    <span css={S.Text(color)}>{label}</span>
+  </div>
+);
 
 export default ProductTag;

@@ -1,3 +1,4 @@
+export { default as LocationIcon } from './LocationIcon';
 export { default as StarIconWhite } from './StarIconWhite';
 export { default as SmallArrowRightIcon } from './SmallArrowRightIcon';
 export { default as SmallArrowDownIcon } from './SmallArrowDownIcon';

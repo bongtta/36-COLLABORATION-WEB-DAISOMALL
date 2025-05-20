@@ -9,11 +9,13 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <Global styles={GlobalStyle} />
-        <div css={css`
-          display: inline-flex;
-          align-items: center;
-          gap: 0.4rem;
-        `}>
+        <div
+          css={css`
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+          `}
+        >
           {productTags.map((tag, idx) => (
             <ProductTag key={idx} {...tag} />
           ))}
