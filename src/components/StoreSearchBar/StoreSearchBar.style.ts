@@ -1,11 +1,6 @@
 import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
-export const Label = css`
-  ${theme.fonts['heading-14B']};
-  color: ${theme.colors['gray-01']};
-`;
-
 export const Divider = css`
   width: 1px;
   height: 1.6rem;
@@ -21,12 +16,10 @@ export const Explanation = css`
 export const ExplanationText = css`
   ${theme.fonts['body-12R']};
   color: ${theme.colors['gray-03']};
-  line-height: 1.45;
 `;
 
 export const Wrapper = css`
   width: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -36,6 +29,7 @@ export const SearchBar = css`
   width: 100%;
   padding: 0.8rem;
   border-bottom: 1px solid ${theme.colors['gray-01']};
+  height: 4rem;
 `;
 
 export const TopRow = css`
@@ -48,8 +42,8 @@ export const TopRow = css`
 export const IconGroup = css`
   display: flex;
   align-items: center;
+  cursor: pointer;
   gap: 0.8rem;
-  flex-shrink: 0;
 `;
 
 export const InputField = css`

@@ -30,11 +30,7 @@ const StoreSearchBar = ({ onSearch }: StoreSearchBarProps) => {
             onChange={(e) => setKeyword(e.target.value)}
             onKeyDown={handleKeyDown}
           />
-          <div
-            css={S.IconGroup}
-            onClick={handleSearch}
-            style={{ cursor: 'pointer' }}
-          >
+          <div css={S.IconGroup} onClick={handleSearch}>
             <LocationIcon width={24} height={24} />
             <div css={S.Divider} />
             <SearchIcon width={24} height={24} />
