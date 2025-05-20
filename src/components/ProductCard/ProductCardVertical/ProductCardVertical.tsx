@@ -46,25 +46,29 @@ const ProductCardVertical = ({
       </button>
     </div>
 
-    <div css={S.infoArea}>
-      <div css={S.textGroup}>
-        <div css={R.priceRow}>
-          <span css={R.rankingPrice}>{price}</span>
-          <span css={R.rankingWon}>원</span>
-        </div>
-        {isBoxDelivery && quantityText && (
-          <div css={S.unitPriceRow}>
-            <div css={R.priceRow}>
-              <span css={S.unitPrice}>3,000</span>
-              <span css={S.unitWon}>원</span>
-            </div>
-            <MultipleIcon width={5} />
-            <div css={S.unitBadge}>
-              <span css={S.unitBadgeText}>{quantityText}</span>
-            </div>
+    <div css={S.infoGroup}>
+      <div css={S.infoArea}>
+        <div css={S.textGroup}>
+          <div css={R.priceRow}>
+            <span css={R.rankingPrice}>{price}</span>
+            <span css={R.rankingWon}>원</span>
           </div>
-        )}
-        <p css={R.rankingName}>{name}</p>
+
+          {isBoxDelivery && quantityText && (
+            <div css={S.unitPriceRow}>
+              <div css={R.priceRow}>
+                <span css={S.unitPrice}>3,000</span>
+                <span css={S.unitWon}>원</span>
+              </div>
+              <MultipleIcon width={5} />
+              <div css={S.unitBadge}>
+                <span css={S.unitBadgeText}>{quantityText}</span>
+              </div>
+            </div>
+          )}
+
+          <p css={R.rankingName}>{name}</p>
+        </div>
       </div>
 
       <div css={S.tagList}>

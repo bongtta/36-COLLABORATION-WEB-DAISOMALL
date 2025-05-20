@@ -148,3 +148,9 @@ export const unitBadgeText = css`
   ${theme.fonts['caption-10SB']}
   color: ${theme.colors.white};
 `;
+
+export const infoGroup = css`
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+`;
