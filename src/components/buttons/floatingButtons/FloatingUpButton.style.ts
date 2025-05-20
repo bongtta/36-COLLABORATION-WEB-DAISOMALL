@@ -13,7 +13,7 @@ export const buttonStyle = (isVisible: boolean) => css`
   border-radius: 20px;
   
   background-color: ${theme.colors.white};
-  box-shadow: ${theme.shadows.button};
+  box-shadow: ${theme.shadows.floatingButton};
   border: none;
   
   display: flex;
