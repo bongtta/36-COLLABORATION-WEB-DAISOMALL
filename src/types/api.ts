@@ -1,12 +1,3 @@
-export interface ApiResponse<T> {
-  success: boolean;
-  data: T;
-  error?: {
-    code: string;
-    message: string;
-  };
-}
-
 // 기본 API 응답 구조
 export interface BaseApiResponse<T = unknown> {
   status: number;

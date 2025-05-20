@@ -4,22 +4,21 @@ import type {
   PageRequest,
   GetBrandProductsResponseData,
   GetProductDetailResponseData,
-  SearchedProduct, // SearchProductsResponseData 대신 SearchedProduct[], 명세 응답이 data.products 임
   SearchProductsResponseData,
   SortProductsRequest,
   GetPopularProductsResponseData,
   GetReviewsResponseData,
   GetStoreStockInfoResponseData,
   SearchStoreByNameResponseData,
-  FilterStoreRequestParams, // 요청 파라미터 타입
+  FilterStoreRequestParams,
   FilterStoresResponseData
 } from '../types/api';
 
-const baseURL = import.meta.env.VITE_API_BASE_URL || '/api/v1'; // 환경 변수가 없으면 기본 /api/v1 사용 (명세서 기준)
+const baseURL = import.meta.env.VITE_API_BASE_URL; // 환경 변수가 없으면 기본 /api/v1 사용 (명세서 기준)
 
 const instance = axios.create({
   baseURL,
-  timeout: 10000, // 타임아웃 10초로 증가
+  timeout: 3000, // 타임아웃 3초
   headers: {
     'Content-Type': 'application/json',
   },
