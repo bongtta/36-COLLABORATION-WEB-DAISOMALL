@@ -181,5 +181,6 @@ const theme = {
 
 export type ColorType = typeof theme.colors;
 export type FontType = typeof theme.fonts;
+export type ShadowType = typeof theme.shadows;
 
 export default theme;
