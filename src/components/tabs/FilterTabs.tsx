@@ -45,22 +45,22 @@ const FilterTabs = ({ onChange }: FilterTabsProps) => {
         <div
           key={key}
           data-option={key}
-          data-selected={isSelected(key as FilterOption)}
+          data-selected={isSelected(key)}
           css={css`
             ${S.filterTab}
-            ${isSelected(key as FilterOption) && S.selectedFilterTab}
+            ${isSelected(key) && S.selectedFilterTab}
           `}
-          onClick={() => handleFilterClick(key as FilterOption)}
+          onClick={() => handleFilterClick(key)}
         >
           <div
             css={css`
               ${S.filterTabText}
-              ${isSelected(key as FilterOption) && S.selectedFilterTabText}
+              ${isSelected(key) && S.selectedFilterTabText}
             `}
           >
             {label}
           </div>
-          {isSelected(key as FilterOption) && (
+          {isSelected(key) && (
             <div css={S.iconWrapper}>
               <XIcon />
             </div>
