@@ -1,4 +1,6 @@
 export { default as React } from './React';
+export { default as SmallArrowDownIcon } from './SmallArrowDownIcon';
+export { default as SmallArrowUpIcon } from './SmallArrowUpIcon';
 export { default as ChatbotIcon } from './ChatbotIcon';
 export { default as FloatingUpIcon } from './FloatingUpIcon';
 export { default as RecentIcon } from './RecentIcon';
