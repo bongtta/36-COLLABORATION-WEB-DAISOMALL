@@ -24,7 +24,9 @@ const AccordionButton = ({ title, children, defaultOpen = false }: AccordionButt
         aria-label={`${title} ${isOpen ? '닫기' : '열기'}`}
       >
         <span css={S.titleStyle}>{title}</span>
-        <ArrowIcon css={S.iconStyle} />
+        <span css={S.iconStyle}>
+          <ArrowIcon />
+        </span>
       </button>
       
       {isOpen && (
