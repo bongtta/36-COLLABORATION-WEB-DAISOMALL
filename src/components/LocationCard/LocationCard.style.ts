@@ -95,6 +95,12 @@ export const tagRow = css`
   gap: 0.8rem;
 `;
 
+export const tagItem = css`
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+`;
+
 export const standText = css`
   ${theme.fonts['heading-16B']};
   color: ${theme.colors['gray-01']};

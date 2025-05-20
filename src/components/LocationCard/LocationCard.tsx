@@ -62,34 +62,37 @@ const LocationCard = ({
       ) : (
         <div css={S.bottomSection}>
           <div css={S.tagRow}>
-            {floor && (
+            <div css={S.tagItem}>
               <LocationTag
                 label={`${floor}`}
                 color={isSoldOut ? 'gray' : 'red'}
               />
-            )}
+            </div>
+
             <span css={S.divider} />
-            {stand && (
-              <>
-                <LocationTag
-                  label={`${stand}`}
-                  color={isSoldOut ? 'gray' : 'red'}
-                />
-                <span css={isSoldOut ? S.standTextGray : S.standText}>
-                  매대
-                </span>
-              </>
-            )}
+
+            <div css={S.tagItem}>
+              <LocationTag
+                label={`${stand}`}
+                color={isSoldOut ? 'gray' : 'red'}
+              />
+              <span css={isSoldOut ? S.standTextGray : S.standText}>매대</span>
+            </div>
+
             <span css={S.divider} />
-            {isSoldOut ? (
-              <LocationTag label="일시품절" color="gray" />
-            ) : (
-              <>
-                <span css={S.standText}>재고</span>
-                <LocationTag label={`${stock ?? 0}개`} color="red" />
-              </>
-            )}
+
+            <div css={S.tagItem}>
+              {!isSoldOut ? (
+                <>
+                  <span css={S.standText}>재고</span>
+                  <LocationTag label={`${stock ?? 0}개`} color="red" />
+                </>
+              ) : (
+                <LocationTag label="일시품절" color="gray" />
+              )}
+            </div>
           </div>
+
           <StoreActionButton isSoldOut={isSoldOut} />
         </div>
       )}
