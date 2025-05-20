@@ -6,7 +6,8 @@ import { CartIcon, SnsIcon, BoxIcon, MultipleIcon } from '@assets/svgs';
 interface ProductCardVerticalProps {
   size: '96' | '128';
   name: string;
-  price: string;
+  totalPrice: string;
+  unitPrice?: string;
   imageUrl?: string;
   tags?: string[];
   quantityText?: string;
@@ -17,7 +18,8 @@ interface ProductCardVerticalProps {
 const ProductCardVertical = ({
   size,
   name,
-  price,
+  totalPrice,
+  unitPrice,
   imageUrl,
   tags = [],
   quantityText,
@@ -50,14 +52,14 @@ const ProductCardVertical = ({
       <div css={S.infoArea}>
         <div css={S.textGroup}>
           <div css={S.priceWrapper}>
-            <span css={S.priceSpan}>{price}</span>
+            <span css={S.priceSpan}>{totalPrice}</span>
             <span css={S.StyledSpan}>원</span>
           </div>
 
           {isBoxDelivery && quantityText && (
             <div css={S.unitPriceRow}>
               <div css={S.priceRow}>
-                <span css={S.unitPrice}>3,000</span>
+                <span css={S.unitPrice}>{unitPrice}</span>
                 <span css={S.unitWon}>원</span>
               </div>
               <MultipleIcon width={5} />
