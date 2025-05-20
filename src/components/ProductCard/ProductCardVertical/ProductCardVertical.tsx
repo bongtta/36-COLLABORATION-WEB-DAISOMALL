@@ -49,9 +49,9 @@ const ProductCardVertical = ({
     <div css={S.infoGroup}>
       <div css={S.infoArea}>
         <div css={S.textGroup}>
-          <div css={R.priceRow}>
-            <span css={R.rankingPrice}>{price}</span>
-            <span css={R.rankingWon}>원</span>
+          <div css={S.priceWrapper}>
+            <span css={S.priceSpan}>{price}</span>
+            <span css={S.StyledSpan}>원</span>
           </div>
 
           {isBoxDelivery && quantityText && (

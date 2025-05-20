@@ -72,7 +72,7 @@ export const rankingWon = css`
 `;
 
 export const rankingName = css`
-  ${theme.fonts['body-14R']};
+  ${theme.fonts['body-12R']};
   color: ${theme.colors['gray-01']};
 
   display: -webkit-box;

@@ -136,7 +136,7 @@ export const unitDividerRight = css`
 
 export const unitBadge = css`
   height: 1.6rem;
-  padding: 0.2rem 0.6rem;
+  padding: 0.2rem 0.3rem;
   background: ${theme.colors['gray-01']};
   border-radius: 12px;
   display: flex;
@@ -153,4 +153,27 @@ export const infoGroup = css`
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+`;
+
+export const priceSpan = css`
+  color: ${theme.colors['gray-01']};
+  ${theme.fonts['number-12R']};
+  font-family: DAISOA;
+  font-weight: 400;
+  line-height: 12px;
+  word-wrap: break-word;
+`;
+
+export const StyledSpan = css`
+  color: ${theme.colors['gray-01']};
+  ${theme.fonts['caption-10SB']};
+  word-wrap: break-word;
+`;
+
+export const priceWrapper = css`
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
 `;
