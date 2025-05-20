@@ -28,7 +28,7 @@ const theme = {
   },
 
   shadows: {
-    button: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
+    floatingButton: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
   },
 
   fonts: {
