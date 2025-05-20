@@ -42,7 +42,7 @@ const ProductCardVertical = ({
       )}
 
       <button css={S.cartButton}>
-        <CartIcon css={R.cartIcon} />
+        <CartIcon css={S.cartIcon} />
       </button>
     </div>
 

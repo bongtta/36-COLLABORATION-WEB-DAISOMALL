@@ -6,12 +6,14 @@ export const code = css`
   color: ${theme.colors['gray-03']};
 `;
 
-export const rankingWrapper = (hasCode: boolean) => css`
+export const rankingWrapper = (hasCode?: boolean) => css`
   display: flex;
-  justify-content: ${hasCode ? 'flex-start' : 'space-between'};
   align-items: center;
+  justify-content: ${hasCode ? 'flex-start' : 'space-between'};
   width: 100%;
   height: 100%;
+  justify-content: space-between;
+  gap: 1.6rem;
 `;
 
 export const rankingContent = (hasCode?: boolean) => css`

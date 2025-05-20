@@ -38,7 +38,6 @@ export const cartButton = css`
   bottom: 0.4rem;
   right: 0.4rem;
   border: none;
-  background: none;
   cursor: pointer;
 `;
 
@@ -118,22 +117,6 @@ export const unitWon = css`
   color: ${theme.colors['gray-01']};
 `;
 
-export const unitDividerLeft = css`
-  width: 0.45rem;
-  height: 0.45rem;
-  outline: 0.07rem ${theme.colors['gray-01']} solid;
-  outline-offset: -0.035rem;
-`;
-
-export const unitDividerRight = css`
-  width: 0.45rem;
-  height: 0.45rem;
-  transform: rotate(180deg);
-  transform-origin: top left;
-  outline: 0.07rem ${theme.colors['gray-01']} solid;
-  outline-offset: -0.035rem;
-`;
-
 export const unitBadge = css`
   height: 1.6rem;
   padding: 0.2rem 0.3rem;
@@ -157,23 +140,25 @@ export const infoGroup = css`
 
 export const priceSpan = css`
   color: ${theme.colors['gray-01']};
-  ${theme.fonts['number-12R']};
-  font-family: DAISOA;
-  font-weight: 400;
-  line-height: 12px;
-  word-wrap: break-word;
+  ${theme.fonts['number-16R']};
 `;
 
 export const StyledSpan = css`
   color: ${theme.colors['gray-01']};
-  ${theme.fonts['caption-10SB']};
-  word-wrap: break-word;
+  ${theme.fonts['heading-14B']};
 `;
 
 export const priceWrapper = css`
-  width: 100%;
-  height: 100%;
   justify-content: flex-start;
   align-items: flex-start;
   display: flex;
+`;
+
+export const cartIcon = css`
+  width: 2rem;
+  height: 2rem;
+
+  path {
+    stroke: ${theme.colors['gray-01']};
+  }
 `;
