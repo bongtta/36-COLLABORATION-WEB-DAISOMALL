@@ -17,6 +17,6 @@ export const StatusDot = (isOpen: boolean) => css`
 `;
 
 export const StatusLabel = css`
-  ${theme.fonts['body-12R']};
+  ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-02']};
 `;

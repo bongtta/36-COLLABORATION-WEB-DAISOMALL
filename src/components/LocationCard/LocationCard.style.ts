@@ -6,14 +6,13 @@ export const wrapper = css`
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 2vw, 1.6rem);
+  gap: 1.6rem;
 `;
 
 export const topSection = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: clamp(0.8rem, 2vw, 1.2rem);
 `;
 
 export const storeInfo = css`
@@ -27,7 +26,6 @@ export const titleRow = css`
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  flex-wrap: wrap;
 `;
 
 export const storeName = css`
@@ -36,7 +34,7 @@ export const storeName = css`
 `;
 
 export const distance = css`
-  ${theme.fonts['body-12R']};
+  ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
 `;
 
@@ -46,7 +44,7 @@ export const pickupBadge = css`
   border-radius: 2px;
   background: ${theme.colors['gray-05']};
   ${theme.fonts['caption-10SB']};
-  color: ${theme.colors['gray-02']};
+  color: ${theme.colors['gray-03']};
   display: flex;
   align-items: center;
 `;
@@ -89,15 +87,12 @@ export const bottomSection = css`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
-  gap: clamp(0.8rem, 2vw, 1.2rem);
 `;
 
 export const tagRow = css`
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  flex-wrap: wrap;
 `;
 
 export const standText = css`
@@ -114,7 +109,7 @@ export const actionButton = css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  ${theme.fonts['body-12R']};
+  ${theme.fonts['button-12R']};
   color: ${theme.colors['gray-01']};
   cursor: pointer;
 `;
@@ -135,7 +130,7 @@ export const tagStyle = (color: 'gray' | 'red' = 'red') => css`
   color: ${color === 'red' ? theme.colors['primary'] : theme.colors['gray-03']};
   background-color: ${color === 'red'
     ? theme.colors['red-02']
-    : theme.colors['gray-06']};
+    : theme.colors['gray-04']};
 `;
 
 export const standTextGray = css`
