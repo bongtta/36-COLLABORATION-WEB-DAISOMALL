@@ -27,6 +27,11 @@ const theme = {
     'brown-04': '#D6C6A7',
   },
 
+  shadows: {
+    floatingButton: '0px 0px 0.9rem 0px rgba(0, 0, 0, 0.15)',
+    viewMoreButton: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+  },
+
   fonts: {
     // Pretendard
     'display-24B': {
