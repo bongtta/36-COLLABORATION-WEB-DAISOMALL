@@ -36,7 +36,7 @@ export const TopRow = css`
   display: flex;
   width: 100%;
   align-items: center;
-  gap: 0.8rem;
+  justify-content: space-between;
 `;
 
 export const IconGroup = css`
