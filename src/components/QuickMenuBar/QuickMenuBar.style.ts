@@ -18,20 +18,19 @@ export const menuItem = css`
   width: 7.2rem;
   height: 7.2rem;
   background: ${theme.colors['gray-06']};
-  border-radius: 0.8rem;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.4rem;
-  padding: 0.8rem 0;
   border: none;
   cursor: pointer;
+  padding-bottom: 0.9rem;
 `;
 
 export const icon = css`
-  width: 3.6rem;
-  height: 3.6rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;

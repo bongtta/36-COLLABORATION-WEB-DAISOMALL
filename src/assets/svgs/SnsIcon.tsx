@@ -1,36 +1,36 @@
 import type { SVGProps } from 'react';
 const SvgSnsIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 36 36"
+    viewBox="0 0 50 50"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     {...props}
   >
-    <circle cx="18" cy="18" r="18" fill="url(#paint0_linear_1_470)" />
-    <rect width="36" height="36" fill="url(#pattern0_1_470)" />
+    <circle cx="25" cy="25" r="18" fill="url(#paint0_linear_4697_1489)" />
+    <rect x="7" y="7" width="36" height="36" fill="url(#pattern0_4697_1489)" />
     <defs>
       <pattern
-        id="pattern0_1_470"
+        id="pattern0_4697_1489"
         patternContentUnits="objectBoundingBox"
         width="1"
         height="1"
       >
-        <use xlinkHref="#image0_1_470" transform="scale(0.00357143)" />
+        <use xlinkHref="#image0_4697_1489" transform="scale(0.00357143)" />
       </pattern>
       <linearGradient
-        id="paint0_linear_1_470"
-        x1="18"
-        y1="0"
-        x2="18"
-        y2="36"
+        id="paint0_linear_4697_1489"
+        x1="25"
+        y1="7"
+        x2="25"
+        y2="43"
         gradientUnits="userSpaceOnUse"
       >
         <stop offset="0.307692" stopColor="#FFEEE8" />
         <stop offset="1" stopColor="#F1352B" />
       </linearGradient>
       <image
-        id="image0_1_470"
+        id="image0_4697_1489"
         width="280"
         height="280"
         preserveAspectRatio="none"
