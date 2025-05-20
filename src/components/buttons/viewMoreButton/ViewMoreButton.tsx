@@ -38,10 +38,13 @@ const ViewMoreButton = ({
             aria-label={`${buttonText} 버튼`}
           >
             <span css={S.textStyle}>{buttonText}</span>
-            <SmallArrowDownIcon css={S.iconStyle} />
+            <div css={S.iconWrapperStyle}>
+              <SmallArrowDownIcon css={S.iconStyle} />
+            </div>
           </button>
         </div>
       )}
+      
       
       {/* 콘텐츠 (펼쳐졌을 때만 표시) */}
       {isExpanded && (

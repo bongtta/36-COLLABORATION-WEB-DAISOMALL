@@ -5,8 +5,6 @@ export const viewMoreContainer = css`
   width: 100%;
   display: flex;
   justify-content: center;
-  
-  margin: 1.5rem 0;
 `;
 
 export const buttonStyle = css`
@@ -15,16 +13,16 @@ export const buttonStyle = css`
   align-items: center;
   gap: 0.4rem;
   
-  width: 34.3rem;
+  width: 100%;
+  height: 4.8rem;
   padding: 1.5rem 11.5rem;
   
   background-color: ${theme.colors.white};
-  border: 0.1rem solid ${theme.colors['gray-04']};
-  border-radius: 0.4rem;
-  box-shadow: 0px 0.4rem 0.4rem 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid ${theme.colors['gray-04']};
+  border-radius: 4px;
+  box-shadow: ${theme.shadows.viewMoreButton};
   
   cursor: pointer;
-  box-sizing: border-box;
 `;
 
 export const textStyle = css`
@@ -34,11 +32,19 @@ export const textStyle = css`
   white-space: nowrap;
 `;
 
-export const iconStyle = css`
-  color: ${theme.colors['gray-02']};
+export const iconWrapperStyle = css`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  min-width: 0.75rem;
-  min-height: 0.75rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 0.7rem;
+  flex-shrink: 0;
+`;
+
+export const iconStyle = css`
+  flex-shrink: 0;
 `;
 
 export const contentStyle = css`
