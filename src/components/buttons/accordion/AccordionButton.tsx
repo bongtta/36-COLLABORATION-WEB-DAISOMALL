@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { SmallArrowDownIcon, SmallArrowUpIcon } from '@assets/svgs';
-import Divider from '../../divider/Divider';
+import Divider from '@components/common/divider/Divider';
 import * as S from './AccordionButton.style';
 
 interface AccordionButtonProps {
