@@ -30,6 +30,7 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@pages/*": ["src/pages/*"],
+      "@routes/*": ["src/routes/*"],
       "@constants/*": ["src/constants/*"],
       "@types/*": ["src/types/*"],
       "@styles/*": ["src/styles/*"],
