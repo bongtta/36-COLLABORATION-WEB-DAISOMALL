@@ -1,1 +1,13 @@
-export { default as React } from './React';
+export { default as SmallArrowRightIcon } from './SmallArrowRightIcon';
+export { default as SmallArrowDownIcon } from './SmallArrowDownIcon';
+export { default as SmallArrowUpIcon } from './SmallArrowUpIcon';
+export { default as ChatbotIcon } from './ChatbotIcon';
+export { default as FloatingUpIcon } from './FloatingUpIcon';
+export { default as RecentIcon } from './RecentIcon';
+export { default as BackIcon } from './BackIcon';
+export { default as CartIcon } from './CartIcon';
+export { default as Logo } from './Logo';
+export { default as SearchIcon } from './SearchIcon';
+export { default as TohomeIcon } from './TohomeIcon';
+export { default as BarcodeIcon } from './BarcodeIcon';
+export { default as CancelIcon } from './CancelIcon';

@@ -56,19 +56,3 @@ export const allText = css`
   ${theme.fonts['button-12R']};
   color: ${theme.colors['gray-01']};
 `;
-
-export const icon = css`
-  width: 1.6rem;
-  height: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const arrow = css`
-  width: 0.6rem;
-  height: 0.6rem;
-  border-right: 1px solid ${theme.colors['gray-02']};
-  border-bottom: 1px solid ${theme.colors['gray-02']};
-  transform: rotate(-45deg);
-`;
