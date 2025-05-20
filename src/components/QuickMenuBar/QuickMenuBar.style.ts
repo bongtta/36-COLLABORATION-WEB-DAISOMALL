@@ -37,7 +37,7 @@ export const icon = css`
 `;
 
 export const label = css`
-  color: ${theme.colors['gray-01']};
+  color: ${theme.colors['gray-02']};
   ${theme.fonts['display-12M']};
   white-space: nowrap;
 `;
