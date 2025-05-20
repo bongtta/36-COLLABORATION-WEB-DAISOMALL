@@ -5,6 +5,11 @@ import { XIcon } from '@assets/svgs'
 
 type FilterOption = 'like-store' | 'pickup-able' | 'no-soldout' | 'no-store'
 
+interface FilterOptions {
+  key: FilterOption;
+  label: string;
+}
+
 interface FilterTabsProps {
   onChange?: (selectedOptions: FilterOption[]) => void
 }
@@ -12,7 +17,7 @@ interface FilterTabsProps {
 const FilterTabs = ({ onChange }: FilterTabsProps) => {
   const [selectedOptions, setSelectedOptions] = useState<FilterOption[]>([])
 
-  const filterOptions = [
+  const filterOptions: FilterOptions[] = [
     { key: 'like-store', label: '관심 매장' },
     { key: 'pickup-able', label: '픽업 가능 매장' },
     { key: 'no-soldout', label: '일시품절 제외' },
