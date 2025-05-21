@@ -69,3 +69,11 @@ const SkeletonBase = styled.div`
 export const SkeletonImage = styled(SkeletonBase)``;
 
 export const SkeletonMoreWrapper = styled(SkeletonBase)``;
+
+export const EmptyReviewText = styled.div`
+  width: 100%;
+  padding: 2rem 0;
+  text-align: center;
+  ${theme.fonts['body-14M']};
+  color: ${theme.colors['gray-03']};
+`;
