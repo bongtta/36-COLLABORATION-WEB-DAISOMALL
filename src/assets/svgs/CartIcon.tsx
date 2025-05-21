@@ -1,21 +1,17 @@
 import type { SVGProps } from 'react';
 const SvgCartIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    viewBox="0 0 20 20"
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
     {...props}
   >
+    <path stroke="#28323C" strokeWidth={1.5} d="M6 7h13l2 14H4z" />
     <path
-      stroke="#374553"
-      strokeWidth={1.2}
-      d="M4.8002 5.59998H15.2002L16.8002 16.8H3.2002L4.8002 5.59998Z"
-    />
-    <path
-      stroke="#374553"
-      strokeWidth={1.2}
+      stroke="#28323C"
       strokeLinecap="round"
-      d="M12 7.19998V3.59998C12 2.49541 11.1046 1.59998 10 1.59998V1.59998C8.89543 1.59998 8 2.4954 8 3.59997V7.19998"
+      strokeWidth={1.5}
+      d="M15 9V4.5A2.5 2.5 0 0 0 12.5 2v0A2.5 2.5 0 0 0 10 4.5V9"
     />
   </svg>
 );

@@ -1,6 +1,7 @@
 import * as S from './ProductCardVertical.style';
 import * as R from '../ProductCardRanking/ProductCardRanking.style';
-import ProductTag from '../ProductTag';
+import ProductTag from '@components/Tag/ProductTag';
+import type { ProductTagData } from '@components/Tag/tagData';
 import { CartIcon, SnsIcon, BoxIcon, MultipleIcon } from '@assets/svgs';
 
 interface ProductCardVerticalProps {
@@ -9,7 +10,7 @@ interface ProductCardVerticalProps {
   totalPrice: string;
   unitPrice?: string;
   imageUrl?: string;
-  tags?: string[];
+  tags?: ProductTagData[];
   quantityText?: string;
   isSnsHot?: boolean;
   isBoxDelivery?: boolean;
@@ -75,7 +76,13 @@ const ProductCardVertical = ({
 
       <div css={S.tagList}>
         {tags.map((tag) => (
-          <ProductTag key={tag} type={tag} />
+          <ProductTag
+            key={tag.label}
+            label={tag.label}
+            bg={tag.bg}
+            color={tag.color}
+            icon={tag.icon}
+          />
         ))}
       </div>
     </div>

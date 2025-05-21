@@ -1,13 +1,14 @@
 import * as R from '@components/ProductCard/ProductCardRanking/ProductCardRanking.style';
-import ProductTag from '@components/ProductCard/ProductTag';
+import ProductTag from '@components/Tag/ProductTag';
 import { CartIcon } from '@assets/svgs';
+import type { ProductTagData } from '@components/Tag/tagData';
 
 interface ProductCardRankingProps {
   rank?: number;
   imageUrl: string;
   name: string;
   price: string;
-  tags?: string[];
+  tags?: ProductTagData[];
   code?: string;
   showCartIcon?: boolean;
 }
@@ -41,7 +42,13 @@ const ProductCardRanking = ({
         {code ? <p css={R.code}>품번: {code}</p> : null}
         <div css={R.tagList}>
           {tags.map((tag) => (
-            <ProductTag key={tag} type={tag} />
+            <ProductTag
+              key={tag.label}
+              label={tag.label}
+              bg={tag.bg}
+              color={tag.color}
+              icon={tag.icon}
+            />
           ))}
         </div>
       </div>
