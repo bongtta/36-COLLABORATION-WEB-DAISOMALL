@@ -1,17 +1,17 @@
 import { Global, ThemeProvider } from '@emotion/react';
-import { BrowserRouter } from 'react-router-dom';
 import theme from '@styles/theme';
 import GlobalStyle from './styles/global';
-import Router from '@routes/Router';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import pageRoutes from '@routes/pageRoutes';
 
 function App() {
+  const router = createBrowserRouter([...pageRoutes]);
+
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <Global styles={GlobalStyle} />
-        <Router />
-      </ThemeProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <Global styles={GlobalStyle} />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
 
