@@ -31,3 +31,6 @@ export { default as MypageIcon } from './MypageIcon';
 export { default as OfflineSearchActive } from './OfflineSearchActive';
 export { default as OfflineSearchLarge } from './OfflineSearchLarge';
 export { default as OfflineSearch } from './OfflineSearch';
+export { default as DeliverySortIcon } from './DeliverySortIcon';
+export { default as EventIcon } from './EventIcon';
+export { default as BizIcon } from './BizIcon';

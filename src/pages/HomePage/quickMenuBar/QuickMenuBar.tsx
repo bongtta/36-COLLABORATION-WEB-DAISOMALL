@@ -5,6 +5,9 @@ import {
   PickupIcon,
   HolidayArrivalIcon,
   DeliveryIcon,
+  DeliverySortIcon,
+  EventIcon,
+  BizIcon,
 } from '@assets/svgs';
 
 interface QuickMenuItem {
@@ -17,11 +20,14 @@ interface QuickMenuBarProps {
 }
 
 const QUICK_MENUS: QuickMenuItem[] = [
-  { icon: <SnsIcon />, label: 'SNS핫템' },
+  { icon: <SnsIcon width={34} />, label: 'SNS핫템' },
   { icon: <StoreSearchIcon />, label: '매장재고' },
   { icon: <PickupIcon />, label: '매장픽업' },
   { icon: <HolidayArrivalIcon />, label: '휴일도착' },
   { icon: <DeliveryIcon />, label: '정기배송' },
+  { icon: <DeliverySortIcon width={34} />, label: '대량주문' },
+  { icon: <EventIcon width={34} />, label: '이벤트' },
+  { icon: <BizIcon width={34} />, label: 'BIZ' },
 ];
 
 const QuickMenuBar = ({ onStoreSearchClick }: QuickMenuBarProps) => (

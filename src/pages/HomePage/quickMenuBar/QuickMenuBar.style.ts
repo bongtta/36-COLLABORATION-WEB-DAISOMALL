@@ -3,7 +3,7 @@ import theme from '@styles/theme';
 
 export const wrapper = css`
   display: flex;
-  overflow-x: visible;
+  overflow-x: auto;
   gap: 0.8rem;
   padding: 2rem 1.6rem;
   -webkit-overflow-scrolling: touch;
