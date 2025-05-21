@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import * as S from './ProductPageInfo.style';
-import { ArrowRightIcon } from '@assets/svgs';
+import { ArrowRightIcon, StarIcon } from '@assets/svgs';
 
 const ProductPageInfo = () => {
   return (
@@ -25,9 +25,7 @@ const ProductPageInfo = () => {
         </div>
         <div css={S.Rating}>
           <div css={S.RatingIconWrapper}>
-            <div css={S.RatingIconBackground} />
-            <div css={S.RatingIconOutline} />
-            <div css={S.RatingIconFill} />
+            <StarIcon />
           </div>
           <div css={S.RatingText}>4.8점</div>
           <div css={S.ReviewCount}>(1.1만)</div>

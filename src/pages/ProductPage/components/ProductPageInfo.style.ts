@@ -106,38 +106,11 @@ export const Rating = css`
 `;
 
 export const RatingIconWrapper = css`
-  width: 11px;
-  height: 11px;
-  position: relative;
-  overflow: hidden;
-`;
-
-export const RatingIconBackground = css`
-  width: 11px;
-  height: 11px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: ${theme.colors.white};
-`;
-
-export const RatingIconOutline = css`
-  width: 10px;
-  height: 10px;
-  left: 0.5px;
-  top: 0.5px;
-  position: absolute;
-  outline: 1px ${theme.colors['gray-03']} solid;
-  outline-offset: -0.5px;
-`;
-
-export const RatingIconFill = css`
-  width: 10.69px;
-  height: 10.16px;
-  left: 0.16px;
-  top: 0.42px;
-  position: absolute;
-  background: ${theme.colors.primary};
+  width: 1.1rem;
+  height: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 `;
 
 export const RatingText = css`
