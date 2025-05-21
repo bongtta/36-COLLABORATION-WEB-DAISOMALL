@@ -5,11 +5,16 @@ export const homeWrapper = css`
   margin-bottom: 5.6rem;
 `;
 
+export const sectionWrapper = (hasBanner: boolean) => css`
+  margin: ${hasBanner ? '1.6rem 0rem' : '2rem 0rem'};
+  gap: 2.4rem;
+`;
+
 export const wrapper = css`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  margin: 2rem;
+  margin: 2rem 1.6rem;
 `;
 
 export const cardWrapper = css`

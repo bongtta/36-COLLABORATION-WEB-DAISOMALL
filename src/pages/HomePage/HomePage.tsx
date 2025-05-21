@@ -1,16 +1,12 @@
 import HomeCarousel from '@components/homeCarousel/HomeCarousel';
 import QuickMenuBar from './quickMenuBar/QuickMenuBar';
-import Divider from '@pages/HomePage/HomeDivider/HomeDivider';
+import HomeDivider from '@pages/HomePage/HomeDivider/HomeDivider';
+import Divider from '@components/common/divider/Divider';
 import HomeSectionCard from './HomeSectionCard/HomeSectionCard';
 import SpecialSection from '@pages/HomePage/SpecialSection/HomeSectionCard';
 import Header from '@components/Header/Header';
 import HeaderNav from '@components/HeaderNav/HeaderNav';
 import * as H from '@pages/HomePage/HomeSectionCard/HomeSectionCard.style';
-import ImageCarousel from '@components/ImageCarousel/ImageCarousel';
-import bannerImg1 from '/home-banner-1.png';
-import bannerImg2 from '/home-banner-2.png';
-
-const bannerImages = [bannerImg1, bannerImg2];
 
 import { FIRST_RANKING_PRODUCTS } from './mockData/section1Data';
 import { SECOND_RANKING_PRODUCTS } from './mockData/section2Data';
@@ -24,20 +20,15 @@ const HomePage = () => (
     <HeaderNav />
     <HomeCarousel />
     <QuickMenuBar />
-    <ImageCarousel
-      images={bannerImages}
-      bottomPadding="1.1rem"
-      autoSlideInterval={3000}
-      autoplay={true}
-    />
     <Divider />
 
     <HomeSectionCard
       title1="오늘의 추천 상품"
       productList={FIRST_RANKING_PRODUCTS}
+      hasBanner={true}
     />
 
-    <Divider />
+    <HomeDivider />
 
     <HomeSectionCard
       title1="지금 올라온 따끈따끈 신상"
@@ -45,7 +36,7 @@ const HomePage = () => (
       productList={SECOND_RANKING_PRODUCTS}
     />
 
-    <Divider />
+    <HomeDivider />
 
     <HomeSectionCard
       title1="고객 반응 베스트"
@@ -53,14 +44,14 @@ const HomePage = () => (
       productList={THIRD_RANKING_PRODUCTS}
     />
 
-    <Divider />
+    <HomeDivider />
 
     <SpecialSection
       title1="시원한 얼음 아이스트레이"
       subtitle="시원하게 더위 이겨내세요"
     />
 
-    <Divider />
+    <HomeDivider />
 
     <HomeSectionCard
       title1="시원한 얼음 아이스트레이"
