@@ -77,7 +77,7 @@ export const ProductName = css`
 export const Price = css`
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 1px;
+  gap: 0.1rem;
   display: inline-flex;
 `;
 
@@ -98,10 +98,10 @@ export const PriceUnit = css`
 `;
 
 export const Rating = css`
-  height: 14px;
+  height: 1.4rem;
   justify-content: flex-start;
   align-items: center;
-  gap: 3px;
+  gap: 0.3rem;
   display: inline-flex;
 `;
 
