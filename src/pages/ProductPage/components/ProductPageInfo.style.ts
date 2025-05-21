@@ -2,18 +2,18 @@ import { css } from '@emotion/react';
 
 export const ProductInfoWrapper = css`
   width: 100%;
-  height: 100%;
+
   justify-content: space-between;
   align-items: flex-start;
   display: inline-flex;
 `;
 
 export const ProductDetails = css`
-  width: 293px;
+  
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1.6rem;
   display: inline-flex;
 `;
 
@@ -22,7 +22,7 @@ export const ProductBrandAndName = css`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 8px;
+  gap: 0.8rem;
   display: flex;
 `;
 
