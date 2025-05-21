@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import * as S from './ProductPageInfo.style';
-import { ArrowRightIcon, StarIcon } from '@assets/svgs';
+import { ArrowRightIcon, StarIcon, ShareIcon } from '@assets/svgs';
 
 const ProductPageInfo = () => {
   return (
@@ -31,13 +31,10 @@ const ProductPageInfo = () => {
           <div css={S.ReviewCount}>(1.1만)</div>
         </div>
       </div>
-      <div css={S.ActionButtons}>
         <div css={S.ShareButton}>
-          <div css={S.ShareButtonIconTop} />
-          <div css={S.ShareButtonIconBottom} />
+          <ShareIcon css={S.ShareIcon} />
         </div>
       </div>
-    </div>
   );
 };
 

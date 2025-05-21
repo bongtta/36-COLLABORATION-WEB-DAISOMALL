@@ -131,41 +131,16 @@ export const ReviewCount = css`
   word-wrap: break-word;
 `;
 
-export const ActionButtons = css`
-  height: 32px;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  overflow: hidden;
+export const ShareButton = css`
+  padding-top: 0.1rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 10px;
-  display: flex;
 `;
 
-export const ShareButton = css`
-  width: 24px;
-  height: 24px;
-  position: relative;
-`;
-
-export const ShareButtonIconTop = css`
-  width: 16.5px;
-  height: 5.5px;
-  left: 3.75px;
-  top: 14.75px;
-  position: absolute;
-  outline: 2px ${theme.colors['gray-01']} solid;
-  outline-offset: -1px;
-`;
-
-export const ShareButtonIconBottom = css`
-  width: 9.9px;
-  height: 4.4px;
-  left: 6.75px;
-  top: 3.75px;
-  position: absolute;
-  outline: 2px ${theme.colors['gray-01']} solid;
-  outline-offset: -1px;
+export const ShareIcon = css`
+  width: 1.7rem;
+  height: 1.7rem;
 `; 
