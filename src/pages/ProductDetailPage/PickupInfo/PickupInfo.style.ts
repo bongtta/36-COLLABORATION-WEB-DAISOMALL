@@ -3,7 +3,7 @@ import theme from '@styles/theme';
 
 export const Wrapper = css`
   width: 100%;
-  padding: 3.2rem 1.6rem;
+  padding: 3.2rem 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -14,6 +14,7 @@ export const Title = css`
   ${theme.fonts['heading-14B']};
   color: ${theme.colors['gray-01']};
   text-align: left;
+  padding: 0 1.6rem;
 `;
 
 export const MethodList = css`
@@ -22,6 +23,7 @@ export const MethodList = css`
   justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
+  
 `;
 
 export const MethodItem = css`
@@ -91,18 +93,17 @@ export const BetaTag = css`
   line-height: 1; // BETA 태그는 줄바꿈이 없으므로
 `;
 
-
 export const InfoSection = css`
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 2.2rem;
 `;
 
 export const InfoRow = css`
   display: flex;
-  padding-left: 4px;
-  padding-right: 4px;
-  gap: 10px; // 레이블과 컨텐츠 사이 간격
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  gap: 1rem; // 레이블과 컨텐츠 사이 간격
 `;
 
 export const InfoLabel = css`
@@ -176,18 +177,6 @@ export const TempIcon = css`
   }
 `;
 
-export const HiddenText = css`
-  /* 화면에는 보이지 않지만 스크린 리더 등에는 읽히도록 */
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-`;
-
 export const PickupInfoText = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
@@ -195,4 +184,8 @@ export const PickupInfoText = css`
   
   /* 여러 줄 텍스트의 줄바꿈 처리를 위해 white-space 추가 */
   white-space: pre-line; 
+`;
+
+export const ButtonContainer = css`
+  padding: 0 1.6rem;
 `;
