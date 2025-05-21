@@ -1,3 +1,8 @@
+export { default as BookmarkIcon } from './BookmarkIcon';
+export { default as SnsIcon } from './SnsIcon';
+export { default as BoxIcon } from './BoxIcon';
+export { default as MultipleIcon } from './MultipleIcon';
+export { default as XIcon } from './XIcon';
 export { default as LikeIcon } from './LikeIcon';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as LocationIcon } from './LocationIcon';
