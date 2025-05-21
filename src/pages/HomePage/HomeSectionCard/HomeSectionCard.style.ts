@@ -1,6 +1,10 @@
 import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
+export const homeWrapper = css`
+  margin-bottom: 5.6rem;
+`;
+
 export const wrapper = css`
   display: flex;
   flex-direction: column;

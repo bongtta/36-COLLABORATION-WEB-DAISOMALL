@@ -5,6 +5,12 @@ import HomeSectionCard from './HomeSectionCard/HomeSectionCard';
 import SpecialSection from '@pages/HomePage/SpecialSection/HomeSectionCard';
 import Header from '@components/Header/Header';
 import HeaderNav from '@components/HeaderNav/HeaderNav';
+import * as H from '@pages/HomePage/HomeSectionCard/HomeSectionCard.style';
+import ImageCarousel from '@components/ImageCarousel/ImageCarousel';
+import bannerImg1 from '/home-banner-1.png';
+import bannerImg2 from '/home-banner-2.png';
+
+const bannerImages = [bannerImg1, bannerImg2];
 
 import { FIRST_RANKING_PRODUCTS } from './mockData/section1Data';
 import { SECOND_RANKING_PRODUCTS } from './mockData/section2Data';
@@ -13,11 +19,17 @@ import { FOURTH_RANKING_PRODUCTS } from './mockData/section4Data';
 import BottomNav from '@components/BottomNav/BottomNav';
 
 const HomePage = () => (
-  <div>
+  <div css={H.homeWrapper}>
     <Header showLogo={true} showCartIcon={true} showSearchIcon={true} />
     <HeaderNav />
     <HomeCarousel />
     <QuickMenuBar />
+    <ImageCarousel
+      images={bannerImages}
+      bottomPadding="1.1rem"
+      autoSlideInterval={3000}
+      autoplay={true}
+    />
     <Divider />
 
     <HomeSectionCard
