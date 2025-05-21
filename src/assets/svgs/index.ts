@@ -12,7 +12,6 @@ export { default as CartIcon } from './CartIcon';
 export { default as ChatbotIcon } from './ChatbotIcon';
 export { default as DeliveryIconCycle } from './DeliveryIconCycle';
 export { default as DeliveryIconTruck } from './DeliveryIconTruck';
-export { default as DeliveryboxIcon } from './DeliveryboxIcon';
 export { default as FloatingUpIcon } from './FloatingUpIcon';
 export { default as HomeIconActive } from './HomeIconActive';
 export { default as HomeIcon } from './HomeIcon';
