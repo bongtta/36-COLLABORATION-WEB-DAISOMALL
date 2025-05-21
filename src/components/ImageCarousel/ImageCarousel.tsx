@@ -33,7 +33,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({
     beforeChange: (_: number, nextIndex: number) => {
       setCurrentIndex(nextIndex);
     },
-    adaptiveHeight: true // 이미지 높이에 따라 슬라이더 높이 조절
+    adaptiveHeight: true, // 이미지 높이에 따라 슬라이더 높이 조절
   };
 
   return (

@@ -1,7 +1,3 @@
-const StoreSearchPage = () => {
-  return (
-    <div>StoreSearchPage</div>
-  )
-}
+const StoreSearchPage = () => <div>StoreSearchPage</div>;
 
-export default StoreSearchPage
+export default StoreSearchPage;
