@@ -131,7 +131,11 @@ export const ReviewCount = css`
 `;
 
 export const ShareButton = css`
+  background: none;
+  border: none;
+  appearance: none;
   padding-top: 0.1rem;
+  cursor: pointer;
   width: 3.2rem;
   height: 3.2rem;
   display: flex;
