@@ -35,27 +35,24 @@ export const Brand = css`
 
 export const BrandText = css`
   color: ${theme.colors['gray-01']};
-  font-size: 14px;
-  font-family: Pretendard;
-  font-weight: 400;
-  line-height: 20.3px;
-  word-wrap: break-word;
+  ${theme.fonts['button-14R']};
 `;
 
-export const BrandIconWrapper = css`
-  width: 24px;
-  height: 24px;
+export const RightArrowWrapper = css`
+  width: 2.4rem;
+  height: 2.4rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   display: flex;
 `;
 
-export const BrandIcon = css`
-  width: 4px;
-  height: 8px;
-  outline: 1px ${theme.colors['gray-02']} solid;
-  outline-offset: -0.5px;
+export const RightArrow = css`
+  width: 1.2rem;
+  height: 2.4rem;
+  path {
+    stroke: ${theme.colors['gray-02']};
+    stroke-width: 0.1rem;
+  }
 `;
 
 export const NameAndPrice = css`

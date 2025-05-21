@@ -1,6 +1,6 @@
-import React from 'react';
 /** @jsxImportSource @emotion/react */
 import * as S from './ProductPageInfo.style';
+import { ArrowRightIcon } from '@assets/svgs';
 
 const ProductPageInfo = () => {
   return (
@@ -9,8 +9,8 @@ const ProductPageInfo = () => {
         <div css={S.ProductBrandAndName}>
           <div css={S.Brand}>
             <div css={S.BrandText}>VT</div>
-            <div css={S.BrandIconWrapper}>
-              <div css={S.BrandIcon} />
+            <div css={S.RightArrowWrapper}>
+              <ArrowRightIcon css={S.RightArrow} />
             </div>
           </div>
           <div css={S.NameAndPrice}>
