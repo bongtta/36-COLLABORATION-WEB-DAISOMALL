@@ -7,7 +7,6 @@ export const Wrapper = css`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 `;
 
 export const Title = css`
@@ -15,6 +14,7 @@ export const Title = css`
   color: ${theme.colors['gray-01']};
   text-align: left;
   padding: 0 1.6rem;
+  padding-bottom: 2rem;
 `;
 
 export const MethodList = css`

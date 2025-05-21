@@ -3,15 +3,16 @@ import theme from '../../../styles/theme'; // 경로 수정
 
 export const InfoRow = css`
   display: flex;
-  padding-left: 1.6rem; // Wrapper의 패딩이 없어졌으므로 여기서 추가
+  padding-left: 1.6rem; 
   padding-right: 1.6rem;
-  gap: 1rem; // 10px -> 1rem
+  gap: 0.6rem;
 `;
 
 export const InfoLabel = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-03']};
-  width: 7rem; // 70px -> 7rem
+  width: 7rem;
+  padding-left: 0.4rem;
 `;
 
 export const InfoContent = css`

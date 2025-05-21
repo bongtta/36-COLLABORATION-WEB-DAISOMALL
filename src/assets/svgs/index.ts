@@ -1,3 +1,6 @@
+export { default as BetaMark } from './BetaMark';
+export { default as PickupTomorrow } from './PickupTomorrow';
+export { default as QuestionCircle } from './QuestionCircle';
 export { default as CategoryIconNew } from './CategoryIconNew';
 export { default as ArrowRightIcon } from './ArrowRightIcon';
 export { default as BackIcon } from './BackIcon';

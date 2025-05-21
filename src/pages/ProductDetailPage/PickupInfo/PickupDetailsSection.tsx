@@ -1,4 +1,6 @@
 import * as S from './PickupDetailsSection.style';
+import PickupTomorrow from '@assets/svgs/PickupTomorrow'; // PickupTomorrow 아이콘 추가
+import QuestionCircle from '@assets/svgs/QuestionCircle'; // QuestionCircle 아이콘 추가
 
 // import ClockIcon from '@assets/svgs/ClockIcon'; // Clock 아이콘 추가 필요
 // import QuestionIcon from '@assets/svgs/QuestionIcon'; // Question 아이콘 추가 필요
@@ -13,12 +15,9 @@ const PickupDetailsSection = () => {
           <div css={S.TextWithIcon}>
             <span>매장픽업 마감, 지금 결제하면</span>
             <span css={S.HighlightBackground}>
-              {/* <ClockIcon width={12} height={12} /> */}
-              <span css={S.TempIcon} aria-label="시계 아이콘" /> {/* 임시 아이콘 */}
-              <span>4/29(화) 14시</span>
+              <PickupTomorrow width={68.75} height={22} />
             </span>
-            {/* <QuestionIcon width={16} height={16} /> */}
-            <span css={S.TempIcon} aria-label="도움말 아이콘" /> {/* 임시 아이콘 */}
+            <QuestionCircle width={16} height={16} />
           </div>
           <div css={S.TextWithIcon}>
             <span css={S.PickupInfoText}>
@@ -26,13 +25,11 @@ const PickupDetailsSection = () => {
               <br />
               24시간 이내 발송, 최대 2일까지 픽업 가능
             </span>
-            {/* <QuestionIcon width={16} height={16} /> */}
-            <span css={S.TempIcon} aria-label="도움말 아이콘" /> {/* 임시 아이콘 */}
+            <QuestionCircle width={16} height={16} />
           </div>
           <div css={S.TextWithIcon}>
             <span>픽업 수수료 200원</span>
-            {/* <QuestionIcon width={16} height={16} /> */}
-            <span css={S.TempIcon} aria-label="도움말 아이콘" /> {/* 임시 아이콘 */}
+            <QuestionCircle width={16} height={16} />
           </div>
         </div>
       </div>

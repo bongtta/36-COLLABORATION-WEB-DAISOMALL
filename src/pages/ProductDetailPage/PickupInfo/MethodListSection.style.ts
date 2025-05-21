@@ -7,6 +7,7 @@ export const MethodList = css`
   justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
+  padding-bottom: 2rem;
 `;
 
 export const MethodItem = css`
