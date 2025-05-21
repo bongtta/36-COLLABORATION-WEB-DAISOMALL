@@ -11,6 +11,12 @@ export const Container = styled.div`
   gap: 0.6rem;
   overflow-x: auto;
   padding-bottom: 3.2rem;
+
+  /* 스크롤바 숨기기 */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+  }
 `;
 
 export const Image = styled.img`
