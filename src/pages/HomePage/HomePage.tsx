@@ -1,9 +1,8 @@
-import React from 'react';
+import ReviewCarousel from "@pages/ProductDetailPage/ReviewCarousel/ReviewCarousel";
 
 const HomePage = () => (
   <div>
-    <h1>홈 페이지</h1>
-    <p>메인 페이지입니다.</p>
+    <ReviewCarousel />
   </div>
 );
 

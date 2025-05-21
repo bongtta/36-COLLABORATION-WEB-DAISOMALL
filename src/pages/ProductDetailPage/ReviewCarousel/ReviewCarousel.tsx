@@ -1,4 +1,3 @@
-import React from 'react';
 import * as S from './ReviewCarousel.style';
 
 const placeholder = 'https://placehold.co/58x58';
@@ -19,3 +18,4 @@ const ReviewCarousel = () => {
 };
 
 export default ReviewCarousel;
+
