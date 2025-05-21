@@ -2,7 +2,7 @@ import ReviewCarousel from './ReviewCarousel/ReviewCarousel';
 
 const ProductDetailPage = () => (
   <div>
-    <ReviewCarousel />
+    <ReviewCarousel isLoading={true} />
   </div>
 );
 

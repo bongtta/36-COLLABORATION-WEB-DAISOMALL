@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import theme from '@styles/theme';
+import { keyframes } from '@emotion/react';
 
 export const Container = styled.div`
   width: 100%;
@@ -23,7 +24,7 @@ export const MoreWrapper = styled.div`
   width: 5.8rem;
   height: 5.8rem;
   border-radius: 4px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url('https://placehold.co/58x58');
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
   background-size: cover;
   display: inline-flex;
   flex-direction: column;
@@ -38,3 +39,27 @@ export const MoreText = styled.div`
   ${theme.fonts['body-12R']}
   word-wrap: break-word;
 `;
+
+const pulse = keyframes`
+  0% {
+    background-color: ${theme.colors['gray-05']};
+  }
+  50% {
+    background-color: ${theme.colors['gray-04']};
+  }
+  100% {
+    background-color: ${theme.colors['gray-05']};
+  }
+`;
+
+const SkeletonBase = styled.div`
+  width: 5.8rem;
+  height: 5.8rem;
+  border-radius: 4px;
+  flex-shrink: 0;
+  animation: ${pulse} 1.5s ease-in-out infinite;
+`;
+
+export const SkeletonImage = styled(SkeletonBase)``;
+
+export const SkeletonMoreWrapper = styled(SkeletonBase)``;

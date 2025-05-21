@@ -1,13 +1,27 @@
 import * as S from './ReviewCarousel.style';
 
-const placeholder = 'https://placehold.co/58x58';
+interface ReviewCarouselProps {
+  isLoading?: boolean;
+  imageUrls?: string[];
+}
 
-const ReviewCarousel = () => {
-  const images = Array(7).fill(placeholder);
+const ReviewCarousel = ({ isLoading = false, imageUrls = [] }: ReviewCarouselProps) => {
+  if (isLoading) {
+    return (
+      <S.Container>
+        {Array(7)
+          .fill(0)
+          .map((_, index) => (
+            <S.SkeletonImage key={index} />
+          ))}
+        <S.SkeletonMoreWrapper />
+      </S.Container>
+    );
+  }
 
   return (
     <S.Container>
-      {images.map((src, index) => (
+      {imageUrls.map((src, index) => (
         <S.Image key={index} src={src} alt={`review-${index}`} />
       ))}
       <S.MoreWrapper>
