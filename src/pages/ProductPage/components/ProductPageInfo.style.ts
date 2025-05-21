@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import theme from '@styles/theme';
 
 export const ProductInfoWrapper = css`
   width: 100%;
@@ -33,7 +34,7 @@ export const Brand = css`
 `;
 
 export const BrandText = css`
-  color: #28323c;
+  color: ${theme.colors['gray-01']};
   font-size: 14px;
   font-family: Pretendard;
   font-weight: 400;
@@ -53,7 +54,7 @@ export const BrandIconWrapper = css`
 export const BrandIcon = css`
   width: 4px;
   height: 8px;
-  outline: 1px #374553 solid;
+  outline: 1px ${theme.colors['gray-02']} solid;
   outline-offset: -0.5px;
 `;
 
@@ -68,7 +69,7 @@ export const NameAndPrice = css`
 export const ProductName = css`
   width: 293px;
   height: 51px;
-  color: #28323c;
+  color: ${theme.colors['gray-01']};
   font-size: 16px;
   font-family: Pretendard;
   font-weight: 400;
@@ -84,7 +85,7 @@ export const Price = css`
 `;
 
 export const PriceAmount = css`
-  color: #161d24;
+  color: ${theme.colors.black};
   font-size: 24px;
   font-family: DAISOA;
   font-weight: 400;
@@ -92,7 +93,7 @@ export const PriceAmount = css`
 `;
 
 export const PriceUnit = css`
-  color: #161d24;
+  color: ${theme.colors.black};
   font-size: 22px;
   font-family: Pretendard;
   font-weight: 800;
@@ -120,7 +121,7 @@ export const RatingIconBackground = css`
   left: 0;
   top: 0;
   position: absolute;
-  background: white;
+  background: ${theme.colors.white};
 `;
 
 export const RatingIconOutline = css`
@@ -129,7 +130,7 @@ export const RatingIconOutline = css`
   left: 0.5px;
   top: 0.5px;
   position: absolute;
-  outline: 1px #646f7c solid;
+  outline: 1px ${theme.colors['gray-03']} solid;
   outline-offset: -0.5px;
 `;
 
@@ -139,11 +140,11 @@ export const RatingIconFill = css`
   left: 0.16px;
   top: 0.42px;
   position: absolute;
-  background: #d70011;
+  background: ${theme.colors.primary};
 `;
 
 export const RatingText = css`
-  color: #646f7c;
+  color: ${theme.colors['gray-03']};
   font-size: 12px;
   font-family: Pretendard;
   font-weight: 400;
@@ -152,7 +153,7 @@ export const RatingText = css`
 `;
 
 export const ReviewCount = css`
-  color: #646f7c;
+  color: ${theme.colors['gray-03']};
   font-size: 12px;
   font-family: Pretendard;
   font-weight: 400;
@@ -185,7 +186,7 @@ export const ShareButtonIconTop = css`
   left: 3.75px;
   top: 14.75px;
   position: absolute;
-  outline: 2px #28323c solid;
+  outline: 2px ${theme.colors['gray-01']} solid;
   outline-offset: -1px;
 `;
 
@@ -195,6 +196,6 @@ export const ShareButtonIconBottom = css`
   left: 6.75px;
   top: 3.75px;
   position: absolute;
-  outline: 2px #28323c solid;
+  outline: 2px ${theme.colors['gray-01']} solid;
   outline-offset: -1px;
 `; 

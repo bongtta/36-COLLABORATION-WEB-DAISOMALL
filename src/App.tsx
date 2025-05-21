@@ -1,4 +1,4 @@
-import { Global, ThemeProvider, css } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import theme from '@styles/theme';
 import GlobalStyle from './styles/global';
 
