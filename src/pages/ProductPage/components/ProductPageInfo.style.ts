@@ -3,14 +3,13 @@ import theme from '@styles/theme';
 
 export const ProductInfoWrapper = css`
   width: 100%;
-
+  padding: 1.6rem 1.6rem;
   justify-content: space-between;
   align-items: flex-start;
   display: inline-flex;
 `;
 
 export const ProductDetails = css`
-  
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -64,8 +63,7 @@ export const NameAndPrice = css`
 `;
 
 export const ProductName = css`
-  width: 293px;
-  height: 51px;
+  width: 29.3rem;
   color: ${theme.colors['gray-01']};
   font-size: 16px;
   font-family: Pretendard;
@@ -76,8 +74,9 @@ export const ProductName = css`
 
 export const Price = css`
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 0.1rem;
+  height: 3rem;
   display: inline-flex;
 `;
 
