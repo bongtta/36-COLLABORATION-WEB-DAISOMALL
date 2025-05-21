@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import * as S from '@components/SearchBar/searchBar.style';
+import * as S from './searchBar.style';
 import { SearchIcon, BarcodeIcon, CancelIcon } from '@assets/svgs';
 
 interface SearchBarProps {
