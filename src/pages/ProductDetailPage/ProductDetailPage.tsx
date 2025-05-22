@@ -1,3 +1,5 @@
-const ProductDetailPage = () => <div>ProductDetailPage</div>;
+
+const ProductDetailPage = () => (
+    );
 
 export default ProductDetailPage;
