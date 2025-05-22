@@ -8,10 +8,22 @@ import {
   RecentIcon,
 } from '@assets/svgs';
 import * as S from './BottomNav.style';
-import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const BottomNav = () => {
-  const [selectedTab, setSelectedTab] = useState('home');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // 현재 경로에 따라 탭 결정
+  const getSelectedTab = () => {
+    if (location.pathname === '/store-list') return 'offline';
+    if (location.pathname === '/') return 'home';
+    // 필요시 다른 경로도 추가
+    return '';
+  };
+
+  const selectedTab = getSelectedTab();
+
   return (
     <nav css={S.Wrapper}>
       <div css={S.Container}>
@@ -19,17 +31,16 @@ const BottomNav = () => {
         <p css={S.Caption}>카테고리</p>
       </div>
 
-      <div css={S.Container} onClick={() => setSelectedTab('home')}>
+      <div css={S.Container} onClick={() => navigate('/')}>
         {selectedTab === 'home' ? (
           <HomeIconActive css={S.HomeIcon} />
         ) : (
           <HomeIcon css={S.HomeIcon} />
         )}
-
         <p css={S.Caption}>홈</p>
       </div>
 
-      <div css={S.CenterContainer} onClick={() => setSelectedTab('offline')}>
+      <div css={S.CenterContainer} onClick={() => navigate('/store-list')}>
         {selectedTab !== 'offline' ? (
           <div css={S.CircleButton}>
             <OfflineSearchLarge css={S.OfflineSearchIcon} />

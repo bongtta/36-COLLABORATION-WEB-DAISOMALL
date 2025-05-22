@@ -5,6 +5,7 @@ export const homeWrapper = css`
   padding-bottom: 5.6rem;
   position: relative;
   overflow-x: hidden;
+  width: 100%;
 `;
 
 export const sectionWrapper = (hasBanner: boolean) => css`
@@ -74,5 +75,4 @@ export const dividerStyle = css`
   height: 0.8rem;
   background-color: ${theme.colors['gray-06']};
   border: none;
-  margin: 0;
 `;
