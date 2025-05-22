@@ -1,5 +1,6 @@
 import * as S from './Pagination.style';
 import { useRef } from 'react';
+import { useSwipeNavigation } from '@hooks/useSwipeNavigation';
 
 interface PaginationProps {
   totalPages: number;
@@ -10,61 +11,6 @@ interface PaginationProps {
 }
 
 const SWIPE_THRESHOLD = 50;
-
-// 스와이프 훅 (외부에서 사용 가능)
-export const useSwipeNavigation = (
-  currentPage: number,
-  totalPages: number,
-  onPageChange: (page: number) => void,
-  enabled: boolean = true
-) => {
-  const startX = useRef<number | null>(null);
-
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!enabled) return;
-    startX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (!enabled || startX.current === null) return;
-    const diffX = startX.current - e.changedTouches[0].clientX;
-    if (Math.abs(diffX) > SWIPE_THRESHOLD) {
-      if (diffX > 0) {
-        // 왼쪽으로 스와이프 (다음 페이지)
-        onPageChange(currentPage === totalPages ? 1 : currentPage + 1);
-      } else {
-        // 오른쪽으로 스와이프 (이전 페이지)
-        onPageChange(currentPage === 1 ? totalPages : currentPage - 1);
-      }
-    }
-    startX.current = null;
-  };
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!enabled) return;
-    startX.current = e.clientX;
-  };
-
-  const handleMouseUp = (e: React.MouseEvent) => {
-    if (!enabled || startX.current === null) return;
-    const diffX = startX.current - e.clientX;
-    if (Math.abs(diffX) > SWIPE_THRESHOLD) {
-      if (diffX > 0) {
-        onPageChange(currentPage === totalPages ? 1 : currentPage + 1);
-      } else {
-        onPageChange(currentPage === 1 ? totalPages : currentPage - 1);
-      }
-    }
-    startX.current = null;
-  };
-
-  return {
-    onTouchStart: handleTouchStart,
-    onTouchEnd: handleTouchEnd,
-    onMouseDown: handleMouseDown,
-    onMouseUp: handleMouseUp,
-  };
-};
 
 function Pagination({
   totalPages,
