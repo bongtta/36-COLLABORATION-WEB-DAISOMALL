@@ -7,13 +7,13 @@ interface LabelColumnProps {
 
 const LabelColumn = ({ labels }: LabelColumnProps) => {
   return (
-    <div css={S.labelColumn}>
+    <aside css={S.labelColumn}>
       {labels.map((label, index) => (
-        <div key={index} css={S.label}>
+        <span key={index} css={S.label}>
           {label}
-        </div>
+        </span>
       ))}
-    </div>
+    </aside>
   );
 };
 

@@ -14,21 +14,21 @@ interface InfoColumnProps {
 
 const InfoColumn = ({ pointInfo, benefitInfo }: InfoColumnProps) => {
   return (
-    <div css={S.infoColumn}>
-      <div css={S.infoText}>{pointInfo}</div>
-      <div css={S.benefitWrapper}>
+    <main css={S.infoColumn}>
+      <p css={S.infoText}>{pointInfo}</p>
+      <ul css={S.benefitWrapper}>
         {benefitInfo.map((benefit, index) => (
-          <div key={index} css={S.benefitContainer}>
-            <div css={S.benefitInfoText}>{benefit.text}</div>
+          <li key={index} css={S.benefitContainer}>
+            <p css={S.benefitInfoText}>{benefit.text}</p>
             {benefit.hasIcon && (
-              <div css={S.iconContainer}>
+              <figure css={S.iconContainer}>
                 <SvgQuestionCircle />
-              </div>
+              </figure>
             )}
-          </div>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </main>
   );
 };
 

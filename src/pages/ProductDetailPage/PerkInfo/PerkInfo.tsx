@@ -14,13 +14,13 @@ const PerkInfo = () => {
   ];
 
   return (
-    <div css={S.container}>
-      <div css={S.title}>혜택안내</div>
-      <div css={S.contentWrapper}>
+    <section css={S.container}>
+      <h2 css={S.title}>혜택안내</h2>
+      <article css={S.contentWrapper}>
         <LabelColumn labels={labels} />
         <InfoColumn pointInfo={pointInfo} benefitInfo={benefitInfo} />
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
