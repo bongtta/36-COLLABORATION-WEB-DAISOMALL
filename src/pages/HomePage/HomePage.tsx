@@ -1,20 +1,22 @@
 import { useState } from 'react';
+
+import * as H from '@pages/HomePage/HomeSectionCard/HomeSectionCard.style';
 import HomeCarousel from '@components/homeCarousel/HomeCarousel';
-import QuickMenuBar from './quickMenuBar/QuickMenuBar';
+import QuickMenuBar from '@pages/HomePage/quickMenuBar/QuickMenuBar';
 import HomeDivider from '@pages/HomePage/HomeDivider/HomeDivider';
 import Divider from '@components/common/divider/Divider';
-import HomeSectionCard from './HomeSectionCard/HomeSectionCard';
+import HomeSectionCard from '@pages/HomePage/HomeSectionCard/HomeSectionCard';
 import SpecialSection from '@pages/HomePage/SpecialSection/HomeSectionCard';
 import Header from '@components/Header/Header';
 import HeaderNav from '@components/HeaderNav/HeaderNav';
-import * as H from '@pages/HomePage/HomeSectionCard/HomeSectionCard.style';
-import { getSlideRankingProducts } from './mockData/slideRankingProducts';
-import { FIRST_PRODUCTS } from './mockData/section1Data';
-import { SECOND_PRODUCTS } from './mockData/section2Data';
-import { THIRD_PRODUCTS } from './mockData/section3Data';
-import { FOURTH_PRODUCTS } from './mockData/section4Data';
 import BottomNav from '@components/BottomNav/BottomNav';
-import RankingSection from './RankingSection/RankingSection';
+import RankingSection from '@pages/HomePage/RankingSection/RankingSection';
+
+import { getSlideRankingProducts } from '@pages/HomePage/mockData/slideRankingProducts';
+import { FIRST_PRODUCTS } from '@pages/HomePage/mockData/section1Data';
+import { SECOND_PRODUCTS } from '@pages/HomePage/mockData/section2Data';
+import { THIRD_PRODUCTS } from '@pages/HomePage/mockData/section3Data';
+import { FOURTH_PRODUCTS } from '@pages/HomePage/mockData/section4Data';
 
 const HomePage = () => {
   const [rankingPage, setRankingPage] = useState(1);

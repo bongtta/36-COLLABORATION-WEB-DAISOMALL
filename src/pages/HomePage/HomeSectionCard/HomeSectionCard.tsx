@@ -2,13 +2,23 @@ import * as H from './HomeSectionCard.style';
 import SectionTitle from '@components/common/SectionTitle/SectionTitle';
 import Divider from '@components/common/divider/Divider';
 import ProductCardVertical from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
-import type { ProductCardVerticalProps } from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
 import ImageCarousel from '@components/ImageCarousel/ImageCarousel';
 import bannerImg1 from '/home-banner-1.png';
 import bannerImg2 from '/home-banner-2.png';
-
+import type { ProductTagData } from '@components/Tag/tagData';
 const bannerImages = [bannerImg1, bannerImg2];
-
+interface ProductCardVerticalProps {
+  id: number;
+  size: '96' | '128';
+  name: string;
+  totalPrice: string;
+  unitPrice?: string;
+  imageUrl?: string;
+  tags?: ProductTagData[];
+  quantityText?: string;
+  isSnsHot?: boolean;
+  isBoxDelivery?: boolean;
+}
 interface HomeSectionCardProps {
   title1: string;
   subtitle?: string;

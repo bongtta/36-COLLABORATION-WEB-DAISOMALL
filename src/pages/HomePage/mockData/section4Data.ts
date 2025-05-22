@@ -24,7 +24,7 @@ interface ProductCardVerticalProps {
 export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   {
     id: 1,
-    size: '96',
+    size: '128',
     imageUrl: sectionImg1,
     name: '랭킹용 앰플',
     totalPrice: '3,000',
@@ -34,14 +34,14 @@ export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   },
   {
     id: 2,
-    size: '96',
+    size: '128',
     imageUrl: sectionImg2,
     name: '랭킹용 앰플',
     totalPrice: '3,000',
   },
   {
     id: 3,
-    size: '96',
+    size: '128',
     imageUrl: sectionImg3,
     name: '랭킹용 앰플',
     totalPrice: '3,000',
@@ -56,7 +56,7 @@ export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   },
   {
     id: 4,
-    size: '96',
+    size: '128',
     imageUrl: sectionImg4,
     name: '랭킹용 앰플',
     totalPrice: '3,000',
@@ -70,7 +70,7 @@ export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   },
   {
     id: 5,
-    size: '96',
+    size: '128',
     imageUrl: sectionImg5,
     name: '랭킹용 앰플',
     totalPrice: '3,000',

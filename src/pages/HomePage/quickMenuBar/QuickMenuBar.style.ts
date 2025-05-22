@@ -6,7 +6,7 @@ export const wrapper = css`
   overflow-x: auto;
   gap: 0.8rem;
   padding: 2rem 1.6rem;
-  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 
   &::-webkit-scrollbar {
     display: none;

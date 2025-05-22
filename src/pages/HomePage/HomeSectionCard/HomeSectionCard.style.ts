@@ -2,7 +2,9 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const homeWrapper = css`
-  margin-bottom: 5.6rem;
+  padding-bottom: 5.6rem;
+  position: relative;
+  overflow-x: hidden;
 `;
 
 export const sectionWrapper = (hasBanner: boolean) => css`

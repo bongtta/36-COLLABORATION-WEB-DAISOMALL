@@ -5,6 +5,7 @@ export const Wrapper = css`
   display: flex;
   justify-content: space-between;
   position: fixed;
+  background: #fff;
   bottom: 0;
   width: 100%;
   height: 5.6rem;
