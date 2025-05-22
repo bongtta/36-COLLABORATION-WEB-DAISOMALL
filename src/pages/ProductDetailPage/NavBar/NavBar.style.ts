@@ -34,6 +34,16 @@ export const tabText = (isActive: boolean) => css`
   color: ${theme.colors['gray-01']};
   ${isActive ? theme.fonts['heading-14B'] : theme.fonts['body-14R']};
   word-wrap: break-word;
+  transition: all 0.3s ease;
+`;
+
+export const activeBarContainer = css`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  overflow: hidden;
 `;
 
 export const activeBar = css`
@@ -42,5 +52,6 @@ export const activeBar = css`
   background: ${theme.colors['gray-01']};
   position: absolute;
   bottom: 0;
+  left: 0;
   transition: transform 0.3s ease;
 `;
