@@ -4,19 +4,19 @@ export const CarouselContainer = css`
   position: relative;
   width: 100%;
   overflow: hidden;
-  
+
   .slick-slider {
     width: 100%;
   }
-  
+
   .slick-track {
     display: flex;
   }
-  
+
   .slick-slide {
     height: auto;
   }
-  
+
   .slick-slide > div {
     height: 100%;
     width: 100%;

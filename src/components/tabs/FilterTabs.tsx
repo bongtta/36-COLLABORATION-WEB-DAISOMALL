@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import * as S from './FilterTabs.style'
-import { css } from '@emotion/react'
-import { XIcon } from '@assets/svgs'
+import { useState } from 'react';
+import * as S from './FilterTabs.style';
+import { css } from '@emotion/react';
+import { XIcon } from '@assets/svgs';
 
-type FilterOption = 'like-store' | 'pickup-able' | 'no-soldout' | 'no-store'
+type FilterOption = 'like-store' | 'pickup-able' | 'no-soldout' | 'no-store';
 
 interface FilterOptions {
   key: FilterOption;
@@ -11,33 +11,33 @@ interface FilterOptions {
 }
 
 interface FilterTabsProps {
-  onChange?: (selectedOptions: FilterOption[]) => void
+  onChange?: (selectedOptions: FilterOption[]) => void;
 }
 
 const FilterTabs = ({ onChange }: FilterTabsProps) => {
-  const [selectedOptions, setSelectedOptions] = useState<FilterOption[]>([])
+  const [selectedOptions, setSelectedOptions] = useState<FilterOption[]>([]);
 
   const filterOptions: FilterOptions[] = [
     { key: 'like-store', label: '관심 매장' },
     { key: 'pickup-able', label: '픽업 가능 매장' },
     { key: 'no-soldout', label: '일시품절 제외' },
-    { key: 'no-store', label: '가맹/유통점 제외' }
-  ]
+    { key: 'no-store', label: '가맹/유통점 제외' },
+  ];
 
   const handleFilterClick = (option: FilterOption) => {
-    let newSelectedOptions: FilterOption[]
-    
-    if (selectedOptions.includes(option)) {
-      newSelectedOptions = selectedOptions.filter(item => item !== option)
-    } else {
-      newSelectedOptions = [...selectedOptions, option]
-    }
-    
-    setSelectedOptions(newSelectedOptions)
-    onChange?.(newSelectedOptions)
-  }
+    let newSelectedOptions: FilterOption[];
 
-  const isSelected = (option: FilterOption) => selectedOptions.includes(option)
+    if (selectedOptions.includes(option)) {
+      newSelectedOptions = selectedOptions.filter((item) => item !== option);
+    } else {
+      newSelectedOptions = [...selectedOptions, option];
+    }
+
+    setSelectedOptions(newSelectedOptions);
+    onChange?.(newSelectedOptions);
+  };
+
+  const isSelected = (option: FilterOption) => selectedOptions.includes(option);
 
   return (
     <div css={S.filterTabsContainer}>
@@ -68,7 +68,7 @@ const FilterTabs = ({ onChange }: FilterTabsProps) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default FilterTabs
+export default FilterTabs;
