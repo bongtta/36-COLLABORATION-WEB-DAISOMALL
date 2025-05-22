@@ -1,10 +1,45 @@
 import * as S from './PickupDetailsSection.style';
 import PickupTomorrow from '@assets/svgs/PickupTomorrow';
 import QuestionCircle from '@assets/svgs/QuestionCircle';
+import type { ReactNode } from 'react';
 
-// import ClockIcon from '@assets/svgs/ClockIcon'; // Clock 아이콘 추가 필요
-// import QuestionIcon from '@assets/svgs/QuestionIcon'; // Question 아이콘 추가 필요
-// import ArrowRightIcon from '@assets/svgs/ArrowRightIcon'; // ArrowRight 아이콘 추가 필요
+interface TextWithIconProps {
+  text: string;
+  icon?: ReactNode;
+  additionalIcon?: ReactNode;
+}
+
+const TextWithIconComponent = ({ text, icon, additionalIcon }: TextWithIconProps) => {
+  return (
+    <div css={S.TextWithIcon}>
+      <span>{text}</span>
+      {icon && icon}
+      {additionalIcon && (
+        <div css={S.QuestionCircleContainer}>
+          {additionalIcon}
+        </div>
+      )}
+    </div>
+  );
+};
+
+interface PickupInfoProps {
+  text: string;
+  icon?: ReactNode;
+}
+
+const PickupInfoComponent = ({ text, icon }: PickupInfoProps) => {
+  return (
+    <div css={S.PickupInfoWrapper}>
+      <span css={S.PickupInfoText}>{text}</span>
+      {icon && (
+        <div css={S.QuestionCircleAlignBottom}>
+          {icon}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const PickupDetailsSection = () => {
   return (
@@ -14,36 +49,26 @@ const PickupDetailsSection = () => {
         
         <div css={S.InfoContent}>
 
-          <div css={S.TextWithIcon}>
-            <span>매장픽업 마감, 지금 결제하면</span>
-            
+          <TextWithIconComponent 
+            text="매장픽업 마감, 지금 결제하면" 
+            icon={
               <div css={S.PickupTomorrowContainer}>
                 <PickupTomorrow />
               </div>
-              
-              <div css={S.QuestionCircleContainer}>
-                <QuestionCircle />
-              </div>
+            }
+            additionalIcon={<QuestionCircle />}
+          />
 
-          </div>
-
-          <div css={S.PickupInfoWrapper}>
-            <span css={S.PickupInfoText}>
-              결제 후 상품준비 완료 알림톡(픽업바코드)
-              <br />
-              24시간 이내 발송, 최대 2일까지 픽업 가능
-            </span>
-            <div css={S.QuestionCircleAlignBottom}>
-              <QuestionCircle />
-            </div>
-          </div>
+          <PickupInfoComponent 
+            text="결제 후 상품준비 완료 알림톡(픽업바코드)
+24시간 이내 발송, 최대 2일까지 픽업 가능"
+            icon={<QuestionCircle />}
+          />
           
-          <div css={S.TextWithIcon}>
-            <span>픽업 수수료 200원</span>
-            <div css={S.QuestionCircleContainer}>
-              <QuestionCircle />
-            </div>
-          </div>
+          <TextWithIconComponent 
+            text="픽업 수수료 200원" 
+            additionalIcon={<QuestionCircle />}
+          />
           
         </div>
       </div>
