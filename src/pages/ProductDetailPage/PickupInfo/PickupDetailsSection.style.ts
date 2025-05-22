@@ -4,11 +4,8 @@ import theme from '../../../styles/theme'; // 경로 수정
 // PickupStoreSection.style.ts 와 중복되는 스타일
 export const InfoRow = css`
   display: flex;
-  padding-left: 1.6rem;
-  padding-right: 1.6rem;
   gap: 0.4rem; 
-  padding-bottom: 1.8rem;
-  
+  padding: 0 1.6rem 1.8rem 1.6rem;
 `;
 
 export const InfoLabel = css`

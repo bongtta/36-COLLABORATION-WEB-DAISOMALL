@@ -18,7 +18,7 @@ export const InfoLabel = css`
 export const InfoContent = css`
   display: flex;
   flex-direction: column;
-  gap: 0.4rem; // 4px -> 0.4rem
+  gap: 0.4rem;
 
   & > div,
   & > span {
