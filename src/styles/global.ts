@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import Reset from './reset';
 import theme from './theme';
+import './fonts/fonts.css'
 
 const GlobalStyle = css`
   ${Reset}
