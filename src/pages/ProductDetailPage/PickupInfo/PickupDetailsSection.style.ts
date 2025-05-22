@@ -6,8 +6,9 @@ export const InfoRow = css`
   display: flex;
   padding-left: 1.6rem;
   padding-right: 1.6rem;
-  gap: 0.6rem; 
+  gap: 0.4rem; 
   padding-bottom: 1.8rem;
+  
 `;
 
 export const InfoLabel = css`
@@ -27,7 +28,6 @@ export const InfoContent = css`
   & > span {
     ${theme.fonts['body-14R']};
     color: ${theme.colors['gray-01']};
-    line-height: 20.3px;
   }
 `;
 // 중복 끝
@@ -39,21 +39,44 @@ export const HighlightBackground = css`
   padding: 2px 4px; 
   border-radius: 2px; 
   height: 22px; 
-
-  & > svg { 
-    margin-right: 4px;
-  }
 `;
 
 export const TextWithIcon = css`
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0.4rem;
+  
 `;
 
 export const PickupInfoText = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-01']};
-  line-height: 1.45;
   white-space: pre-line;
+`;
+
+export const PickupTomorrowContainer = css`
+  width: 7.5rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-right: 0.065rem;
+    
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const QuestionCircleContainer = css`
+  width: 16px;
+  height: 16px;
+  display: flex; // 내부 svg 정렬을 위해
+  align-items: center;
+  justify-content: center;
+  svg {
+    width: 100%; // 부모 컨테이너 크기에 맞춤
+    height: 100%;
+  }
 `; 

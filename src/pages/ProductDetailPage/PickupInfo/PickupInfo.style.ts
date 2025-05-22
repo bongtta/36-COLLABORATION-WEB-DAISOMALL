@@ -115,12 +115,12 @@ export const InfoLabel = css`
 export const InfoContent = css`
   display: flex;
   flex-direction: column;
-  gap: 4px; // 내부 아이템들 간격
+  gap: 0.4rem;
+  
 
   & > div, & > span { // InfoContent 직계 자식들에게 적용
     ${theme.fonts['body-14R']};
     color: ${theme.colors['gray-01']};
-    line-height: 20.3px;
   }
 `;
 
