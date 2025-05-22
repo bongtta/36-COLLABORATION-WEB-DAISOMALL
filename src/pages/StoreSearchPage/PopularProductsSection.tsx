@@ -4,6 +4,7 @@ import ProductCardRanking from '@components/ProductCard/ProductCardRanking/Produ
 import Pagination, { useSwipeNavigation } from '@components/pagination/Pagination';
 import { useState } from 'react';
 import { usePopularProducts } from '@hooks/queries/usePopularProducts';
+import type { PopularProduct } from '@app-types/popularProducts';
 
 const PAGE_SIZE = 5;
 
@@ -72,7 +73,7 @@ const PopularProductsSection = () => {
           <div css={S.ProductRow} key={product.productId}>
             <ProductCardRanking
               rank={(currentPage - 1) * PAGE_SIZE + idx + 1}
-              imageUrl={null}
+              imageUrl={product.mainImage}
               name={product.productName}
               price={product.price.toLocaleString()}
               code={product.productCode}

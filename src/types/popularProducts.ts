@@ -3,6 +3,7 @@ export interface PopularProduct {
   productName: string;
   productCode: string;
   price: number;
+  mainImage: string;
 }
 
 export interface GetPopularProductsResponseData {
