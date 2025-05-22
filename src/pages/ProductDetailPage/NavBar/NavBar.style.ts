@@ -11,7 +11,7 @@ export const container = css`
 `;
 
 export const tabItem = css`
-  width: 12.5rem;
+  width: 100%;
   height: 4.2rem;
   background: white;
   display: flex;
@@ -37,7 +37,7 @@ export const tabText = (isActive: boolean) => css`
 `;
 
 export const activeBar = css`
-  width: 12.5rem;
+  width: 100%;
   height: 0.2rem;
   background: ${theme.colors['gray-01']};
   position: absolute;
