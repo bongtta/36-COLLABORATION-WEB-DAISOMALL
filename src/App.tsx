@@ -6,6 +6,8 @@ import pageRoutes from '@routes/pageRoutes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
+import ProductPageInfo from '@pages/ProductPage/components/ProductPageInfo';
+
 function App() {
   const router = createBrowserRouter([...pageRoutes]);
 
