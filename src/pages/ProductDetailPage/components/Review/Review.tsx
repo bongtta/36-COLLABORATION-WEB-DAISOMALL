@@ -4,6 +4,7 @@ import RenderStars from './RenderStars';
 import Keywords from './Keywords';
 import PhotoScrollList from './PhotoScrollList';
 import Divider from '@components/common/divider/Divider';
+import theme from '@styles/theme';
 
 const Review = () => {
   const averageRating = 4.8;
@@ -45,6 +46,9 @@ const Review = () => {
         />
         <PhotoScrollList images={photos} />
       </div>
+
+      <Divider height="8px" color={theme.colors['gray-06']} />
+
       <div css={S.LowerContainer}></div>
     </div>
   );
