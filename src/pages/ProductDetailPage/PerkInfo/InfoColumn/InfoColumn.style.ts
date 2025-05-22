@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const infoColumn = css`
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -12,7 +12,7 @@ export const infoColumn = css`
 export const infoText = css`
   color: ${theme.colors['gray-01']};
   ${theme.fonts['body-14R']};
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 export const benefitInfoText = css`

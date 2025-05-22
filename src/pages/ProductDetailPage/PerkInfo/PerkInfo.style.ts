@@ -5,7 +5,7 @@ export const container = css`
   width: 100%;
   height: 100%;
   padding: 3.2rem 1.6rem;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;

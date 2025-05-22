@@ -8,8 +8,8 @@ interface LabelColumnProps {
 const LabelColumn = ({ labels }: LabelColumnProps) => {
   return (
     <aside css={S.labelColumn}>
-      {labels.map((label, index) => (
-        <span key={index} css={S.label}>
+      {labels.map((label) => (
+        <span key={label} css={S.label}>
           {label}
         </span>
       ))}
