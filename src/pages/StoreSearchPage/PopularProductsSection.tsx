@@ -2,7 +2,7 @@ import * as S from './PopularProductsSection.style';
 import SearchBar from '@components/SearchBar/SearchBar';
 import ProductCardRanking from '@components/ProductCard/ProductCardRanking/ProductCardRanking';
 import Pagination, { useSwipeNavigation } from '@components/pagination/Pagination';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePopularProducts } from '@hooks/queries/usePopularProducts';
 import type { PopularProduct } from '@app-types/popularProducts';
 
@@ -21,6 +21,19 @@ const PopularProductsSection = () => {
     (currentPage - 1) * PAGE_SIZE,
     currentPage * PAGE_SIZE
   );
+
+  // ===== 이미지 프리로드 (다음 페이지) =====
+  useEffect(() => {
+    if (!data?.pages) return;
+    // 다음 페이지가 있으면 해당 페이지의 이미지 미리 로드
+    if (currentPage < totalPages) {
+      const nextPageProducts = allProducts.slice(currentPage * PAGE_SIZE, (currentPage + 1) * PAGE_SIZE);
+      nextPageProducts.forEach(product => {
+        const img = new window.Image();
+        img.src = product.mainImage;
+      });
+    }
+  }, [currentPage, data, totalPages, allProducts]);
 
   // Pagination에서 제공하는 스와이프 훅 사용
   const swipeHandlers = useSwipeNavigation(currentPage, totalPages, setCurrentPage, true);
