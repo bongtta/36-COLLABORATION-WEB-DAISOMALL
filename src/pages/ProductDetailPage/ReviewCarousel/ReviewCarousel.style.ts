@@ -1,8 +1,7 @@
-import styled from '@emotion/styled';
+import { css, keyframes } from '@emotion/react';
 import theme from '@styles/theme';
-import { keyframes } from '@emotion/react';
 
-export const Container = styled.div`
+export const container = css`
   width: 100%;
   height: 100%;
   display: inline-flex;
@@ -19,31 +18,43 @@ export const Container = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const imageContainer = css`
+  position: relative;
+  width: 5.8rem;
+  height: 5.8rem;
+  flex-shrink: 0;
+`;
+
+export const image = css`
   width: 5.8rem;
   height: 5.8rem;
   border-radius: 4px;
   flex-shrink: 0;
 `;
 
-export const MoreWrapper = styled.div`
-  width: 5.8rem;
-  height: 5.8rem;
+export const moreWrapper = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border-radius: 4px;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
   background-size: cover;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.4rem;
   flex-shrink: 0;
+  cursor: pointer;
 `;
 
-export const MoreText = styled.div`
+export const moreText = css`
   color: ${theme.colors.white};
   ${theme.fonts['body-12R']}
   word-wrap: break-word;
+  text-align: center;
 `;
 
 const pulse = keyframes`
@@ -58,7 +69,7 @@ const pulse = keyframes`
   }
 `;
 
-const SkeletonBase = styled.div`
+const skeletonBase = css`
   width: 5.8rem;
   height: 5.8rem;
   border-radius: 4px;
@@ -66,11 +77,15 @@ const SkeletonBase = styled.div`
   animation: ${pulse} 1.5s ease-in-out infinite;
 `;
 
-export const SkeletonImage = styled(SkeletonBase)``;
+export const skeletonImage = css`
+  ${skeletonBase}
+`;
 
-export const SkeletonMoreWrapper = styled(SkeletonBase)``;
+export const skeletonMoreWrapper = css`
+  ${skeletonBase}
+`;
 
-export const EmptyReviewText = styled.div`
+export const emptyReviewText = css`
   width: 100%;
   padding: 2rem 0;
   text-align: center;

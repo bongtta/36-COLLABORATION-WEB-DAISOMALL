@@ -1,46 +1,50 @@
-import * as S from './ReviewCarousel.style';
+/** @jsxImportSource @emotion/react */
+import * as styles from './ReviewCarousel.style';
 
 interface ReviewCarouselProps {
   isLoading?: boolean;
   imageUrls?: string[];
+  onMoreClick?: () => void;
 }
 
-const MAX_IMAGES_BEFORE_MORE = 6;
+const MAX_IMAGES_BEFORE_MORE = 7;
 const MIN_IMAGES_FOR_MORE_BUTTON = 8;
 const SKELETON_COUNT = 7;
 
-const ReviewCarousel = ({ isLoading = false, imageUrls = [] }: ReviewCarouselProps) => {
+const ReviewCarousel = ({ isLoading = false, imageUrls = [], onMoreClick }: ReviewCarouselProps) => {
   if (isLoading) {
     return (
-      <S.Container>
+      <div css={styles.container}>
         {Array(SKELETON_COUNT)
           .fill(0)
           .map((_, index) => (
-            <S.SkeletonImage key={index} />
+            <div key={index} css={styles.skeletonImage} />
           ))}
-        <S.SkeletonMoreWrapper />
-      </S.Container>
+        <div css={styles.skeletonMoreWrapper} />
+      </div>
     );
   }
 
   if (imageUrls.length === 0) {
-    return <S.EmptyReviewText>리뷰가 없습니다.</S.EmptyReviewText>;
+    return <div css={styles.emptyReviewText}>리뷰가 없습니다.</div>;
   }
 
   const showMoreButton = imageUrls.length >= MIN_IMAGES_FOR_MORE_BUTTON;
-  const imagesToShow = showMoreButton ? imageUrls.slice(0, MAX_IMAGES_BEFORE_MORE) : imageUrls;
+  const imagesToShow = showMoreButton ? MAX_IMAGES_BEFORE_MORE : imageUrls.length;
 
   return (
-    <S.Container>
-      {imagesToShow.map((src, index) => (
-        <S.Image key={index} src={src} alt={`review-${index}`} />
+    <div css={styles.container}>
+      {imageUrls.slice(0, imagesToShow).map((src, index) => (
+        <div key={index} css={styles.imageContainer}>
+          <img css={styles.image} src={src} alt={`review-${index}`} />
+          {showMoreButton && index === MAX_IMAGES_BEFORE_MORE - 1 && (
+            <div css={styles.moreWrapper} onClick={onMoreClick}>
+              <div css={styles.moreText}>더보기</div>
+            </div>
+          )}
+        </div>
       ))}
-      {showMoreButton && (
-        <S.MoreWrapper>
-          <S.MoreText>더보기</S.MoreText>
-        </S.MoreWrapper>
-      )}
-    </S.Container>
+    </div>
   );
 };
 
