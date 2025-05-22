@@ -2,6 +2,11 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const MethodList = css`
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -30,6 +35,8 @@ export const MethodItem = css`
   position: relative;
   width: 8.8rem;
   height: 10rem;
+  margin: 0;
+  padding: 0;
 `;
 
 export const StoreMethodItem = css`

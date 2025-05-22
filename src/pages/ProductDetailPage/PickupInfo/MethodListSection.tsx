@@ -7,9 +7,8 @@ import BoxIcon from '@assets/svgs/BoxIcon';
 
 const MethodListSection = () => { 
   return (
-    <div css={S.MethodList}>
-      <div css={S.MethodItem}>
-
+    <ul css={S.MethodList}>
+      <li css={S.MethodItem}>
         <div css={S.MethodItemContent}>
           <div css={S.IconWrapper}>
             <DeliveryIconTruck />
@@ -17,10 +16,10 @@ const MethodListSection = () => {
           <span css={S.MethodName}>택배배송</span>
           <span css={S.MethodDate}>4/29(화)<br/>도착예정</span>
         </div>
-      </div>
+      </li>
 
       
-      <div css={[S.MethodItem, S.StoreMethodItem]}>
+      <li css={[S.MethodItem, S.StoreMethodItem]}>
         <div css={S.MethodItemContent}>
           <div css={S.IconWrapper}>
             <StoreIcon />
@@ -28,9 +27,9 @@ const MethodListSection = () => {
           <span css={S.MethodName} className="method-name">매장픽업</span>
           <span css={S.MethodDate} className="method-date">4/28(월)<br/>픽업가능</span>
         </div>
-      </div>
+      </li>
 
-      <div css={S.MethodItem}>
+      <li css={S.MethodItem}>
         <BetaMark css={S.BetaIconStyle} />
         <div css={S.MethodItemContent}>
           <div css={S.IconWrapper}>
@@ -39,10 +38,10 @@ const MethodListSection = () => {
           <span css={S.MethodName}>오늘배송</span>
           <span css={S.MethodDate}>4/28(월)<br/>도착예정</span>
         </div>
-      </div>
+      </li>
 
 
-      <div css={S.MethodItem}>
+      <li css={S.MethodItem}>
         <div css={S.MethodItemContent}>
           <div css={S.IconWrapper}>
             <BoxIcon />
@@ -50,10 +49,10 @@ const MethodListSection = () => {
           <span css={S.MethodName}>대량주문</span>
           <span css={S.MethodDate}>7일 이내<br/>도착예정</span>
         </div>
-      </div>
+      </li>
 
 
-    </div>
+    </ul>
   );
 };
 
