@@ -4,7 +4,7 @@ import ProductTag from '@components/Tag/ProductTag';
 import type { ProductTagData } from '@components/Tag/tagData';
 import { CartIcon, SnsIcon, BoxIcon, MultipleIcon } from '@assets/svgs';
 
-export interface ProductCardVerticalProps {
+interface ProductCardVerticalProps {
   id: number;
   size: '96' | '128';
   name: string;

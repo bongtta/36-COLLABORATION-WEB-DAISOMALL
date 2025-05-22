@@ -5,9 +5,23 @@ import sectionImg2 from '/home-section-7.png';
 import sectionImg3 from '/home-section-8.png';
 import sectionImg4 from '/home-section-9.png';
 import sectionImg5 from '/home-section-10.png';
-import type { ProductCardVerticalProps } from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
 
-export const SECOND_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
+import type { ProductTagData } from '@components/Tag/tagData';
+
+interface ProductCardVerticalProps {
+  id: number;
+  size: '96' | '128';
+  name: string;
+  totalPrice: string;
+  unitPrice?: string;
+  imageUrl?: string;
+  tags?: ProductTagData[];
+  quantityText?: string;
+  isSnsHot?: boolean;
+  isBoxDelivery?: boolean;
+}
+
+export const SECOND_PRODUCTS: ProductCardVerticalProps[] = [
   {
     id: 1,
     size: '128',

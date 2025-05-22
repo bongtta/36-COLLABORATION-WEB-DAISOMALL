@@ -1,11 +1,27 @@
-import sectionImg1 from '/home-section-1.png';
-import sectionImg2 from '/home-section-2.png';
-import sectionImg3 from '/home-section-3.png';
-import sectionImg4 from '/home-section-4.png';
-import sectionImg5 from '/home-section-5.png';
-import type { ProductCardVerticalProps } from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
+import theme from '@styles/theme';
 
-export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
+import sectionImg1 from '/home-section-16.png';
+import sectionImg2 from '/home-section-17.png';
+import sectionImg3 from '/home-section-18.png';
+import sectionImg4 from '/home-section-19.png';
+import sectionImg5 from '/home-section-20.png';
+
+import type { ProductTagData } from '@components/Tag/tagData';
+
+interface ProductCardVerticalProps {
+  id: number;
+  size: '96' | '128';
+  name: string;
+  totalPrice: string;
+  unitPrice?: string;
+  imageUrl?: string;
+  tags?: ProductTagData[];
+  quantityText?: string;
+  isSnsHot?: boolean;
+  isBoxDelivery?: boolean;
+}
+
+export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   {
     id: 1,
     size: '96',
@@ -13,8 +29,7 @@ export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
     name: '랭킹용 앰플',
     totalPrice: '3,000',
     tags: [
-      { label: '박스배송', color: 'blue', bg: 'lightblue' },
-      { label: '택배전용', color: 'green', bg: 'lightblue' },
+      { label: 'BEST', bg: theme.colors.primary, color: theme.colors.white },
     ],
   },
   {
@@ -23,10 +38,6 @@ export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
     imageUrl: sectionImg2,
     name: '랭킹용 앰플',
     totalPrice: '3,000',
-    tags: [
-      { label: '박스배송', color: 'blue', bg: 'lightblue' },
-      { label: '택배전용', color: 'green', bg: 'lightblue' },
-    ],
   },
   {
     id: 3,
@@ -35,8 +46,12 @@ export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
     name: '랭킹용 앰플',
     totalPrice: '3,000',
     tags: [
-      { label: '박스배송', color: 'blue', bg: 'lightblue' },
-      { label: '택배전용', color: 'green', bg: 'lightblue' },
+      { label: 'BEST', bg: theme.colors.primary, color: theme.colors.white },
+      {
+        label: '신상',
+        bg: theme.colors['gray-05'],
+        color: theme.colors.primary,
+      },
     ],
   },
   {
@@ -46,8 +61,11 @@ export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
     name: '랭킹용 앰플',
     totalPrice: '3,000',
     tags: [
-      { label: '박스배송', color: 'blue', bg: 'lightblue' },
-      { label: '택배전용', color: 'green', bg: 'lightblue' },
+      {
+        label: '신상',
+        bg: theme.colors['gray-05'],
+        color: theme.colors.primary,
+      },
     ],
   },
   {
@@ -57,8 +75,12 @@ export const FOURTH_RANKING_PRODUCTS: ProductCardVerticalProps[] = [
     name: '랭킹용 앰플',
     totalPrice: '3,000',
     tags: [
-      { label: '박스배송', color: 'blue', bg: 'lightblue' },
-      { label: '택배전용', color: 'green', bg: 'lightblue' },
+      { label: 'BEST', bg: theme.colors.primary, color: theme.colors.white },
+      {
+        label: '신상',
+        bg: theme.colors['gray-05'],
+        color: theme.colors.primary,
+      },
     ],
   },
 ];

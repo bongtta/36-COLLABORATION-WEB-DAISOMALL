@@ -24,6 +24,7 @@ export const rankingContent = (hasCode?: boolean) => css`
 
 export const rankingNumber = css`
   position: relative;
+  width: 1.1rem;
   ${theme.fonts['number-18R']}
   color: ${theme.colors['gray-01']};
 `;

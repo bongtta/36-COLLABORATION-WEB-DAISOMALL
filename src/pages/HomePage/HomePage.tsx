@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import HomeCarousel from '@components/homeCarousel/HomeCarousel';
 import QuickMenuBar from './quickMenuBar/QuickMenuBar';
 import HomeDivider from '@pages/HomePage/HomeDivider/HomeDivider';
@@ -7,59 +8,73 @@ import SpecialSection from '@pages/HomePage/SpecialSection/HomeSectionCard';
 import Header from '@components/Header/Header';
 import HeaderNav from '@components/HeaderNav/HeaderNav';
 import * as H from '@pages/HomePage/HomeSectionCard/HomeSectionCard.style';
-
-import { FIRST_RANKING_PRODUCTS } from './mockData/section1Data';
-import { SECOND_RANKING_PRODUCTS } from './mockData/section2Data';
-import { THIRD_RANKING_PRODUCTS } from './mockData/section3Data';
-import { FOURTH_RANKING_PRODUCTS } from './mockData/section4Data';
+import { getSlideRankingProducts } from './mockData/slideRankingProducts';
+import { FIRST_PRODUCTS } from './mockData/section1Data';
+import { SECOND_PRODUCTS } from './mockData/section2Data';
+import { THIRD_PRODUCTS } from './mockData/section3Data';
+import { FOURTH_PRODUCTS } from './mockData/section4Data';
 import BottomNav from '@components/BottomNav/BottomNav';
+import RankingSection from './RankingSection/RankingSection';
 
-const HomePage = () => (
-  <div css={H.homeWrapper}>
-    <Header showLogo={true} showCartIcon={true} showSearchIcon={true} />
-    <HeaderNav />
-    <HomeCarousel />
-    <QuickMenuBar />
-    <Divider />
+const HomePage = () => {
+  const [rankingPage, setRankingPage] = useState(1);
+  const slideContents = getSlideRankingProducts();
+  return (
+    <div css={H.homeWrapper}>
+      <Header showLogo={true} showCartIcon={true} showSearchIcon={true} />
+      <HeaderNav />
+      <HomeCarousel />
+      <QuickMenuBar />
+      <Divider />
 
-    <HomeSectionCard
-      title1="오늘의 추천 상품"
-      productList={FIRST_RANKING_PRODUCTS}
-      hasBanner={true}
-    />
+      <HomeSectionCard
+        title1="오늘의 추천 상품"
+        productList={FIRST_PRODUCTS}
+        hasBanner={true}
+      />
 
-    <HomeDivider />
+      <HomeDivider />
 
-    <HomeSectionCard
-      title1="지금 올라온 따끈따끈 신상"
-      subtitle="매일 업데이트 되는 상품들을 만나보세요🔥"
-      productList={SECOND_RANKING_PRODUCTS}
-    />
+      <HomeSectionCard
+        title1="지금 올라온 따끈따끈 신상"
+        subtitle="매일 업데이트 되는 상품들을 만나보세요🔥"
+        productList={SECOND_PRODUCTS}
+      />
 
-    <HomeDivider />
+      <HomeDivider />
+      <RankingSection
+        title1="고객 반응 베스트"
+        subtitle="24시간 동안 가장 많이 판매됐어요"
+        currentPage={rankingPage}
+        onPageChange={setRankingPage}
+        contents={slideContents}
+      />
 
-    <HomeSectionCard
-      title1="고객 반응 베스트"
-      subtitle="24시간 동안 가장 많이 판매됐어요"
-      productList={THIRD_RANKING_PRODUCTS}
-    />
+      <HomeDivider />
 
-    <HomeDivider />
+      <SpecialSection
+        title1="시원한 얼음 아이스트레이"
+        subtitle="시원하게 더위 이겨내세요"
+      />
 
-    <SpecialSection
-      title1="시원한 얼음 아이스트레이"
-      subtitle="시원하게 더위 이겨내세요"
-    />
+      <HomeDivider />
 
-    <HomeDivider />
+      <HomeSectionCard
+        title1="따스한 햇살 속 피크닉💗"
+        subtitle="매장픽업으로 피크닉 준비를 빠르게"
+        productList={THIRD_PRODUCTS}
+      />
 
-    <HomeSectionCard
-      title1="시원한 얼음 아이스트레이"
-      subtitle="시원하게 더위 이겨내세요"
-      productList={FOURTH_RANKING_PRODUCTS}
-    />
-    <BottomNav />
-  </div>
-);
+      <HomeDivider />
+
+      <HomeSectionCard
+        title1="시원한 얼음 아이스트레이"
+        subtitle="시원하게 더위 이겨내세요"
+        productList={FOURTH_PRODUCTS}
+      />
+      <BottomNav />
+    </div>
+  );
+};
 
 export default HomePage;
