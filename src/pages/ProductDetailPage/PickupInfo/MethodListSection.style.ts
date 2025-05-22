@@ -19,8 +19,6 @@ export const MethodList = css`
 `;
 
 export const MethodItem = css`
-  
-
   background: ${theme.colors['gray-06']};
   border-radius: 4px;
   display: flex;
@@ -30,11 +28,20 @@ export const MethodItem = css`
   text-align: center;
   cursor: pointer;
   position: relative;
-  
-  &[data-selected='true'] {
-    background: ${theme.colors['gray-01']};
-    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+  width: 8.8rem;
+  height: 10rem;
+`;
+
+export const StoreMethodItem = css`
+  background: ${theme.colors['gray-01']};
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+  color: ${theme.colors.white};
+
+  .method-name {
     color: ${theme.colors.white};
+  }
+  .method-date {
+    color: ${theme.colors['gray-05']};
   }
 `;
 
@@ -43,7 +50,10 @@ export const MethodItemContent = css`
   padding: 1.3rem 2.5rem;
   flex-direction: column;
   align-items: center;
-  
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  gap: 0.4rem;
 `;
 
 export const IconWrapper = css`
@@ -56,19 +66,11 @@ export const MethodName = css`
   ${theme.fonts['button-14B']};
   color: ${theme.colors['gray-01']};
   word-break: keep-all;
- 
-  ${MethodItem}[data-selected='true'] & {
-    color: ${theme.colors.white};
-  }
 `;
 
 export const MethodDate = css`
   ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
-  
-  ${MethodItem}[data-selected='true'] & {
-    color: ${theme.colors['gray-05']};
-  }
 `;
 
 export const BetaIconStyle = css`
