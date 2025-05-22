@@ -20,7 +20,7 @@ const StoreSearchPage = () => {
 
         {/* 결과 섹션 */}
         <div css={S.ResultSection}>
-          <p>검색어를 입력해주세요</p>
+          <p>검색어를 입력해주세요.</p>
         </div>
       </div>
 

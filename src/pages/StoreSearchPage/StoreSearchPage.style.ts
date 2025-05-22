@@ -1,18 +1,14 @@
 import { css } from '@emotion/react';
 
-export const ContentContainer = css`
+export const pageLayoutStyle = css`
   display: flex;
-  padding: 16px;
   flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
+  min-height: 100vh;
 `;
 
-export const ResultSection = css`
-  width: 100%;
+export const contentAreaStyle = css`
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  align-self: stretch;
+  margin-bottom: 5.6rem;
 `;
