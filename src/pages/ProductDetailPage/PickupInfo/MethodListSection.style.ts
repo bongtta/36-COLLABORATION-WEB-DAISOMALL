@@ -71,12 +71,13 @@ export const MethodName = css`
 export const MethodDate = css`
   ${theme.fonts['caption-12R']};
   color: ${theme.colors['gray-03']};
+  word-break: keep-all;
 `;
 
 export const BetaIconStyle = css`
   position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 21px;
-  height: 7px;
+  top: 0.5rem;
+  right: 0.6rem;
+  width: 2.1rem;
+  height: 0.7rem;
 `; 
