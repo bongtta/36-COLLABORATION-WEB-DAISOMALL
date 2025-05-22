@@ -38,12 +38,14 @@ const Review = () => {
         </div>
       </div>
 
-      <div css={S.MiddleContainer}>
+      <div>
         <Divider />
-        <SectionTitle
-          title1="사진&동영상"
-          onClickAll={() => console.log('전체보기 클릭')}
-        />
+        <div css={S.MiddleContainer}>
+          <SectionTitle
+            title1="사진&동영상"
+            onClickAll={() => console.log('전체보기 클릭')}
+          />
+        </div>
         <PhotoScrollList images={photos} />
       </div>
 

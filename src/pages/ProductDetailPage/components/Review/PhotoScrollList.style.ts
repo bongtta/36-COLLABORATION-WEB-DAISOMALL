@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 export const ScrollContainer = css`
   display: flex;
   gap: 0.8rem;
+  padding: 0 0 1.6rem 1.6rem;
   overflow-x: auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
