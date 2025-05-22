@@ -3,17 +3,17 @@ import { useState, useEffect } from 'react';
 import * as S from './BrandInfo.style';
 
 interface BrandInfoProps {
-  brandName?: string;
-  brandDescription?: string;
-  brandImageUrl?: string;
-  isLoading?: boolean;
+  brandName: string;
+  brandDescription: string;
+  brandImageUrl: string;
+  isLoading: boolean;
 }
 
 const BrandInfo = ({
-  brandName = 'VT',
-  brandDescription = '유행을 창조하는 Stylish와 시간에 구애받지 않는 Timeless 효과로 당신의 매일을 함께하는 VT의 스페셜 홈케어! 리들샷의 따끔한 미세자극으로 건강한 피부를 가꿔보세요.',
-  brandImageUrl = 'https://placehold.co/70x70',
-  isLoading = false
+  brandName,
+  brandDescription,
+  brandImageUrl,
+  isLoading
 }: BrandInfoProps) => {
   const [imageError, setImageError] = useState(false);
   const [isImageLoaded, setIsImageLoaded] = useState(false);
