@@ -26,6 +26,8 @@ export const rankingNumber = css`
   position: relative;
   ${theme.fonts['number-18R']}
   color: ${theme.colors['gray-01']};
+  min-width: 2.4rem;
+  text-align: center;
 `;
 
 export const rankingImageWrapper = css`
