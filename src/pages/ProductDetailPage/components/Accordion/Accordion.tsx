@@ -5,7 +5,7 @@ import Divider from '@components/common/divider/Divider';
 import SvgContactIcon from '@assets/svgs/ContactIcon';
 
 const Accordion = () => (
-  <div>
+  <div css={S.Wrapper}>
     <AccordionButton title="상품정보 제공 고시">
       <ul css={S.InfoList}>
         <li css={S.Info}>

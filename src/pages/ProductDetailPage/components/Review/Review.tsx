@@ -24,7 +24,7 @@ const Review = () => {
       <div css={S.UpperContainer}>
         <SectionTitle
           title1="리뷰"
-          title2="123445"
+          title2="11747"
           title2Color="#D70011"
           onClickAll={() => console.log('전체보기 클릭')}
         />

@@ -1,6 +1,10 @@
 import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
+export const Wrapper = css`
+  margin-bottom: 7.3rem;
+`;
+
 export const InfoList = css`
   width: 100%;
 `;

@@ -1,6 +1,6 @@
 import type { RouteType } from '@app-types/routeType';
 import HomePage from '@pages/HomePage/HomePage';
-import ProductDetailBottom from '@pages/ProductDetailPage/productDetailBottom';
+import ProductDetailBottom from '@pages/ProductDetailPage/ProductDetailBottom';
 import ProductDetailPage from '@pages/ProductDetailPage/ProductDetailPage';
 import StoreSearchPage from '@pages/StoreSearchPage/StoreSearchPage';
 import routePath from '@routes/routePath';
