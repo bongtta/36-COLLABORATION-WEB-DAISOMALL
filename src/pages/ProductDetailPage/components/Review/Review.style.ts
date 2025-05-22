@@ -35,4 +35,57 @@ export const MiddleContainer = css`
   padding: 1.6rem;
 `;
 
-export const LowerContainer = css``;
+export const LowerContainer = css`
+  padding: 1.6rem;
+`;
+
+export const FilteringContainer = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const ButtonContainer = css`
+  display: flex;
+  gap: 0.8rem;
+`;
+
+export const AllBtn = css`
+  display: flex;
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 16px;
+  border: none;
+  background: ${theme.colors['gray-01']};
+
+  ${theme.fonts['button-14B']}
+  color: ${theme.colors.white};
+`;
+
+export const RepurchaseBtn = css`
+  display: flex;
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 16px;
+  border: 1px solid ${theme.colors['gray-05']};
+  background: ${theme.colors.white};
+
+  ${theme.fonts['button-14R']}
+  color: ${theme.colors['gray-01']};
+`;
+
+export const DropdownContainer = css`
+  display: flex;
+  align-items: center;
+`;
+
+export const Recommendation = css`
+  ${theme.fonts['button-14R']}
+  color: ${theme.colors['gray-01']};
+`;
+
+export const ArrowIcon = css`
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0 0.7rem;
+`;

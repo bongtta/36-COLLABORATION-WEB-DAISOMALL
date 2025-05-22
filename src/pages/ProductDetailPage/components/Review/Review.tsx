@@ -5,6 +5,8 @@ import Keywords from './Keywords';
 import PhotoScrollList from './PhotoScrollList';
 import Divider from '@components/common/divider/Divider';
 import theme from '@styles/theme';
+import { SmallArrowDownIcon } from '@assets/svgs';
+import Comment from './Comment';
 
 const Review = () => {
   const averageRating = 4.8;
@@ -51,7 +53,20 @@ const Review = () => {
 
       <Divider height="8px" color={theme.colors['gray-06']} />
 
-      <div css={S.LowerContainer}></div>
+      <div css={S.LowerContainer}>
+        <div css={S.FilteringContainer}>
+          <div css={S.ButtonContainer}>
+            <button css={S.AllBtn}>전체</button>
+            <button css={S.RepurchaseBtn}>재구매</button>
+          </div>
+          <div css={S.DropdownContainer}>
+            <p css={S.Recommendation}>추천순</p>
+            <SmallArrowDownIcon css={S.ArrowIcon} />
+          </div>
+        </div>
+
+        <Comment />
+      </div>
     </div>
   );
 };
