@@ -4,7 +4,7 @@ import theme from '@styles/theme';
 export const container = css`
   width: 100%;
   height: 100%;
-  display: inline-flex;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.6rem;
