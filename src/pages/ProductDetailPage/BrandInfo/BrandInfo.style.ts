@@ -1,5 +1,15 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import theme from '@styles/theme';
+
+// 스켈레톤 UI를 위한 애니메이션 추가
+const skeletonAnimation = keyframes`
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+`;
 
 export const container = css`
   width: 100%;
@@ -52,4 +62,32 @@ export const brandDescription = css`
   color: ${theme.colors['gray-01']};
   ${theme.fonts['body-14R']};
   word-wrap: break-word;
+`;
+
+// 스켈레톤 UI 스타일 추가
+export const skeletonBase = css`
+  background: linear-gradient(90deg, ${theme.colors['gray-05']} 25%, ${theme.colors['gray-06']} 37%, ${theme.colors['gray-05']} 63%);
+  background-size: 400% 100%;
+  animation: ${skeletonAnimation} 1.4s ease infinite;
+`;
+
+export const skeletonImageContainer = css`
+  ${imageContainer}
+  border-radius: 0.4rem;
+  overflow: hidden;
+  ${skeletonBase}
+`;
+
+export const skeletonBrandName = css`
+  width: 50%;
+  height: 1.6rem;
+  border-radius: 0.2rem;
+  ${skeletonBase}
+`;
+
+export const skeletonBrandDescription = css`
+  width: 100%;
+  height: 4.2rem;
+  border-radius: 0.2rem;
+  ${skeletonBase}
 `;
