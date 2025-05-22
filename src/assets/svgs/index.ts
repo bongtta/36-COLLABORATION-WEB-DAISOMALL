@@ -6,6 +6,7 @@ export { default as BookmarkIcon } from './BookmarkIcon';
 export { default as CancelIcon } from './CancelIcon';
 export { default as CartIcon } from './CartIcon';
 export { default as ChatbotIcon } from './ChatbotIcon';
+export { default as ContactIcon } from './ContactIcon';
 export { default as DeliveryboxIcon } from './DeliveryboxIcon';
 export { default as FloatingUpIcon } from './FloatingUpIcon';
 export { default as HomeIconActive } from './HomeIconActive';
