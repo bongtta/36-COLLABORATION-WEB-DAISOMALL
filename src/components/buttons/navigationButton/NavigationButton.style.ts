@@ -14,7 +14,7 @@ export const buttonStyle = (variant: 'white' | 'gray') => css`
   gap: ${variant === 'white' ? '0.4rem' : '0.8rem'};
 
   width: 100%;
-  max-width: 34.3rem;
+  
   height: 4.8rem;
   padding: 1.5rem 11.5rem;
 
