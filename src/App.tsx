@@ -5,7 +5,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import pageRoutes from '@routes/pageRoutes';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import Review from '@pages/ProductDetailPage/components/Review/Review';
 
 function App() {
   const router = createBrowserRouter([...pageRoutes]);
@@ -28,7 +27,6 @@ function App() {
       <div style={{ fontSize: '16px' }}>
         <ReactQueryDevtools />
       </div>
-      <Review />
     </QueryClientProvider>
   );
 }

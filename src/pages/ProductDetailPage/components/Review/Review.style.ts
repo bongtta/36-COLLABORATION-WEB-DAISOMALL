@@ -36,6 +36,9 @@ export const MiddleContainer = css`
 `;
 
 export const LowerContainer = css`
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
   padding: 1.6rem;
 `;
 

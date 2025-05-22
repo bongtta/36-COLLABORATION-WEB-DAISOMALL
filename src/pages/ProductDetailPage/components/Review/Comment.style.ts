@@ -24,6 +24,10 @@ export const FirstLeftContainer = css`
   gap: 1rem;
 `;
 
+export const ProfileSection = css`
+  display: flex;
+`;
+
 export const MiddleSection = css`
   display: flex;
   align-items: center;

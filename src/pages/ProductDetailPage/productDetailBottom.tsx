@@ -1,7 +1,13 @@
-const productDetailBottom = () => {
-  return (
-    <div>productDetailBottom</div>
-  )
-}
+import BottomCarousel from './components/Carousel/BottomCarousel';
+import Review from './components/Review/Review';
+import TodayDiscovery from './components/TodayDiscovery/TodayDiscovery';
 
-export default productDetailBottom
+const ProductDetailBottom = () => (
+  <div>
+    <TodayDiscovery />
+    <BottomCarousel />
+    <Review />
+  </div>
+);
+
+export default ProductDetailBottom;
