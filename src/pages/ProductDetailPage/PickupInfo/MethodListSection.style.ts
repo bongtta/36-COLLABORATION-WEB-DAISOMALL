@@ -33,7 +33,7 @@ export const MethodItem = css`
   text-align: center;
   cursor: pointer;
   position: relative;
-  width: 8.8rem;
+  
   height: 10rem;
   margin: 0;
   padding: 0;
@@ -54,7 +54,7 @@ export const StoreMethodItem = css`
 
 export const MethodItemContent = css`
   display: flex;
-  padding: 1.3rem 2.5rem;
+  padding: 1.3rem 2.55rem;
   flex-direction: column;
   align-items: center;
   width: 100%;

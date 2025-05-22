@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import theme from '../../../styles/theme'; // 경로 수정
 
-// PickupStoreSection.style.ts 와 중복되는 스타일. 필요시 공통 파일로 분리 고려.
+// PickupStoreSection.style.ts 와 중복되는 스타일
 export const InfoRow = css`
   display: flex;
   padding-left: 1.6rem;
@@ -30,22 +30,13 @@ export const InfoContent = css`
     color: ${theme.colors['gray-01']};
   }
 `;
-// 중복 끝
-
-export const HighlightBackground = css`
-  display: inline-flex; 
-  align-items: center;
-  background-color: ${theme.colors['gray-05']};
-  padding: 2px 4px; 
-  border-radius: 2px; 
-  height: 22px; 
-`;
 
 export const TextWithIcon = css`
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  
+  overflow: visible;
+  position: relative;
 `;
 
 export const PickupInfoText = css`
@@ -54,29 +45,38 @@ export const PickupInfoText = css`
   white-space: pre-line;
 `;
 
+export const PickupInfoWrapper = css`
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+`;
+
 export const PickupTomorrowContainer = css`
-  width: 7.5rem;
   height: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding-right: 0.065rem;
-    
+  
   svg {
-    width: 100%;
     height: 100%;
+    width: auto;
+    object-fit: contain;
   }
 `;
 
 export const QuestionCircleContainer = css`
-  width: 16px;
-  height: 16px;
-  display: flex; // 내부 svg 정렬을 위해
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex; 
   align-items: center;
   justify-content: center;
   svg {
     width: 100%; // 부모 컨테이너 크기에 맞춤
     height: 100%;
   }
+`;
+
+export const QuestionCircleAlignBottom = css`
+  ${QuestionCircleContainer};
+  align-self: flex-end;
 `; 

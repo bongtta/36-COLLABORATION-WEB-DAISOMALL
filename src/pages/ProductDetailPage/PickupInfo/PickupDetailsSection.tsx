@@ -11,6 +11,7 @@ const PickupDetailsSection = () => {
     <>
       <div css={S.InfoRow}>
         <span css={S.InfoLabel}>픽업정보</span>
+        
         <div css={S.InfoContent}>
 
           <div css={S.TextWithIcon}>
@@ -19,18 +20,20 @@ const PickupDetailsSection = () => {
               <div css={S.PickupTomorrowContainer}>
                 <PickupTomorrow />
               </div>
+              
               <div css={S.QuestionCircleContainer}>
                 <QuestionCircle />
               </div>
+
           </div>
 
-          <div css={S.TextWithIcon}>
+          <div css={S.PickupInfoWrapper}>
             <span css={S.PickupInfoText}>
               결제 후 상품준비 완료 알림톡(픽업바코드)
               <br />
               24시간 이내 발송, 최대 2일까지 픽업 가능
             </span>
-            <div css={S.QuestionCircleContainer}>
+            <div css={S.QuestionCircleAlignBottom}>
               <QuestionCircle />
             </div>
           </div>
