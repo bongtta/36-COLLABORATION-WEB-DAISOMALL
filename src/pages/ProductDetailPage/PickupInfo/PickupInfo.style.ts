@@ -74,7 +74,6 @@ export const MethodName = css`
 export const MethodDate = css`
   ${theme.fonts['body-12R']};
   color: ${theme.colors['gray-03']};
-  line-height: 17.4px; // theme 값과 약간 다름
 
   ${MethodItem}[data-selected='true'] & {
     color: ${theme.colors['gray-05']};
@@ -83,8 +82,8 @@ export const MethodDate = css`
 
 export const BetaTag = css`
   position: absolute;
-  top: 5px;
-  right: 5px; // 피그마는 left: 61px 이었으나, 오른쪽 위로 변경
+  top: 0.5rem;
+  right: 0.5rem; 
   background-color: ${theme.colors.primary}; // 임시 색상, theme에 BETA 색상 추가 필요
   color: ${theme.colors.white};
   padding: 2px 4px;
@@ -109,7 +108,7 @@ export const InfoRow = css`
 export const InfoLabel = css`
   ${theme.fonts['body-14R']};
   color: ${theme.colors['gray-03']};
-  width: 70px; // 고정 너비
+  width: 7rem;
 `;
 
 export const InfoContent = css`
@@ -135,14 +134,14 @@ export const HighlightBackground = css`
   display: inline-flex; // span처럼 동작하도록
   align-items: center;
   background-color: ${theme.colors['gray-05']};
-  padding: 2px 4px; // 피그마에 맞춰서 조정
-  border-radius: 2px; // 피그마에 맞춰서 조정
-  height: 22px; // 피그마 22px
-  // width: 74.35px; // 내용에 따라 자동 조절되도록
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+  height: 2.2rem;
+  width: 7.4rem;
 
   // 내부 아이콘/텍스트 스타일은 별도 정의 또는 상속
   & > svg { // 아이콘이 있다면
-    margin-right: 4px;
+    margin-right: 0.4rem;
   }
 `;
 
