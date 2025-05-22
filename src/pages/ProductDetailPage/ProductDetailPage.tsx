@@ -1,3 +1,9 @@
-const ProductDetailPage = () => <div>ProductDetailPage</div>;
+import PerkInfo from './PerkInfo/PerkInfo';
+
+const ProductDetailPage = () => (
+  <div>
+    <PerkInfo />
+  </div>
+);
 
 export default ProductDetailPage;
