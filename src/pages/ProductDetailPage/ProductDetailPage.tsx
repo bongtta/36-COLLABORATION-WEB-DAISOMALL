@@ -157,27 +157,36 @@ const ProductDetailPage = () => {
         </p>
       </AccordionButton>
 
+      <DividerThick />
+
       {/* 13 & 14. 추천 상품 (ProductCardVertical 두 개) */}
       <div css={recommendedProductsStyle}>
         <h3 css={recommendedTitleStyle}>함께 구매하면 좋은 상품</h3>
-        <div css={productsGridStyle}>
-          <ProductCardVertical 
-            size="96"
-            name="다이소 미니 멀티탭 1.5m"
-            totalPrice="3,000"
-            imageUrl="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb"
-            tags={[{ label: '신상', bg: '#5C5CFF', color: '#FFFFFF' }]}
-          />
-          <ProductCardVertical 
-            size="96"
-            name="다이소 LED 무드등"
-            totalPrice="5,000"
-            imageUrl="https://images.unsplash.com/photo-1543508282-6319a3e2621f"
-            tags={[{ label: '인기', bg: '#FF5C5C', color: '#FFFFFF' }]}
-          />
-        </div>
+        <ProductCardVertical 
+          size="96"
+          name="다이소 미니 멀티탭 1.5m"
+          totalPrice="3,000"
+          imageUrl="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb"
+          tags={[{ label: '신상', bg: '#5C5CFF', color: '#FFFFFF' }]}
+        />
       </div>
+
+      <DividerThick />
+
+      <div css={recommendedProductsStyle}>
+        <h3 css={recommendedTitleStyle}>이 상품과 어울리는 제품</h3>
+        <ProductCardVertical 
+          size="96"
+          name="다이소 LED 무드등"
+          totalPrice="5,000"
+          imageUrl="https://images.unsplash.com/photo-1543508282-6319a3e2621f"
+          tags={[{ label: '인기', bg: '#FF5C5C', color: '#FFFFFF' }]}
+        />
+      </div>
+
+      <DividerThick />
     </div>
+    
   );
 };
 
