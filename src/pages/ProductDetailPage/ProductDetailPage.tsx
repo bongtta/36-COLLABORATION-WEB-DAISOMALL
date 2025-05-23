@@ -11,6 +11,9 @@ import NavBar from './NavBar/NavBar';
 import BrandInfo from './BrandInfo/BrandInfo';
 import AccordionButton from '@components/buttons/accordion/AccordionButton';
 
+import Divider from '@components/common/divider/Divider';
+import DividerThick from '@components/common/divider/DividerThick';
+
 const productDetailStyle = css`
   width: 100%;
   max-width: 768px;
@@ -88,11 +91,17 @@ const ProductDetailPage = () => {
       {/* 4. 리뷰 캐러셀 */}
       <ReviewCarousel imageUrls={reviewImages} onMoreClick={() => console.log('리뷰 더보기 클릭')} />
 
+      <Divider />
+
       {/* 5. 픽업 정보 */}
       <PickupInfo />
 
+      <Divider />
+
       {/* 6. 혜택 정보 */}
       <PerkInfo />
+
+      <DividerThick />
 
       {/* 7. 상품 카드 (수직형) */}
       <div css={recommendedProductsStyle}>
@@ -107,14 +116,20 @@ const ProductDetailPage = () => {
         />
       </div>
 
+      <DividerThick />
+
       {/* 8. 이미지 캐러셀 (두번째) */}
       <ImageCarousel 
         images={carouselImages.slice(0, 2)} 
         autoplay={false}
       />
 
+      <DividerThick />
+
       {/* 9. 네비게이션 바 */}
       <NavBar />
+
+      <Divider />
 
       {/* 10. 브랜드 정보 */}
       <BrandInfo 

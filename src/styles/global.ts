@@ -20,9 +20,13 @@ const GlobalStyle = css`
     font-size: 62.5%;
     overflow-x: hidden;
 
-    ::-webkit-scrollbar {
-      display: none;
-    }
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+-ms-overflow-style: none;
+scrollbar-width: none;
+    @  
   }
 
   #root {
