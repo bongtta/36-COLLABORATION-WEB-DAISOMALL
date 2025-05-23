@@ -1,26 +1,10 @@
 import LocationCard from '@components/LocationCard/LocationCard';
+import { isStoreOpen } from '@utils/time';
 import type { LocationCardDataType } from '@app-types/store';
 
 interface LocationCardListProps {
   stores: LocationCardDataType[];
 }
-
-const isStoreOpen = (openingHours: string): boolean => {
-  const [start, end] = openingHours.split('~');
-  if (!start || !end) return true;
-
-  const now = new Date();
-  const [startHour, startMin] = start.split(':').map(Number);
-  const [endHour, endMin] = end.split(':').map(Number);
-
-  const startDate = new Date(now);
-  startDate.setHours(startHour, startMin, 0, 0);
-
-  const endDate = new Date(now);
-  endDate.setHours(endHour, endMin, 0, 0);
-
-  return now >= startDate && now <= endDate;
-};
 
 const LocationCardList = ({ stores }: LocationCardListProps) => (
   <>
