@@ -19,8 +19,7 @@ import { useState } from 'react';
 const ProductDetailPage = () => {
   // 예시 데이터
   const productTitle = '다이소 베이직 노트북 파우치 15인치';
-  const productPrice = '5,000';
-  const productUnitPrice = '5,000';
+  
   const [isImageExpanded, setIsImageExpanded] = useState(false);
 
   const carouselImages = [
@@ -143,11 +142,17 @@ const ProductDetailPage = () => {
       {/* 13 & 14. 추천 상품 (ProductCardVertical 두 개) */}
       <div css={S.recommendedProductsStyle}>
         <SectionTitle 
-          
           title1="VT"
           title2="브랜드 상품 모아보기"
           title1Color={theme.colors['gray-03']}
           onClickAll={() => console.log('브랜드 상품 모아보기 클릭')}
+          image={
+            <img 
+              src="https://images.unsplash.com/photo-1526947425960-945c6e72858f" 
+              alt="VT 브랜드" 
+              style={{ width: '3.2rem', height: '3.2rem', borderRadius: '50%', objectFit: 'cover' }}
+            />
+          }
         />
         <ProductCardVertical 
           size="96"
