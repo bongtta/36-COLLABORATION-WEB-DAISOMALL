@@ -14,6 +14,7 @@ export const imageContainerStyle = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 `;
 
 export const recommendedProductsStyle = css`
@@ -31,4 +32,12 @@ export const productsGridStyle = css`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.6rem;
+`;
+
+export const viewMoreButtonWrapper = css`
+  padding: 0 1.6rem 1.9rem;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `; 

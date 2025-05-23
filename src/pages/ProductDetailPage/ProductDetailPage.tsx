@@ -117,15 +117,17 @@ const ProductDetailPage = () => {
           alt="상품 상세 이미지"
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
+
+        {/* 12. 네비게이션 버튼 */}
+        <div css={S.viewMoreButtonWrapper}>
+          <ViewMoreButton 
+            buttonText="상품 상세 정보" 
+            onExpand={() => console.log('상품 상세 정보 클릭')}
+          >
+            <div>상품 상세 정보 내용</div>
+          </ViewMoreButton>
+        </div>
       </div>
-
-      {/* 12. 네비게이션 버튼 */}
-      <ViewMoreButton 
-        buttonText="상품 상세 정보" 
-        
-        onExpand={() => console.log('상품 상세 정보 클릭')}
-      />
-
 
       <DividerThick />
 
