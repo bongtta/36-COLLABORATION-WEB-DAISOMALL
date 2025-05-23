@@ -48,8 +48,24 @@ export const viewMoreButtonWrapper = css`
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.8) 8%, rgba(255, 255, 255, 1) 25%);
-  height: 8rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.05) 1%,
+    rgba(255, 255, 255, 0.1) 2%,
+    rgba(255, 255, 255, 0.15) 3%,
+    rgba(255, 255, 255, 0.2) 5%, 
+    rgba(255, 255, 255, 0.3) 8%,
+    rgba(255, 255, 255, 0.4) 12%,
+    rgba(255, 255, 255, 0.5) 17%,
+    rgba(255, 255, 255, 0.6) 23%,
+    rgba(255, 255, 255, 0.7) 30%,
+    rgba(255, 255, 255, 0.8) 38%,
+    rgba(255, 255, 255, 0.9) 47%,
+    rgba(255, 255, 255, 0.95) 53%,
+    rgba(255, 255, 255, 1) 60%
+  );
+  height: 10rem;
   justify-content: center;
   display: flex;
   align-items: flex-end;
