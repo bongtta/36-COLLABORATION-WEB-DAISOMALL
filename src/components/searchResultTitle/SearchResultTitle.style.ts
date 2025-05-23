@@ -5,8 +5,13 @@ export const containerStyle = css`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  width: 343px;
+  width: 100%;
+  max-width: 34.3rem;
+  margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
 export const countTextStyle = css`

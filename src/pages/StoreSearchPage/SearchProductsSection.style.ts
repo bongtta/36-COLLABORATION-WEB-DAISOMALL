@@ -4,14 +4,17 @@ import theme from '@styles/theme';
 export const SearchWrapper = css`
   display: flex;
   width: 37.5rem;
+  max-width: 100vw;
+  margin: 0 auto;
   padding: 1.6rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 2.4rem;
-  align-self: stretch;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: 100%;
+    padding: 1.6rem;
   }
 `;
 
@@ -19,7 +22,7 @@ export const ResultWrapper = css`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.8rem;
+  gap: 2.4rem;
   width: 100%;
 `;
 
@@ -40,9 +43,12 @@ export const ProductCardWrapper = css`
   gap: 1.6rem;
   border-radius: 0.8rem;
   border: 1px solid var(--gray-05, #EBE9EE);
+  background: #fff;
+  box-sizing: border-box;
 
   @media (max-width: 768px) {
     width: 100%;
+    min-width: 0;
   }
 `;
 
@@ -64,4 +70,16 @@ export const ErrorContainer = css`
   height: 10rem;
   font-size: 1.6rem;
   color: var(--gray-03, #9E9E9E);
+`;
+
+export const SectionTitleRow = css`
+  display: flex;
+  width: 34.3rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
