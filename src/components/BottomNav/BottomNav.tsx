@@ -26,7 +26,7 @@ const BottomNav = () => {
 
   return (
     <nav css={S.Wrapper}>
-      <div css={S.Container} onClick={() => navigate('/category')}>
+      <div css={S.Container}>
         <CategoryIconNew css={S.BasicIcon} />
         <p css={S.Caption}>카테고리</p>
       </div>
@@ -51,12 +51,12 @@ const BottomNav = () => {
         <p css={S.CenterCaption(selectedTab === 'offline')}>매장 상품 찾기</p>
       </div>
 
-      <div css={S.Container} onClick={() => navigate('/recent')}>
+      <div css={S.Container}>
         <RecentIcon css={S.BasicIcon} />
         <p css={S.Caption}>최근 본 상품</p>
       </div>
 
-      <div css={S.Container} onClick={() => navigate('/mypage')}>
+      <div css={S.Container}>
         <MypageIcon css={S.BasicIcon} />
         <p css={S.Caption}>마이페이지</p>
       </div>

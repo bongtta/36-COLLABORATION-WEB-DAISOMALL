@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 import Reset from './reset';
 import theme from './theme';
+import './fonts/fonts.css';
 
 const GlobalStyle = css`
   ${Reset}
@@ -17,6 +18,8 @@ const GlobalStyle = css`
     min-height: 100vh;
     background-color: ${theme.colors.white};
     font-size: 62.5%;
+    overflow-x: hidden;
+    
   }
 
   #root {

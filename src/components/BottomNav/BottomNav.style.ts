@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import theme from '@styles/theme';
 
 export const Wrapper = css`
-  display: flex;
+  display: fixed;
   justify-content: space-between;
   position: absolute;
   bottom: 0;
