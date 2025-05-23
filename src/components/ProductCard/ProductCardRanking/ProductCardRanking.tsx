@@ -29,7 +29,7 @@ const ProductCardRanking = ({
   return (
     <div css={R.rankingWrapper(!!code)}>
       <div css={R.rankingContent(!!code)}>
-        <div css={R.rankingNumber}>{rank}</div>
+        {rank && <div css={R.rankingNumber}>{rank}</div>}
 
         <div css={R.rankingImageWrapper}>
           <LazyImage

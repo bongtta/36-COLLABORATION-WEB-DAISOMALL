@@ -1,10 +1,10 @@
-import React from 'react';
 import Header from '@components/Header/Header';
 import Divider from '@components/common/divider/Divider';
 import BottomNav from '@components/BottomNav/BottomNav';
 import ChatbotButton from '@components/buttons/floatingButtons/ChatbotButton';
 import FloatingUpButton from '@components/buttons/floatingButtons/FloatingUpButton';
 import PopularProductsSection from './PopularProductsSection';
+import StoreNameSearchSection from '@pages/StoreSearchPage/StoreNameSearchSection/StoreNameSearchSection';
 import { pageLayoutStyle, contentAreaStyle } from './StoreSearchPage.style';
 
 const StoreSearchPage = () => (
@@ -13,7 +13,7 @@ const StoreSearchPage = () => (
     <Divider />
     
     <div css={contentAreaStyle}>
-      <PopularProductsSection />
+      <StoreNameSearchSection />
     </div>
     
     <ChatbotButton />

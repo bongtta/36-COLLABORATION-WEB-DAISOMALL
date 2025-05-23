@@ -3,7 +3,6 @@ import theme from '@styles/theme';
 
 export const wrapper = css`
   width: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
