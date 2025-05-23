@@ -9,12 +9,20 @@ export const productDetailStyle = css`
 
 export const imageContainerStyle = css`
   width: 100%;
-  height: 20rem;
   background-color: #f5f5f5;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
+`;
+
+export const collapsedImageStyle = css`
+  height: 20rem;
+`;
+
+export const expandedImageStyle = css`
+  height: auto;
 `;
 
 export const recommendedProductsStyle = css`
@@ -40,4 +48,9 @@ export const viewMoreButtonWrapper = css`
   position: absolute;
   bottom: 0;
   left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 5%, rgba(255, 255, 255, 0.8) 8%, rgba(255, 255, 255, 1) 25%);
+  height: 8rem;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
 `; 
