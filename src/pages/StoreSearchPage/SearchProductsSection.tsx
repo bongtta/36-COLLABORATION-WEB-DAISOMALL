@@ -8,19 +8,10 @@ import SearchEmptyResult from '@components/searchEmptyResult/SearchEmptyResult';
 import { useSearchProducts } from '@hooks/queries/useSearchProducts';
 import type { SearchProductsResponseData, SortOptionType } from '@app-types/apiResponseType';
 
-// 컴포넌트에서 사용할 정렬 옵션
-type SortOption = '신상품' | '가격 낮은 순' | '가격 높은 순';
-const SORT_OPTIONS: SortOption[] = ['신상품', '가격 낮은 순', '가격 높은 순'];
+// 정렬 옵션 타입을 SortOptionType으로 통일
+const SORT_OPTIONS: SortOptionType[] = ['최신순', '가격 낮은 순', '가격 높은 순'];
 
-// API 요청 시 사용할 정렬 옵션 값 매핑
-const getSortOptionValue = (option: SortOption): SortOptionType => {
-  switch(option) {
-    case '가격 낮은 순': return 'priceLow';
-    case '가격 높은 순': return 'priceHigh';
-    case '신상품': 
-    default: return 'latest';
-  }
-};
+type SortOption = SortOptionType;
 
 interface SearchProductsSectionProps {
   initialKeyword?: string;
@@ -38,9 +29,9 @@ const SearchProductsSection = ({
     keyword,
     0,
     20,
-    sortOption ? getSortOptionValue(sortOption) : undefined
+    sortOption
   );
-
+  
   // 초기 키워드가 있으면 검색 실행
   useEffect(() => {
     if (initialKeyword) {
@@ -129,7 +120,7 @@ const SearchProductsSection = ({
       <div css={S.ResultWrapper}>
         <SearchResultTitle 
           totalCount={data.pageable.numberOfElements || 0}
-          initialSortOption={sortOption || '신상품'}
+          initialSortOption={sortOption || '최신순'}
           onSortChange={handleSortChange}
           showSortOptions={true}
         />

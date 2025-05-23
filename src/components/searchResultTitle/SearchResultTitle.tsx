@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import * as S from './SearchResultTitle.style';
 import SmallArrowDownIcon from '@assets/svgs/SmallArrowDownIcon';
+import type { SortOptionType } from '@app-types/apiResponseType';
 
-// 정렬 옵션 타입 정의
-type SortOption = '신상품' | '가격 낮은 순' | '가격 높은 순';
+// 정렬 옵션 타입을 SortOptionType으로 통일
+type SortOption = SortOptionType;
 
 // 정렬 옵션 목록
 const SORT_OPTIONS: SortOption[] = [
-  '신상품',
+  '최신순',
   '가격 낮은 순',
   '가격 높은 순'
 ];
@@ -22,7 +23,7 @@ interface SearchResultTitleProps {
 
 const SearchResultTitle = ({
   totalCount,
-  initialSortOption = '신상품',
+  initialSortOption = '최신순',
   onSortChange,
   showSortOptions = false,
   className,

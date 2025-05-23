@@ -24,8 +24,8 @@ export interface SearchProductsResponseData {
   pageable: Pageable;
 }
 
-// 브랜드 타입 추가
+// 브랜드 타입
 export type BrandType = 'VT' | '비즈' | '락앤락';
 
-// 정렬 옵션 타입 추가
-export type SortOptionType = 'latest' | 'priceLow' | 'priceHigh';
+// 정렬 옵션 타입
+export type SortOptionType = '최신순' | '가격 낮은 순' | '가격 높은 순';
