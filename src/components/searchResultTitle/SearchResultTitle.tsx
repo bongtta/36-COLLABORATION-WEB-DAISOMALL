@@ -3,7 +3,7 @@ import * as S from './SearchResultTitle.style';
 import SmallArrowDownIcon from '@assets/svgs/SmallArrowDownIcon';
 import type { SortOptionType } from '@app-types/apiResponseType';
 
-// 정렬 옵션 타입을 SortOptionType으로 통일
+// 정렬 옵션 타입을 SortOptionType으로 통일y
 type SortOption = SortOptionType;
 
 // 정렬 옵션 목록
