@@ -6,14 +6,14 @@ import ProductCardRanking from '@components/ProductCard/ProductCardRanking/Produ
 import SearchResultTitle from '@components/searchResultTitle/SearchResultTitle';
 import SearchEmptyResult from '@components/searchEmptyResult/SearchEmptyResult';
 import { useSearchProducts } from '@hooks/queries/useSearchProducts';
-import type { SearchProductsResponseData } from '@app-types/apiResponseType';
+import type { SearchProductsResponseData, SortOptionType } from '@app-types/apiResponseType';
 
 // 컴포넌트에서 사용할 정렬 옵션
 type SortOption = '신상품' | '가격 낮은 순' | '가격 높은 순';
 const SORT_OPTIONS: SortOption[] = ['신상품', '가격 낮은 순', '가격 높은 순'];
 
 // API 요청 시 사용할 정렬 옵션 값 매핑
-const getSortOptionValue = (option: SortOption) => {
+const getSortOptionValue = (option: SortOption): SortOptionType => {
   switch(option) {
     case '가격 낮은 순': return 'priceLow';
     case '가격 높은 순': return 'priceHigh';
@@ -137,7 +137,7 @@ const SearchProductsSection = ({
           {data.products.map((product: SearchProductsResponseData['products'][0]) => (
             <div css={S.ProductCardWrapper} key={product.productId}>
               <ProductCardRanking
-                imageUrl={''}
+                imageUrl={product.mainImage}
                 name={product.productName}
                 price={product.price.toLocaleString()}
                 code={product.productCode}

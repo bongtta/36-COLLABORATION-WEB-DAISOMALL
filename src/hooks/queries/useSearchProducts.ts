@@ -1,12 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 import { searchProducts, getSortedProducts } from '@apis/search/product';
-import type { SearchProductsResponseData } from '@app-types/apiResponseType';
+import type { SearchProductsResponseData, SortOptionType } from '@app-types/apiResponseType';
+
+const DEFAULT_PAGE_SIZE = 20;
 
 export const useSearchProducts = (
   keyword: string,
   page: number = 0,
-  size: number = 10,
-  sort?: string
+  size: number = DEFAULT_PAGE_SIZE,
+  sort?: SortOptionType
 ) => 
   useQuery<SearchProductsResponseData>({
     queryKey: ['searchProducts', keyword, page, size, sort],
