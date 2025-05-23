@@ -11,9 +11,17 @@ export const storeSectionWrapper = css`
 `;
 
 export const productWrapper = css`
+  width: 34.3rem;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 1.1rem 1.2rem;
   border-radius: 8px;
   border: 1px solid ${theme.colors['gray-05']};
+
+  @media (max-width: 768px) {
+    width: 100%;
+    min-width: 0;
+  }
 `;
 
 export const filterTabWrapper = css`
