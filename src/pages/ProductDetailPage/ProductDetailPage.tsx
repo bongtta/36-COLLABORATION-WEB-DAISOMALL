@@ -9,8 +9,9 @@ import ProductCardVertical from '@components/ProductCard/ProductCardVertical/Pro
 import NavBar from './NavBar/NavBar';
 import BrandInfo from './BrandInfo/BrandInfo';
 import NavigationButton from '@components/buttons/navigationButton/NavigationButton';
+import SectionTitle from '@components/common/SectionTitle/SectionTitle';
 import * as S from './ProductDetailPage.style';
-
+import theme from '@styles/theme';
 import Divider from '@components/common/divider/Divider';
 import DividerThick from '@components/common/divider/DividerThick';
 
@@ -72,9 +73,12 @@ const ProductDetailPage = () => {
 
       {/* 7. 상품 카드 (수직형) */}
       <div css={S.recommendedProductsStyle}>
-        <h3 css={S.recommendedTitleStyle}>이런 상품은 어때요?</h3>
+        <SectionTitle 
+          title1="다른 고객이 함께 본 상품"
+          onClickAll={() => console.log('이런 상품은 어때요? 전체보기 클릭')}
+        />
         <ProductCardVertical 
-          size="128"
+          size="96"
           name="다이소 베이직 노트북 파우치 15인치"
           totalPrice="5,000"
           unitPrice="5,000"
@@ -128,7 +132,13 @@ const ProductDetailPage = () => {
 
       {/* 13 & 14. 추천 상품 (ProductCardVertical 두 개) */}
       <div css={S.recommendedProductsStyle}>
-        <h3 css={S.recommendedTitleStyle}>함께 구매하면 좋은 상품</h3>
+        <SectionTitle 
+          
+          title1="VT"
+          title2="브랜드 상품 모아보기"
+          title1Color={theme.colors['gray-03']}
+          onClickAll={() => console.log('브랜드 상품 모아보기 클릭')}
+        />
         <ProductCardVertical 
           size="96"
           name="다이소 미니 멀티탭 1.5m"
@@ -141,7 +151,10 @@ const ProductDetailPage = () => {
       <DividerThick />
 
       <div css={S.recommendedProductsStyle}>
-        <h3 css={S.recommendedTitleStyle}>이 상품과 어울리는 제품</h3>
+        <SectionTitle 
+          title1="이런 기초스킨케어 상품은 어때요?"
+          onClickAll={() => console.log('이런 기초스킨케어 상품은 어때요? 전체보기 클릭')}
+        />
         <ProductCardVertical 
           size="96"
           name="다이소 LED 무드등"

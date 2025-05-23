@@ -17,7 +17,7 @@ export const imageContainerStyle = css`
 `;
 
 export const recommendedProductsStyle = css`
-  padding: 3.2rem 1.6rem;
+  padding: 1.6rem;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
