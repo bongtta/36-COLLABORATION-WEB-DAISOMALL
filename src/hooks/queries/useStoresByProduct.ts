@@ -17,26 +17,54 @@ export const useStoresByProduct = ({
   pageNumber = 0,
   pageSize = 10,
 }: UseStoresByProductParams) => {
-  const endpoint = keyword
-    ? END_POINT.SEARCH_STORES_BY_NAME
-    : END_POINT.GET_STORES_BY_PRODUCT_ID;
-
-  const queryKey = ['stores', productId, keyword, pageNumber, pageSize];
+  const keywordKey = keyword?.trim() ?? '';
+  const queryKey = [
+    'stores-combined',
+    productId,
+    keywordKey,
+    pageNumber,
+    pageSize,
+  ];
 
   return useQuery({
     queryKey,
     queryFn: async () => {
-      const res = await axios.get<
-        ApiResponse<{ stores: LocationCardDataType[] }>
-      >(`${BASE_URL}${endpoint}`, {
+      // 1. 재고 정보 요청
+      const stockRes = await axios.get<
+        ApiResponse<{ stores: Partial<LocationCardDataType>[] }>
+      >(`${BASE_URL}${END_POINT.GET_STORES_BY_PRODUCT_ID}`, {
         params: {
           productId,
-          ...(keyword && { keyword }),
           pageNumber,
           pageSize,
         },
       });
-      return res.data.data.stores;
+
+      // 2. 매장 정보 요청 (키워드 조건부)
+      const storeInfoRes = await axios.get<
+        ApiResponse<{ stores: Partial<LocationCardDataType>[] }>
+      >(`${BASE_URL}${END_POINT.SEARCH_STORES_BY_NAME}`, {
+        params: {
+          productId,
+          ...(keywordKey ? { keyword: keywordKey } : {}),
+          pageNumber,
+          pageSize,
+        },
+      });
+
+      const stockMap = new Map(
+        stockRes.data.data.stores.map((store) => [store.storeId, store]),
+      );
+
+      const merged = storeInfoRes.data.data.stores.map((store) => {
+        const stock = stockMap.get(store.storeId);
+        return {
+          ...stock,
+          ...store,
+        } as LocationCardDataType;
+      });
+
+      return merged;
     },
     enabled: !!productId,
   });

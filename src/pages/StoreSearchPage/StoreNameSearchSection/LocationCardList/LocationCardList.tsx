@@ -5,6 +5,23 @@ interface LocationCardListProps {
   stores: LocationCardDataType[];
 }
 
+const isStoreOpen = (openingHours: string): boolean => {
+  const [start, end] = openingHours.split('~');
+  if (!start || !end) return true;
+
+  const now = new Date();
+  const [startHour, startMin] = start.split(':').map(Number);
+  const [endHour, endMin] = end.split(':').map(Number);
+
+  const startDate = new Date(now);
+  startDate.setHours(startHour, startMin, 0, 0);
+
+  const endDate = new Date(now);
+  endDate.setHours(endHour, endMin, 0, 0);
+
+  return now >= startDate && now <= endDate;
+};
+
 const LocationCardList = ({ stores }: LocationCardListProps) => (
   <>
     {stores.map((store) => (
@@ -18,9 +35,11 @@ const LocationCardList = ({ stores }: LocationCardListProps) => (
         stock={store.stockCount}
         isPickupAvailable={store.isPickupAvailable}
         isSoldOut={store.stockStatus === '재고 소진' || store.stockCount === 0}
-        isFranchise={false} // API에는 없으므로 기본값 false
-        distance={'5km'} // 추후 계산 필요
-        isOpen={true}
+        isFranchise={
+          store.storeType === 'FRANCHISE' || store.storeType === 'DISTRIBUTION'
+        }
+        distance={'5km'}
+        isOpen={isStoreOpen(store.openingHours)}
       />
     ))}
   </>

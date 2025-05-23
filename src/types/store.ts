@@ -10,6 +10,7 @@ export interface LocationCardDataType {
   shelfNo: number;
   stockCount: number;
   stockStatus: string;
+  storeType?: 'FRANCHISE' | 'DISTRIBUTION';
   distance: string;
   address: string;
   isOpen: boolean;
