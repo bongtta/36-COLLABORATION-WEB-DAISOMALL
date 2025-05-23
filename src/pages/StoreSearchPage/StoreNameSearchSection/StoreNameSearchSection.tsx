@@ -7,24 +7,24 @@ import StoreSearchBar from '@components/StoreSearchBar/StoreSearchBar';
 import LocationCardList from '@pages/StoreSearchPage/StoreNameSearchSection/LocationCardList/LocationCardList';
 import FilterTabs from '@components/tabs/FilterTabs';
 import * as S from '@pages/StoreSearchPage/StoreNameSearchSection/StoreNameSearchSection.style';
-import Img from '/store-rank-1.png';
+interface StoreNameSearchSectionProps {
+  product: {
+    productId: number;
+    name: string;
+    imageUrl: string;
+    price: string;
+    code?: string;
+  };
+}
 
-const mockProduct = {
-  imageUrl: Img,
-  name: 'VT 리들샷 100 페이셜 부스팅 퍼스트 앰플 2ml*6개입',
-  price: '3,000',
-  code: '1049275',
-  productId: 1,
-};
-
-const StoreNameSearchSection = () => {
+const StoreNameSearchSection = ({ product }: StoreNameSearchSectionProps) => {
   const [keyword, setKeyword] = useState('');
   const [filters, setFilters] = useState<FilterOption[]>([]);
 
   const trimmedKeyword = keyword.trim();
 
   const { data: stores = [], isLoading } = useStoresByProduct({
-    productId: mockProduct.productId,
+    productId: product.productId,
     keyword: trimmedKeyword === '' ? undefined : trimmedKeyword,
   });
 
@@ -56,7 +56,13 @@ const StoreNameSearchSection = () => {
     <div css={S.storeSectionWrapper}>
       <SearchBar placeholder="상품명, 품번, 브랜드" />
       <div css={S.productWrapper}>
-        <ProductCardRanking {...mockProduct} showCartIcon />
+        <ProductCardRanking
+          imageUrl={product.imageUrl}
+          name={product.name}
+          price={product.price}
+          code={product.code}
+          showCartIcon
+        />
       </div>
       <StoreSearchBar onSearch={handleStoreSearch} />
       <div css={S.filterTabWrapper}>
