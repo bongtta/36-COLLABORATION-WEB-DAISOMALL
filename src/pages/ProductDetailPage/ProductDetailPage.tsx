@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
 import Header from '@components/Header/Header';
 import ImageCarousel from '@components/ImageCarousel/ImageCarousel';
 import ProductPageInfo from '../ProductPage/components/ProductPageInfo';
@@ -9,43 +8,11 @@ import PerkInfo from './PerkInfo/PerkInfo';
 import ProductCardVertical from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
 import NavBar from './NavBar/NavBar';
 import BrandInfo from './BrandInfo/BrandInfo';
-import AccordionButton from '@components/buttons/accordion/AccordionButton';
+import NavigationButton from '@components/buttons/navigationButton/NavigationButton';
+import * as S from './ProductDetailPage.style';
 
 import Divider from '@components/common/divider/Divider';
 import DividerThick from '@components/common/divider/DividerThick';
-
-const productDetailStyle = css`
-  width: 100%;
-  max-width: 768px;
-  margin: 0 auto;
-`;
-
-const imageContainerStyle = css`
-  width: 100%;
-  height: 20rem;
-  background-color: #f5f5f5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const recommendedProductsStyle = css`
-  padding: 3.2rem 1.6rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-`;
-
-const recommendedTitleStyle = css`
-  font-size: 1.4rem;
-  font-weight: 700;
-`;
-
-const productsGridStyle = css`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.6rem;
-`;
 
 const ProductDetailPage = () => {
   // 예시 데이터
@@ -71,7 +38,7 @@ const ProductDetailPage = () => {
   ];
 
   return (
-    <div css={productDetailStyle}>
+    <div css={S.productDetailStyle}>
       {/* 1. 헤더 */}
       <Header 
         showBackButton={true} 
@@ -104,8 +71,8 @@ const ProductDetailPage = () => {
       <DividerThick />
 
       {/* 7. 상품 카드 (수직형) */}
-      <div css={recommendedProductsStyle}>
-        <h3 css={recommendedTitleStyle}>이런 상품은 어때요?</h3>
+      <div css={S.recommendedProductsStyle}>
+        <h3 css={S.recommendedTitleStyle}>이런 상품은 어때요?</h3>
         <ProductCardVertical 
           size="128"
           name="다이소 베이직 노트북 파우치 15인치"
@@ -140,7 +107,7 @@ const ProductDetailPage = () => {
       />
 
       {/* 11. 이미지 영역 */}
-      <div css={imageContainerStyle}>
+      <div css={S.imageContainerStyle}>
         <img 
           src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2" 
           alt="상품 상세 이미지"
@@ -148,20 +115,20 @@ const ProductDetailPage = () => {
         />
       </div>
 
-      {/* 12. 아코디언 */}
-      <AccordionButton title="상품 상세 정보">
-        <p>
-          이 제품은 다양한 용도로 사용할 수 있는 다이소의 베스트셀러 제품입니다.
-          내구성이 좋고 실용적인 디자인으로 일상생활에서 유용하게 사용하실 수 있습니다.
-          자세한 제품 사양 및 사용법은 제품 패키지를 참고해주세요.
-        </p>
-      </AccordionButton>
+      {/* 12. 네비게이션 버튼 */}
+      <NavigationButton 
+        text="상품 상세 정보" 
+        variant="gray" 
+        to="/product/detail" 
+        onClick={() => console.log('상품 상세 정보 클릭')}
+      />
+
 
       <DividerThick />
 
       {/* 13 & 14. 추천 상품 (ProductCardVertical 두 개) */}
-      <div css={recommendedProductsStyle}>
-        <h3 css={recommendedTitleStyle}>함께 구매하면 좋은 상품</h3>
+      <div css={S.recommendedProductsStyle}>
+        <h3 css={S.recommendedTitleStyle}>함께 구매하면 좋은 상품</h3>
         <ProductCardVertical 
           size="96"
           name="다이소 미니 멀티탭 1.5m"
@@ -173,8 +140,8 @@ const ProductDetailPage = () => {
 
       <DividerThick />
 
-      <div css={recommendedProductsStyle}>
-        <h3 css={recommendedTitleStyle}>이 상품과 어울리는 제품</h3>
+      <div css={S.recommendedProductsStyle}>
+        <h3 css={S.recommendedTitleStyle}>이 상품과 어울리는 제품</h3>
         <ProductCardVertical 
           size="96"
           name="다이소 LED 무드등"
