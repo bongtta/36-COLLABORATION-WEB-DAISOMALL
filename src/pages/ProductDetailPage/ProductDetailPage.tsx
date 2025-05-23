@@ -57,7 +57,7 @@ const ProductDetailPage = () => {
       />
 
       {/* 2. 이미지 캐러셀 */}
-      <ImageCarousel images={carouselImages} />
+      <ImageCarousel images={carouselImages} height="50rem" />
 
       {/* 3. 상품 정보 */}
       <ProductPageInfo />
@@ -99,6 +99,7 @@ const ProductDetailPage = () => {
       <ImageCarousel 
         images={carouselImages.slice(0, 2)} 
         autoplay={false}
+        height="8rem"
       />
 
       <DividerThick />
@@ -153,7 +154,7 @@ const ProductDetailPage = () => {
           name="다이소 미니 멀티탭 1.5m"
           totalPrice="3,000"
           imageUrl="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb"
-          tags={[{ label: '신상', bg: '#5C5CFF', color: '#FFFFFF' }]}
+          tags={[{ label: '신상', bg: theme.colors['gray-05'], color: theme.colors['primary'] }]}
         />
       </div>
 
@@ -169,7 +170,7 @@ const ProductDetailPage = () => {
           name="다이소 LED 무드등"
           totalPrice="5,000"
           imageUrl="https://images.unsplash.com/photo-1543508282-6319a3e2621f"
-          tags={[{ label: '인기', bg: '#FF5C5C', color: '#FFFFFF' }]}
+          tags={[{ label: '인기', bg: theme.colors['primary'], color: theme.colors['gray-05'] }]}
         />
       </div>
 
