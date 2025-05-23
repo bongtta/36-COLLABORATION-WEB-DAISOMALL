@@ -5,20 +5,8 @@ import sectionImg2 from '/home-section-2.png';
 import sectionImg3 from '/home-section-3.png';
 import sectionImg4 from '/home-section-4.png';
 import sectionImg5 from '/home-section-5.png';
-import type { ProductTagData } from '@components/Tag/tagData';
 
-interface ProductCardVerticalProps {
-  id: number;
-  size: '96' | '128';
-  name: string;
-  totalPrice: string;
-  unitPrice?: string;
-  imageUrl?: string;
-  tags?: ProductTagData[];
-  quantityText?: string;
-  isSnsHot?: boolean;
-  isBoxDelivery?: boolean;
-}
+import type { ProductCardVerticalProps } from '@app-types/productCard';
 
 export const FIRST_PRODUCTS: ProductCardVerticalProps[] = [
   {

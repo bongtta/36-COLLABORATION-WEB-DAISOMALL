@@ -5,16 +5,7 @@ import sectionImg2 from '/home-rank-2.png';
 import sectionImg3 from '/home-rank-3.png';
 import sectionImg4 from '/home-rank-4.png';
 import sectionImg5 from '/home-rank-5.png';
-import type { ProductTagData } from '@components/Tag/tagData';
-interface ProductCardRankingProps {
-  rank?: number;
-  imageUrl: string;
-  name: string;
-  price: string;
-  tags?: ProductTagData[];
-  code?: string;
-  showCartIcon?: boolean;
-}
+import type { ProductCardRankingProps } from '@app-types/productCard';
 
 export const FIRST_RANKING_PRODUCTS: ProductCardRankingProps[] = [
   {

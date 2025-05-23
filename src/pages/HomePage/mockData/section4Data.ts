@@ -6,20 +6,7 @@ import sectionImg3 from '/home-section-18.png';
 import sectionImg4 from '/home-section-19.png';
 import sectionImg5 from '/home-section-20.png';
 
-import type { ProductTagData } from '@components/Tag/tagData';
-
-interface ProductCardVerticalProps {
-  id: number;
-  size: '96' | '128';
-  name: string;
-  totalPrice: string;
-  unitPrice?: string;
-  imageUrl?: string;
-  tags?: ProductTagData[];
-  quantityText?: string;
-  isSnsHot?: boolean;
-  isBoxDelivery?: boolean;
-}
+import type { ProductCardVerticalProps } from '@app-types/productCard';
 
 export const FOURTH_PRODUCTS: ProductCardVerticalProps[] = [
   {
