@@ -15,6 +15,11 @@ import theme from '@styles/theme';
 import Divider from '@components/common/divider/Divider';
 import DividerThick from '@components/common/divider/DividerThick';
 import { useState } from 'react';
+import BottomCarousel from './components/Carousel/BottomCarousel';
+import Review from './components/Review/Review';
+import TodayDiscovery from './components/TodayDiscovery/TodayDiscovery';
+import Accordion from './components/Accordion/Accordion';
+import BuyBar from './components/BuyBar/BuyBar';
 
 const ProductDetailPage = () => {
   // 예시 데이터
@@ -180,6 +185,15 @@ const ProductDetailPage = () => {
       </div>
 
       <DividerThick />
+      
+      <TodayDiscovery />
+      <Divider height="8px" color={theme.colors['gray-06']} />
+      <BottomCarousel />
+      <Divider height="8px" color={theme.colors['gray-06']} />
+      <Review />
+      <Divider height="8px" color={theme.colors['gray-06']} />
+      <Accordion />
+      <BuyBar />
     </div>
     
   );
