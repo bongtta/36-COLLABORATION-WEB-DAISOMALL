@@ -8,7 +8,7 @@ import PerkInfo from './PerkInfo/PerkInfo';
 import ProductCardVertical from '@components/ProductCard/ProductCardVertical/ProductCardVertical';
 import NavBar from './NavBar/NavBar';
 import BrandInfo from './BrandInfo/BrandInfo';
-import NavigationButton from '@components/buttons/navigationButton/NavigationButton';
+import ViewMoreButton from '@components/buttons/viewMoreButton/ViewMoreButton';
 import SectionTitle from '@components/common/SectionTitle/SectionTitle';
 import * as S from './ProductDetailPage.style';
 import theme from '@styles/theme';
@@ -120,11 +120,10 @@ const ProductDetailPage = () => {
       </div>
 
       {/* 12. 네비게이션 버튼 */}
-      <NavigationButton 
-        text="상품 상세 정보" 
-        variant="gray" 
-        to="/product/detail" 
-        onClick={() => console.log('상품 상세 정보 클릭')}
+      <ViewMoreButton 
+        buttonText="상품 상세 정보" 
+        
+        onExpand={() => console.log('상품 상세 정보 클릭')}
       />
 
 
