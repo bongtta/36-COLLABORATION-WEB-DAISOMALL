@@ -16,14 +16,17 @@ export const container = css`
   min-height: 20rem;
   position: relative;
   padding: 2rem;
+  display: flex;
+  align-items: center;
 `;
 
 export const contentWrapper = css`
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   gap: 1.6rem;
   padding: 2rem 0;
+  width: 100%;
 `;
 
 export const imageContainer = css`
