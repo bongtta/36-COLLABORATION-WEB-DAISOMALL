@@ -132,10 +132,10 @@ export const tagStyle = (color: 'gray' | 'red' = 'red') => css`
   height: 2.4rem;
   border-radius: 4px;
   ${theme.fonts['heading-16B']};
-  color: ${color === 'red' ? theme.colors['primary'] : theme.colors['gray-03']};
+  color: ${color === 'red' ? theme.colors['primary'] : theme.colors['gray-04']};
   background-color: ${color === 'red'
     ? theme.colors['red-02']
-    : theme.colors['gray-04']};
+    : theme.colors['gray-06']};
 `;
 
 export const standTextGray = css`
