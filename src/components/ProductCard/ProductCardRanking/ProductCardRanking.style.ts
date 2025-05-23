@@ -26,6 +26,7 @@ export const rankingNumber = css`
   position: relative;
   ${theme.fonts['number-18R']}
   color: ${theme.colors['gray-01']};
+  width: 1.1rem;
 `;
 
 export const rankingImageWrapper = css`
